@@ -1,44 +1,28 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>화이트스페이스</title>
+    <title>Document</title>
   </head>
-  <style>
-    div {
-      width: 400px;
-      border: 1px solid;
-      margin: 10px;
-    }
-    .pre-line {
-      white-space:pre-line; visibility: visible;
-    }
-    .normal {
-      white-space: normal;
-    }
-    .nowrap {
-      white-space: nowrap;
-    }
-    .pre {
-      white-space: pre;
-    }
-    .pre-wrap {
-      white-space: pre-wrap;
-    }
-  </style>
   <body>
-    <div class="normal">l      orem 
-      Ipsum is simply and typesetting industry</div>
-    <div class="nowrap">l      orem 
-      Ipsum is simply and typesetting industry</div>
-    <div class="pre">l      ore
-      m Ipsum is simply and typesetting industry</div>
-    <div class="pre-wrap">l      orem
-       Ipsum is simply and typesetting industry</div>
-    <div class="pre-line">l      orem
-       Ipsum is simply and typesetting industry</div>
-       <p></p>
+    <div id="wrap">
+      <div id="head">헤더영역</div>
+      <div id="nav">메뉴영역</div>
+      <div id="content">컨텐츠영역</div>
+      <div id="foot">푸터영역</div>
+    </div>
+    <div id="wrapper">
+      <header>헤더영역</header>
+      <nav>메뉴영역</nav>
+      <main>
+        <article><section>컨텐츠영역</section></article>
+        <section>
+          <article>컨텐츠영역</article>
+          <article>컨텐츠영역</article>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
