@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메뉴 예시</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    /* 기본 메뉴 스타일 */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #333;
+    }
+
+    .menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .menu-item {
+      position: relative;
+    }
+
+    .menu-item > a {
+      display: block;
+      padding: 15px;
+      color: white;
+      text-decoration: none;
+      background-color: #333;
+    }
+
+    .menu-item > a:hover {
+      background-color: #444;
+    }
+
+    /* 서브메뉴 숨기기 */
+    .submenu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #444;
+      display: none;
+    }
+
+    .submenu li a {
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      background-color: #444;
+    }
+
+    .submenu li a:hover {
+      background-color: #555;
+    }
+
+    /* 서브메뉴 나타내기 */
+    .menu-item:hover .submenu {
+      display: block;
+    }
+  </style>
+  <body>
+    <nav>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="#">홈</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">상품</a>
+          <ul class="submenu">
+            <li><a href="#">상품 1</a></li>
+            <li><a href="#">상품 2</a></li>
+            <li><a href="#">상품 3</a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="#">서비스</a>
+          <ul class="submenu">
+            <li><a href="#">서비스 1</a></li>
+            <li><a href="#">서비스 2</a></li>
+            <li><a href="#">서비스 3</a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a
+            href="http://127.0.0.1:5500/green1227/Html5&CSS/2025_01_15%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84.html"
+            >문의</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      width: 1200px;
+      height: 100px;
+      background-color: aqua;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      position: absolute;
+      width: 240px;
+      height: 100px;
+      background-color: black;
+      top: 0;
+    }
+    p:first-child {
+      left: 0;
+    }
+    p:nth-child(2) {
+      right: 0;
+      opacity: 0.5;
+    }
+    #a3 {
+      position: fixed;
+      top: 0;
+      background-color: black;
+      width: 240px;
+      height: 100px;
+      left: 800px;
+      z-index: -2;
+    }
+  </style>
+  <body>
+    <div>
+      <p id="a1"></p>
+      <p id="a2"></p>
+      <p id="a3"></p>
+    </div>
+    <p></p>
+  </body>
+</html>
