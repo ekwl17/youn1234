@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배경 이미지와 텍스트</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: white; /* 배경을 흰색으로 설정 */
+        font-family: Arial, sans-serif;
+      }
+
+      .content {
+        height: 250vh; /* 페이지 높이를 250%로 설정하여 스크롤이 생기도록 함 */
+      }
+
+      .con {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* 첫 번째 화면에 맞는 높이 설정 */
+        position: relative; /* 텍스트 박스를 배경 안에 넣기 위해 필요 */
+      }
+
+      .text-box {
+        width: 100%; /* 가로는 화면 크기에 맞게 */
+        max-width: 1200px; /* 최대 너비 설정 (필요시 조정) */
+        padding: 3vw 20px; /* 텍스트 박스 크기를 화면 크기에 맞게 조정 (가로는 vw 단위로 설정) */
+        background-image: url("https://www.kukdong.co.kr/images/main/mid_bg_img1.jpg");
+        background-repeat: no-repeat;
+        background-position: center; /* 배경 이미지를 중앙으로 정렬 */
+        background-attachment: fixed; /* 배경을 고정 */
+        background-size: 100% 100%; /* 배경 이미지를 창 크기에 맞게 늘림 */
+        color: white;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 5vw; /* 텍스트 크기를 화면 크기에 맞게 조정 (vw 단위 사용) */
+        min-height: 70vh; /* 텍스트 박스 최소 높이 설정 */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* 수직 중앙 정렬 */
+        align-items: center; /* 수평 중앙 정렬 */
+      }
+
+      .text-box h1 {
+        margin: 0;
+        font-size: 6vw; /* 제목 크기도 화면 크기에 맞게 조정 */
+      }
+
+      .text-box p {
+        margin-top: 1vh;
+        font-size: 3vw; /* 본문 텍스트 크기도 화면 크기에 맞게 조정 */
+      }
+
+      /* 4개의 텍스트 박스를 가로로 배치 */
+      .four-boxes {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; /* 100% 가로폭 */
+        padding: 10px; /* 박스 간격 좁힘 */
+        box-sizing: border-box;
+        position: absolute; /* 배경 안에 위치시키기 위해 절대 위치 지정 */
+        bottom: 10px; /* 박스를 사진 아래쪽으로 붙임 */
+      }
+
+      .four-boxes .box {
+        width: 23%; /* 각 박스의 너비를 4개의 박스가 가로로 배치될 수 있도록 설정 */
+        padding: 10px;
+        background-color: rgba(
+          241,
+          241,
+          241,
+          0.8
+        ); /* 배경을 투명하게 해서 사진이 보이도록 */
+        color: #333;
+        text-align: center;
+        font-size: 2vw;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+      }
+
+      .spacer {
+        height: 200px; /* 추가된 공간 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="con">
+        <div class="text-box">
+          <h1>개개인의 특성과 능력을 중시하는 극동건설은</h1>
+          <p>여러분의 성장의 터전이 됩니다.</p>
+        </div>
+        <!-- 4개의 텍스트 박스를 배경 안에 넣기 -->
+        <div class="four-boxes">
+          <div class="box">
+            <h3>박스 1</h3>
+            <p>첫 번째 텍스트 박스 내용</p>
+          </div>
+          <div class="box">
+            <h3>박스 2</h3>
+            <p>두 번째 텍스트 박스 내용</p>
+          </div>
+          <div class="box">
+            <h3>박스 3</h3>
+            <p>세 번째 텍스트 박스 내용</p>
+          </div>
+          <div class="box">
+            <h3>박스 4</h3>
+            <p>네 번째 텍스트 박스 내용</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+      <!-- 추가된 공간 -->
+    </div>
+  </body>
+</html>
