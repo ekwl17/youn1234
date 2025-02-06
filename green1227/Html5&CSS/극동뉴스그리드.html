@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .grid {
+      width: 800px;
+      margin: 50px;
+      list-style: none;
+    }
+    .grid li {
+      margin: 10px;
+      position: relative;
+      /* width: 300px;
+      height: 300px; */
+      background: whitesmoke;
+      padding: 40px 30px;
+      display: inline-block;
+    }
+    .grid li a {
+      text-decoration: none;
+      color: black;
+    }
+    .grid li div p {
+      margin: 20px 0;
+    }
+    .grid li a div h1 span {
+      font-weight: bold;
+      display: block;
+    }
+    .grid li a .line {
+      position: absolute;
+      background: teal;
+    }
+    .grid li a .top {
+      width: 100%;
+      height: 5px;
+      left: 0;
+      top: 0;
+      transform: scaleX(0);
+      transform-origin: 0 0;
+      transition: 0.5s ease-in-out 1.5s;
+    }
+    .grid li:hover a .top {
+      transform: scaleX(1);
+      transition: 0.5s ease-in-out;
+    }
+    .grid li a .right {
+      width: 5px;
+      height: 100%;
+      right: 0;
+      top: 0;
+      transform: scaleY(0);
+      transform-origin: 0 0;
+      transition: 0.5s ease-in-out 1s;
+    }
+    .grid li:hover a .right {
+      transform: scaleY(1);
+      transition: 0.5s ease-in-out 0.5s;
+    }
+    .grid li a .bottom {
+      width: 100%;
+      height: 5px;
+      left: 0;
+      bottom: 0;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: 0.5s ease-in-out 0.5s;
+    }
+    .grid li:hover a .bottom {
+      transform: scaleX(1);
+      transition: 0.5s ease-in-out 1s;
+    }
+    .grid li a .left {
+      width: 5px;
+      height: 100%;
+      left: 0;
+      top: 0;
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: 0.5s ease-in-out;
+    }
+    .grid li:hover a .left {
+      transform: scaleY(1);
+      transition: 0.5s ease-in-out 1.5s;
+    }
+  </style>
+  <body>
+    <h2>
+      PR Center 세상에 없던 신기술을 개척하는 기업,극동건설이 기술의 진보를
+      선도합니다
+    </h2>
+    <ul class="grid">
+      <li>
+        <a href=""
+          ><div>
+            <h1>언론속의 <span>극동</span></h1>
+            <p>언론에 소개되는 극동의 소식을 <br />안내해드립니다.</p>
+            <span>
+              <img
+                src="https://www.kukdong.co.kr/images/common/next_bar_bk.png"
+                alt="arrow"
+              />
+            </span>
+          </div>
+          <span class="line top"></span><span class="line right"></span>
+          <span class="line bottom"></span> <span class="line left"></span
+        ></a>
+      </li>
+      <li>
+        <a href=""
+          ><div>
+            <h1>언론속의 <span>극동</span></h1>
+            <p>언론에 소개되는 극동의 소식을 <br />안내해드립니다.</p>
+            <span>
+              <img
+                src="https://www.kukdong.co.kr/images/common/next_bar_bk.png"
+                alt="arrow"
+              />
+            </span>
+          </div>
+          <span class="line top"></span><span class="line right"></span>
+          <span class="line bottom"></span> <span class="line left"></span
+        ></a>
+      </li>
+      <li>
+        <a href=""
+          ><div>
+            <h1>언론속의 <span>극동</span></h1>
+            <p>언론에 소개되는 극동의 소식을 <br />안내해드립니다.</p>
+            <span>
+              <img
+                src="https://www.kukdong.co.kr/images/common/next_bar_bk.png"
+                alt="arrow"
+              />
+            </span>
+          </div>
+          <span class="line top"></span><span class="line right"></span>
+          <span class="line bottom"></span> <span class="line left"></span
+        ></a>
+      </li>
+      <li>
+        <a href=""
+          ><div>
+            <h1>언론속의 <span>극동</span></h1>
+            <p>언론에 소개되는 극동의 소식을 <br />안내해드립니다.</p>
+            <span>
+              <img
+                src="https://www.kukdong.co.kr/images/common/next_bar_bk.png"
+                alt="arrow"
+              />
+            </span>
+          </div>
+          <span class="line top"></span><span class="line right"></span>
+          <span class="line bottom"></span> <span class="line left"></span
+        ></a>
+      </li>
+    </ul>
+  </body>
+</html>
