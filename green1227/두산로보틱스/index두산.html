@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .doo {
+      width: 1680px;
+      height: 680px;
+      display: flex;
+      gap: 24px;
+    }
+    .doo > div.left {
+      flex: 1;
+      background: url(https://www.doosanrobotics.com/images/services/robot-training-img01.png)
+        no-repeat;
+      background-size: cover;
+      border-radius: 30px;
+    }
+    .doo > div.right {
+      flex: 3;
+      background: wheat;
+      flex-direction: column;
+      display: flex;
+      gap: 24px;
+    }
+    .doo > div.right > div.xo {
+      width: 100%;
+      background: violet;
+      flex: 1;
+      display: flex;
+      gap: 24px;
+    }
+
+    .doo > div.right > .inner1 > div:first-child {
+      width: 398px;
+      justify-content: space-between;
+    }
+    .doo > div.right > .inner1 > div:last-child {
+      flex: 2;
+    }
+    .doo > div.right > .inner2 > div {
+      flex: 1;
+    }
+    .right > .inner2 > div:first-child {
+      background: url(https://www.doosanrobotics.com/images/services/robot-training-img03.png)
+        no-repeat;
+      background-size: cover;
+      border-radius: 30px;
+    }
+    .right > .inner2 > div:nth-child(2) {
+      background: url(https://www.doosanrobotics.com/images/services/robot-training-img04.png)
+        no-repeat;
+      background-size: cover;
+      border-radius: 30px;
+    }
+
+    .right > .inner1 > div:nth-child(2) {
+      background: url(https://www.doosanrobotics.com/images/services/robot-training-img02.png)
+        no-repeat;
+      background-size: cover;
+      border-radius: 30px;
+    }
+    .txt {
+      border-radius: 32px;
+      background: whitesmoke no-repeat;
+      height: 100%;
+      padding: 48px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+      word-break: keep-all;
+    }
+    h1 {
+      font-size: 25px;
+    }
+    .최고 {
+      color: blue;
+    }
+    .수준별 {
+      color: blueviolet;
+    }
+    .글자 {
+      font-size: 18px;
+    }
+  </style>
+  <body>
+    <div class="doo">
+      <div class="left"></div>
+      <div class="right">
+        <div class="inner1 xo">
+          <div>
+            <div class="txt">
+              <h1>
+                현장에서 바로 적용 가능한
+                <p class="최고">최고의 실급 교육</p>
+              </h1>
+              <p class="글자">
+                두산로보틱스에서 개발한 검증된 실무형 교육 커리큘럼으로, 실제
+                현장에서 바로 적용하며 시시각각 발생하는 다양한 문제를 해결할 수
+                있도록 설계되었습니다.
+              </p>
+            </div>
+          </div>
+          <div></div>
+        </div>
+        <div class="inner2 xo">
+          <div></div>
+          <div></div>
+          <div>
+            <div class="txt">
+              <h1>
+                초보자부터 전문가까지
+                <p class="수준별">수준별 교육제공</p>
+              </h1>
+              <p class="글자">
+                초보자부터 현업 엔지니어 및 교수까지 수준별로 들을 수 있는
+                맞춤형 교육이 마련 돼 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

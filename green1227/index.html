@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+        * {
+          margin: 0;
+          padding: 0;
+        }
+        .menu {
+          padding-left: 430px;
+          padding-right: 430px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+
+          display: inline-block;
+          background: aliceblue;
+        }
+        tr {
+          table-layout: fixed;
+          border-top-width: 0px;
+          list-style: none;
+          margin-top: 5px;
+          box-sizing: border-box;
+
+          display: flex;
+          height: 100px;
+          width: 1080px;
+          background: aliceblue;
+        }
+        td {
+          font-size: 16px;
+          font-weight: 400;
+          border: 1px solid silver;
+          border-right: none;
+          border-top: none;
+          border-bottom: none;
+          flex: 1;
+          text-align: center;
+        }
+        td:first-child {
+          border-left: none;
+        }
+        td img {
+          margin-top: 10px;
+          display: inline-block;
+          block-size: 48px;
+        }
+        td p {
+          display: block;
+        }
+        .menu2 div {
+          flex: 1;
+          background: aliceblue;
+        }
+        .menu2 {
+          padding-left: 430px;
+          padding-right: 430px;
+          justify-content: space-between;
+          display: flex;
+          background: aliceblue;
+          height: 460px;
+          width: 1080px;
+          text-align: center;
+        }
+        .shot {
+          line-height: 30px;
+          word-break: keep-all;
+          padding-bottom: 25px;
+          display: block;
+          font-weight: 700;
+          font-size: 24px;
+          background: aliceblue;
+        }
+        .small {
+          font-size: 18px;
+          font-weight: 400;
+        }
+        .img {
+          text-align: center;
+          box-sizing: border-box;
+          display: inline-block;
+          overflow: hidden;
+          width: 192px;
+          height: 256px;
+          margin-bottom: 44px;
+          border-radius: 20px;
+        }
+        .menu2 .img img {
+          text-align: center;
+          vertical-align: middle;
+          display: inline-block;
+          width: 192px;
+          height: 256px;
+          transition: transform 0.3s ease;
+        }
+        .menu2 .img img:hover {
+          display: inline-block;
+          transform: scale(1.1);
+        }
+        .imgs img {
+          height: 145px;
+          width: 160px;
+          line-height: 1.4;
+          outline: none;
+          box-sizing: border-box;
+          bottom: 500px;
+          z-index: 1;
+          position: absolute;
+        filter: drop-shadow(4px 9px 8px  rgba(0, 0, 0, 0.5));
+    }
+
+        }
+  </style>
+  <body>
+    <div class="menu">
+      <table>
+        <tr>
+          <td>
+            <img
+              src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu1.png"
+              alt=""
+            />
+            <p>이용대금명세서</p>
+          </td>
+          <td>
+            <img
+              src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu2.png"
+              alt=""
+            />
+            <p>결제예상금액</p>
+          </td>
+          <td>
+            <img
+              src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu3.png"
+              alt=""
+            />
+            <p>이용내역조회</p>
+          </td>
+          <td>
+            <img
+              src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu4.png"
+              alt=""
+            />
+            <p>내정보변경</p>
+          </td>
+          <td>
+            <img
+              src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu5.png"
+              alt=""
+            />
+            <p>카드분실신고</p>
+          </td>
+          <td>
+            <img
+              src="https://pc.wooricard.com/dcpc/img/pc/content/ico_quick_menu6.png"
+              alt=""
+            />
+            <p>카드사용변경</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="menu2">
+      <div>
+        <div class="imgs">
+          <img
+            src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_obj.png"
+            alt="imgs"
+          />
+        </div>
+        <div class="img">
+          <img
+            src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_1_bg.png"
+            alt="alt"
+          />
+        </div>
+
+        <span class="shot"
+          ><p>단기카드대출</p>
+          <span class="small"> (현금서비스)</span></span
+        >
+        <span
+          >현금이 급할 때 바로<br />
+          찾아쓰는, <br />편리한 생활자금 마련방법</span
+        >
+      </div>
+      <div>
+        <div class="imgs">
+          <img
+            src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_2_obj.png"
+            alt="imgs"
+          />
+        </div>
+        <div class="img">
+          <img
+            src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_2_bg.png"
+            alt="alt"
+          />
+        </div>
+
+        <span class="shot"
+          ><p>장기카드대출</p>
+          <span class="small">(카드론)</span></span
+        >
+        <span
+          >목돈이 필요할 때<br />
+          복잡한 심사 과정 없이 <br />간편하게</span
+        >
+      </div>
+      <div>
+        <div class="imgs">
+          <img
+            src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_3_obj.png"
+            alt="imgs"
+          />
+        </div>
+        <div class="img">
+          <img
+            src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_3_bg.png"
+            alt="alt"
+          />
+        </div>
+
+        <span class="shot"
+          ><p>일부결제금액이월약정</p>
+          <span class="small">(리볼빙)</span></span
+        >
+        <span
+          >원하는 만큼만 결제하고 매월<br />
+          결제금액을 계획적으로 관리</span
+        >
+      </div>
+      <div>
+        <div class="imgs">
+          <img
+            src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_4_obj.png"
+            alt="imgs"
+          />
+        </div>
+        <div class="img">
+          <img
+            src="https://pc.wooricard.com/dcpc/img/pc/content/special_mlon_4_bg.png"
+            alt="alt"
+          />
+        </div>
+
+        <span class="shot"
+          ><p>올인원대출</p>
+          <span class="small">(신용대출)</span></span
+        >
+        <span
+          >우리카드가 없어도 서류없이,<br />
+          방문없이, 내 신용만으로</span
+        >
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title></head
+  ><style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .firstmain {
+      box-sizing: border-box;
+      display: block;
+      background: pink;
+      height: 3316px;
+      width: 1897px;
+      padding-bottom: 160px;
+      padding-top: 64px;
+    }
+    .back {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      height: 3092px;
+    }
+    .group {
+      margin: 50px;
+      background: royalblue;
+      height: 100%;
+      width: 100%;
+    }
+    .data {
+      background: ;
+      font-weight: 700;
+      font-size: 40px;
+      margin-bottom: 40px;
+      width: 100%;
+      height: 60px;
+    }
+    .main {
+      font-weight: 400;
+      display: block;
+      box-sizing: border-box;
+      background: whitesmoke;
+      width: 100%;
+      height: 1697px;
+    }
+    .num {
+      color: blue;
+    }
+    .line {
+      width: 0;
+      height: 22;
+      margin: 7px 16px;
+    }
+    .CDS {
+      box-sizing: border-box;
+      display: flex;
+      font-weight: 500;
+      font-size: 24px;
+      margin-bottom: 16px;
+      width: 100%;
+      height: 36px;
+    }
+    .title {
+      background: yellowgreen;
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 73px;
+    }
+    .title2 {
+      box-sizing: border-box;
+      background: yellow;
+      line-height: 150%;
+      font-weight: 500;
+      font-size: 22px;
+      margin-bottom: 1.6rem;
+    }
+    .title3 {
+      box-sizing: border-box;
+      background: violet;
+      font-size: 16px;
+      height: 24px;
+    }
+    .main2 {
+      background: wheat;
+      height: 566px;
+      width: 100%;
+      display: block;
+      box-sizing: border-box;
+      margin-top: 48px;
+    }
+    .main2sub {
+      box-sizing: border-box;
+      background: turquoise;
+      line-height: 27px;
+      font-weight: 500;
+      font-size: 18px;
+      display: block;
+      margin-bottom: 16px;
+      width: 100%;
+      height: 27px;
+    }
+    .main2sub2 {
+      box-sizing: border-box;
+      background: thistle;
+      width: 100%;
+      height: 535px;
+      display: block;
+    }
+    .main2sub2 .sub2-box {
+      box-sizing: border-box;
+      background: teal;
+      flex-wrap: wrap;
+      width: 1224px;
+      display: flex;
+      margin: -12px;
+    }
+    .main2sub2 .sub2-box2 {
+      box-sizing: border-box;
+      flex-wrap: wrap;
+      display: flex;
+      background: steelblue;
+      width: 1224px;
+      height: 254px;
+      margin-right: -12px;
+      margin-left: -12px;
+      margin-bottom: -12px;
+      margin-top: 12px;
+    }
+    .main2sub2 .sub2-box .box-in {
+      box-sizing: border-box;
+      background: skyblue;
+      width: 408px;
+      height: 281px;
+      padding: 12px;
+      display: flex;
+      flex: 0 0 33.33333%;
+    }
+    .box-in .inin {
+      text-align: center;
+      box-sizing: border-box;
+      display: block;
+      background: slateblue;
+      border: 1px solid #e5e5e5;
+      width: 384px;
+      height: 257px;
+      padding: 16px;
+      border-radius: 16px;
+    }
+    .inin .ininin {
+      background: salmon;
+      display: block;
+      box-sizing: border-box;
+      height: 223px;
+      width: 350px;
+      padding: 16px;
+      text-align: center;
+    }
+    .ininin i {
+      vertical-align: middle;
+      text-align: center;
+      position: relative;
+      height: 56px;
+      width: 56px;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-sizing: border-box;
+      display: inline-flex;
+      justify-content: center;
+    }
+    .i1 {
+      background-image: url(https://databada.shinhancard.com/assets/icon_custom_01-D_uGWqzi.png);
+    }
+    .i2 {
+      background-image: url(https://databada.shinhancard.com/assets/icon_custom_02-C3Fg9Baz.png);
+    }
+    .i3 {
+      background-image: url(https://databada.shinhancard.com/assets/icon_custom_03-CBdTtg5L.png);
+    }
+    .i4 {
+      background-image: url(https://databada.shinhancard.com/assets/icon_custom_03-CBdTtg5L.png);
+    }
+    .i5 {
+      background-image: url(https://databada.shinhancard.com/assets/icon_custom_03-CBdTtg5L.png);
+    }
+    .intxt {
+      line-height: 150%;
+      background: silver;
+      width: 318px;
+      height: 33px;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      display: block;
+      font-size: 22px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .intxt2 {
+      line-height: 150%;
+      text-align: center;
+      font-weight: 400;
+      font-size: 18px;
+      display: block;
+      box-sizing: border-box;
+      height: 54px;
+      width: 318px;
+    }
+    .main2sub2 .sub2-box2 .box-in2 {
+      box-sizing: border-box;
+      background: rosybrown;
+      height: 254px;
+      padding: 12px;
+      display: flex;
+      flex: 0 0 50%;
+    }
+    .box-in2 .inin2 {
+      text-align: center;
+      box-sizing: border-box;
+      display: block;
+      background: plum;
+      border: 1px solid #e5e5e5;
+      height: 230px;
+      padding: 16px;
+      border-radius: 16px;
+    }
+    .inin2 .ininin2 {
+      background: seagreen;
+      display: block;
+      box-sizing: border-box;
+      height: 196px;
+      padding: 16px;
+      text-align: center;
+    }
+    .ininin2 i {
+      vertical-align: middle;
+      text-align: center;
+      position: relative;
+      height: 56px;
+      width: 56px;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-sizing: border-box;
+      display: inline-flex;
+      justify-content: center;
+    }
+    .in2txt {
+      line-height: 150%;
+      background: palegreen;
+      height: 33px;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      display: block;
+      font-size: 22px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .in2txt2 {
+      line-height: 150%;
+      text-align: center;
+      font-weight: 400;
+      font-size: 18px;
+      display: block;
+      box-sizing: border-box;
+      height: 27px;
+      width: 522px;
+    }
+    .main3 {
+      background: mediumspringgreen;
+      display: block;
+      box-sizing: border-box;
+      margin-top: 48px;
+      width: 100%;
+      height: 238px;
+    }
+    .main3title {
+      background: red;
+      font-weight: 500;
+      font-size: 18px;
+      box-sizing: border-box;
+      margin-bottom: 16px;
+      height: 27px;
+      width: 100%;
+      display: block;
+    }
+    .main3box {
+      background: olivedrab;
+      display: flex;
+      box-sizing: border-box;
+      align-items: center;
+      height: 195px;
+      width: 100%;
+    }
+    .linebox {
+      display: block;
+      box-sizing: border-box;
+      background: mediumvioletred;
+      height: 163px;
+      width: 232px;
+      padding: 16px;
+    }
+    .main4 {
+      background: orchid;
+      margin-top: 64px;
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 97px;
+    }
+    .main5 {
+      background: orange;
+      display: block;
+      box-sizing: border-box;
+      height: 527px;
+      width: 100%;
+      margin-top: 48px;
+    }
+  </style>
+  <body>
+    <div class="firstmain">
+      <div class="back">
+        <div class="group">
+          <div class="data"><h4>맞춤 Data</h4></div>
+          <div class="main">
+            <div class="CDS">
+              <div class="num">01</div>
+              <hr class="line" />
+              <div class="CDSCtxt">
+                Customized Data Service (CDS, 고객사 맞춤 Data공급)
+              </div>
+            </div>
+            <div class="title">
+              <div class="title2">맞춤 Data상품 공급</div>
+              <div class="title3">
+                고객사 Needs에 부합하는 최적의 Data 상품을 개발하고, 다양한
+                전송방식을 통해 고객사에게 적시 제공하는 신한카드의 Data 서비스
+                입니다.
+              </div>
+            </div>
+            <div class="main2">
+              <div class="main2sub">주요영역</div>
+              <div class="main2sub2">
+                <div class="sub2-box">
+                  <div class="box-in">
+                    <div class="inin">
+                      <div class="ininin">
+                        <i class="i1"></i>
+                        <div class="intxt">Macro Data</div>
+                        <div class="intxt2">
+                          지역경제, 민간소비, 경제효과, 관광/상권 Data 등
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-in">
+                    <div class="inin">
+                      <div class="ininin">
+                        <i class="i2"></i>
+                        <div class="intxt">Macro Data</div>
+                        <div class="intxt2">
+                          지역경제, 민간소비, 경제효과, 관광/상권 Data 등
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-in">
+                    <div class="inin">
+                      <div class="ininin">
+                        <i class="i3"></i>
+                        <div class="intxt">Macro Data</div>
+                        <div class="intxt2">
+                          지역경제, 민간소비, 경제효과, 관광/상권 Data 등
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sub2-box2">
+                  <div class="box-in2">
+                    <div class="inin2">
+                      <div class="ininin2">
+                        <i class="i4"></i>
+                        <div class="in2txt">Macro Data</div>
+                        <div class="in2txt2">
+                          지역경제, 민간소비, 경제효과, 관광/상권 Data 등
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-in2">
+                    <div class="inin2">
+                      <div class="ininin2">
+                        <i class="i5"></i>
+                        <div class="in2txt">Macro Data</div>
+                        <div class="in2txt2">
+                          지역경제, 민간소비, 경제효과, 관광/상권 Data 등
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main3">
+              <div class="main3title">서비스 프로세스</div>
+              <div class="main3box"><div class="linebox"></div></div>
+            </div>
+            <div class="main4"></div>
+            <div class="main5"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
