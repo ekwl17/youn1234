@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .main {
+      background: whitesmoke;
+      height: 5938px;
+      width: 1903px;
+      display: block;
+    }
+    .main2 {
+      margin: 0 auto;
+      height: auto;
+      display: block;
+      background: wheat;
+      padding: 0px 20px 160px;
+      max-width: 1480px;
+    }
+    .this {
+      background: violet;
+      width: 100%;
+      height: 953px;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      display: block;
+    }
+    .title {
+      width: 100%;
+      box-sizing: border-box;
+      background: turquoise;
+      height: 99.188px;
+      box-sizing: border-box;
+      display: block;
+      padding-top: 100px;
+    }
+    .title h3 {
+      text-align: center;
+      background: thistle;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 35px;
+      font-size: 2.25rem;
+      text-align: center;
+      opacity: 1;
+    }
+    .sub {
+      background: steelblue;
+      height: 500px;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      gap: 1rem;
+      margin-top: 138px;
+      display: flex;
+      transition-property: opacity, transform;
+      transition-duration: 0.4s;
+      transition-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+      transform: translateZ(0);
+      opacity: 1;
+    }
+    .box {
+      box-sizing: border-box;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      flex: 1 1 0%;
+      width: 11.55%;
+      height: 31.25rem;
+      box-sizing: border-box;
+      transition: width 0.5s;
+      display: flex;
+    }
+    .sub :nth-child(1) {
+      background-image: url(https://company.ybtour.co.kr/images/bg/bg_category_1.jpg);
+    }
+    .sub :nth-child(2) {
+      background-image: url(https://company.ybtour.co.kr/images/bg/bg_category_2.jpg);
+    }
+    .sub :nth-child(3) {
+      background-image: url(https://company.ybtour.co.kr/images/bg/bg_category_3.jpg);
+    }
+    .sub :nth-child(4) {
+      background-image: url(https://company.ybtour.co.kr/images/bg/bg_category_4.jpg);
+    }
+    .sub :nth-child(5) {
+      background-image: url(https://company.ybtour.co.kr/images/bg/bg_category_5.jpg);
+    }
+
+    .sub :nth-child(6) {
+      background-image: url(https://company.ybtour.co.kr/images/bg/bg_category_6.jpg);
+    }
+    .sub :nth-child(7) {
+      background-image: url(https://company.ybtour.co.kr/images/bg/bg_category_7.jpg);
+    }
+    .sub :nth-child(8) {
+      background-image: url(https://company.ybtour.co.kr/images/bg/bg_category_8.jpg);
+    }
+
+    .boxin {
+      justify-content: center;
+      display: block;
+      text-align: center;
+      z-index: 1;
+      box-sizing: border-box;
+      width: 100%;
+      align-items: center;
+      left: 0px;
+      position: absolute;
+      top: 220px;
+      display: block;
+      height: auto;
+    }
+    .boxin span {
+      width: auto;
+      font-weight: 400;
+      display: inline;
+      text-align: center;
+      font-size: 24px;
+    }
+    .boxin p {
+      background: wheat;
+      display: block;
+      opacity: 0;
+      height: 0;
+      width: 171px;
+      text-align: center;
+      color: aliceblue;
+      box-sizing: border-box;
+    }
+    .box:hover p {
+      opacity: 1;
+    }
+    .box:hover .boxin {
+      display: block;
+      content: "";
+      opacity: 0.2;
+      background: rgb(0, 0, 0);
+      height: 100%;
+      width: 100%;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+    }
+    .box:hover {
+      transition: 0.5s 0.5s;
+      width: 15%;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="main2">
+        <div class="this">
+          <div class="title"><h3>노랑풍선이 만드는 여행</h3></div>
+          <div class="sub">
+            <div class="box">
+              <div class="boxin">
+                <span>Package</span>
+                <p>
+                  전세계 맞춤 패키지여행으로 <br />연인, 친구, 가족과 함께<br />
+                  행복한 추억을 만듭니다.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="boxin">
+                <span>Package</span>
+                <p>
+                  전세계 맞춤 패키지여행으로 <br />연인, 친구, 가족과 함께<br />
+                  행복한 추억을 만듭니다.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="boxin">
+                <span>Package</span>
+                <p>
+                  전세계 맞춤 패키지여행으로 <br />연인, 친구, 가족과 함께<br />
+                  행복한 추억을 만듭니다.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="boxin">
+                <span>Package</span>
+                <p>
+                  전세계 맞춤 패키지여행으로 <br />연인, 친구, 가족과 함께<br />
+                  행복한 추억을 만듭니다.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="boxin">
+                <span>Package</span>
+                <p>
+                  전세계 맞춤 패키지여행으로 <br />연인, 친구, 가족과 함께<br />
+                  행복한 추억을 만듭니다.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="boxin">
+                <span>Package</span>
+                <p>
+                  전세계 맞춤 패키지여행으로 <br />연인, 친구, 가족과 함께<br />
+                  행복한 추억을 만듭니다.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="boxin">
+                <span>Package</span>
+                <p>
+                  전세계 맞춤 패키지여행으로 <br />연인, 친구, 가족과 함께<br />
+                  행복한 추억을 만듭니다.
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="boxin">
+                <span>Package</span>
+                <p>
+                  전세계 맞춤 패키지여행으로 <br />연인, 친구, 가족과 함께<br />
+                  행복한 추억을 만듭니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

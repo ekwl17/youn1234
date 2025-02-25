@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      height: 0;
+    }
+    div {
+      display: block;
+      position: relative;
+    }
+    div img {
+      display: block;
+      width: 500px;
+      height: 300px;
+    }
+    input {
+      display: block;
+      display: none;
+    }
+    div p img {
+      display: block;
+      display: none;
+    }
+    label {
+      margin-top: 300px;
+      justify-content: space-around;
+      height: 60px;
+      width: 500px;
+      align-items: center;
+      display: flex;
+      background: #9cc;
+    }
+    .qwer {
+      display: none;
+      width: 500px;
+      height: 300px;
+    }
+    .name {
+      text-align: center;
+      display: flex;
+      height: 60px;
+      width: 500px;
+    }
+    .name label:hover {
+      background: #669;
+    }
+
+    #photo1:checked ~ .name label:nth-of-type(1),
+    #photo2:checked ~ .name label:nth-of-type(2),
+    #photo3:checked ~ .name label:nth-of-type(3),
+    #photo4:checked ~ .name label:nth-of-type(4),
+    #photo5:checked ~ .name label:nth-of-type(5),
+    #photo6:checked ~ .name label:nth-of-type(6) {
+      background: #699;
+    }
+    #photo1:checked ~ .qwer img,
+    #photo2:checked ~ .qwer img,
+    #photo3:checked ~ .qwer img,
+    #photo4:checked ~ .qwer img,
+    #photo5:checked ~ .qwer img,
+    #photo6:checked ~ .qwer img {
+      display: none;
+    }
+    #photo1:checked ~ div p:first-child img {
+      display: block;
+    }
+    #photo2:checked ~ div p:nth-child(2) img {
+      display: block;
+    }
+    #photo3:checked ~ div p:nth-child(3) img {
+      display: block;
+    }
+    #photo4:checked ~ div p:nth-child(4) img {
+      display: block;
+    }
+    #photo5:checked ~ div p:nth-child(5) img {
+      display: block;
+    }
+    #photo6:checked ~ div p:nth-child(6) img {
+      display: block;
+    }
+  </style>
+  <body>
+    <input type="radio" name="photo" id="photo1" />
+    <input type="radio" name="photo" id="photo2" />
+    <input type="radio" name="photo" id="photo3" />
+    <input type="radio" name="photo" id="photo4" />
+    <input type="radio" name="photo" id="photo5" />
+    <input type="radio" name="photo" id="photo6" />
+    <p class="qwer"></p>
+    <div>
+      <p><img src="./images/photo1.jpg" alt="" /></p>
+      <p><img src="./images/photo2.jpg" alt="" /></p>
+      <p><img src="./images/photo3.jpg" alt="" /></p>
+      <p><img src="./images/photo4.jpg" alt="" /></p>
+      <p><img src="./images/photo1.jpg" alt="" /></p>
+      <p><img src="./images/photo2.jpg" alt="" /></p>
+    </div>
+    <div class="name">
+      <label for="photo1">첫번째</label>
+      <label for="photo2">두번째</label>
+      <label for="photo3">세번째</label>
+      <label for="photo4">네번째</label>
+      <label for="photo5">다섯번째</label>
+      <label for="photo6">여섯번째</label>
+    </div>
+  </body>
+</html>

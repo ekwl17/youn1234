@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>무지개 왕복 애니메이션</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        animation-name: move;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      .q {
+        animation-timing-function: ease;
+      }
+      .w {
+        animation-timing-function: ease-in;
+      }
+      .e {
+        animation-timing-function: ease-out;
+      }
+      .r {
+        animation-timing-function: ease-in-out;
+      }
+      .t {
+        animation-timing-function: linear;
+      }
+      .y {
+        animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+      }
+
+      @keyframes move {
+        0% {
+          left: 0;
+          background: red;
+        }
+        16.6% {
+          background: orange;
+        }
+        33.3% {
+          background: yellow;
+        }
+        50% {
+          background: green;
+        }
+        66.6% {
+          background: blue;
+        }
+        83.3% {
+          background: indigo;
+        }
+        100% {
+          left: 500px;
+          background: violet;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p class="q">ㅎ</p>
+    <p class="w">ㅎㅎ</p>
+    <p class="e">ㅎㅎㅎ</p>
+    <p class="r">ㅎㅎㅎㅎ</p>
+    <p class="t">ㅎㅎㅎㅎㅎ</p>
+    <p class="y">ㅎㅎㅎㅎㅎㅎ</p>
+  </body>
+</html>

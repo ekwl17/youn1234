@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      height: 0;
+    }
+
+    .win {
+      display: block;
+      background: skyblue;
+      width: 1897px;
+      height: 2267px;
+    }
+    .submenu {
+      z-index: 10;
+      border-bottom: 1px solid gray;
+      display: block;
+      background: salmon;
+      height: 100px;
+      margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
+      position: sticky;
+    }
+    .sm {
+      display: block;
+      background: royalblue;
+      margin: 0 auto;
+      max-width: 1480px;
+      height: 100%;
+    }
+    .smsub {
+      background: red;
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      margin: 0 auto;
+      height: 100%;
+      max-width: 1280px;
+    }
+    .smsub1 {
+      background: paleturquoise;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 65px;
+    }
+    .ban {
+      background-image: url(https://www.wjfood.co.kr/uploads/main//5827022b-d6e5-4b86-9088-3640b4443773.png);
+      width: 100%;
+      height: 592.8px;
+    }
+    .main {
+      display: block;
+      height: 452.5px;
+      max-width: 1480px;
+      margin: 80px auto 0;
+      text-align: center;
+      background: wheat;
+    }
+
+    .main h2 {
+      height: 66px;
+      background: turquoise;
+      display: block;
+      margin-bottom: 5px;
+      font-size: 44px;
+    }
+    .main .p {
+      background: violet;
+      font-size: 18px;
+      height: 27px;
+      color: #777;
+      display: block;
+      text-align: center;
+      margin-bottom: -25px;
+    }
+    .menu {
+      background: yellow;
+      height: 34.5px;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      margin: 50px 0;
+      padding: 0 25px;
+      display: flex;
+      gap: 10px;
+    }
+    .menu label:hover {
+      background: teal;
+      border-bottom: 3px solid #71b200;
+      color: #71b200;
+    }
+    .menu label {
+      border-bottom: 3px solid tomato;
+      background: tomato;
+      width: auto;
+      height: auto;
+      font-size: 15px;
+      cursor: pointer;
+      padding: 0 20px 12px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    . menu p {
+      background: yellowgreen;
+      width: 100%;
+      height: 34.5px;
+      font-size: 15px;
+      display: block;
+      cursor: pointer;
+      margin: 0 10px;
+      flex: 1;
+    }
+    .main img {
+      justify-content: center;
+      display: flex;
+      margin-right: 45px;
+      width: 218px;
+      height: 218px;
+    }
+    .sub {
+      width: 1480px;
+      display: flex;
+      height: 220px;
+    }
+    .submein div {
+      display: flex;
+    }
+    .submein {
+      margin: 0 20px;
+      padding: 0 15px;
+    }
+    #photo1:checked ~ .menu label:first-child,
+    #photo2:checked ~ .menu label:nth-child(2),
+    #photo3:checked ~ .menu label:nth-child(3),
+    #photo4:checked ~ .menu label:nth-child(4),
+    #photo5:checked ~ .menu label:nth-child(5),
+    #photo6:checked ~ .menu label:nth-child(6),
+    #photo7:checked ~ .menu label:nth-child(7),
+    #photo8:checked ~ .menu label:nth-child(8) {
+      background: teal;
+      border-bottom: 3px solid #71b200;
+      color: #71b200;
+    }
+
+    #photo1:checked ~ .sub .sub1 img,
+    #photo2:checked ~ .sub .sub2 img,
+    #photo3:checked ~ .sub .sub3 img,
+    #photo4:checked ~ .sub .sub4 img,
+    #photo5:checked ~ .sub .sub5 img,
+    #photo6:checked ~ .sub .sub6 img,
+    #photo7:checked ~ .sub .sub7 img,
+    #photo8:checked ~ .sub .sub8 img {
+      display: flex;
+    }
+
+    .main img {
+      display: none;
+    }
+    .화살표 {
+      width: 62px;
+      height: 100%;
+      align-items: center;
+      /* justify-content: center; */
+      text-align: center;
+      display: flex;
+    }
+    .화살표2 {
+      display: flex;
+      border-radius: 50%;
+      background: slateblue;
+      width: 65px;
+      height: 65px;
+    }
+  </style>
+  <body>
+    <div class="win">
+      <div class="submenu">
+        <div class="sm">
+          <div class="smsub"><div class="smsub1"></div></div>
+        </div>
+      </div>
+      <div class="ban"></div>
+      <div class="main">
+        <h2>웅진 브랜드</h2>
+        <p class="p">맛있고 건강한 웅진식품 대표 브랜드를 확인해보세요</p>
+        <input type="radio" name="photo" id="photo1" />
+        <input type="radio" name="photo" id="photo2" />
+        <input type="radio" name="photo" id="photo3" />
+        <input type="radio" name="photo" id="photo4" />
+        <input type="radio" name="photo" id="photo5" />
+        <input type="radio" name="photo" id="photo6" />
+        <input type="radio" name="photo" id="photo7" />
+        <input type="radio" name="photo" id="photo8" />
+        <div class="menu">
+          <label for="photo1">주스</label>
+          <label for="photo2">차</label>
+          <label for="photo3">곡물</label>
+          <label for="photo4">어린이</label>
+          <label for="photo5">생수/탄산/이온</label>
+          <label for="photo6">홍삼/건강/드링크</label>
+          <label for="photo7">제과</label>
+          <label for="photo8">해외수입제품</label>
+        </div>
+
+        <div class="sub">
+          <div class="화살표"><p class="화살표2"></p></div>
+          <div class="submein">
+            <div class="sub1">
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                alt=""
+              />
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/dad9b103-f115-42a0-b0a5-cfd25561c3be.png"
+                alt=""
+              />
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/ab012b6f-ce24-4d5b-ac20-76541c911f0f.png"
+                alt=""
+              />
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/a3d59de4-4bcd-4a12-ac0d-1a5608544137.png"
+                alt=""
+              />
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/a5699127-9db4-4568-9d60-305e0f20009c.png"
+                alt=""
+              />
+            </div>
+            <div class="sub2">
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/25c76a16-a07f-46b9-b7a4-08d273053a5c.png"
+                alt=""
+              />
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/e30619e8-fe12-4aa9-ab8c-265f01436e49.png"
+                alt=""
+              />
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/eafaa3c6-4a4d-4221-b31a-c36e14bfd3f7.png"
+                alt=""
+              />
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/bf2c7c9a-cd93-4470-b1e3-b0f59e33e6a9.png"
+                alt=""
+              />
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/17e5ada2-b3ee-4573-928f-91a25c1920b5.png"
+                alt=""
+              />
+            </div>
+            <div class="sub3">
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/be03c11b-dbac-4ec9-984f-67a2f9772452.png"
+                alt=""
+              />
+            </div>
+            <div class="sub4">
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/fd015622-9e18-4d71-8d87-c446c80e01cc.png"
+                alt=""
+              />
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/e75b40f1-12ad-4642-acfd-823845df9283.png"
+                alt=""
+              />
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/9827e987-5dde-4fd2-9d89-c7a28a4c9618.png"
+                alt=""
+              />
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/35514abd-8acd-45ac-8660-3175bd56bdc1.png"
+                alt=""
+              />
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/d6fabdcd-a8b9-4ce9-b461-ec0882658233.png"
+                alt=""
+              />
+            </div>
+            <div class="sub5">
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/e12c803a-aa7a-45a0-bb5f-7cbc53621087.png"
+                alt=""
+              /><img
+                src="https://www.wjfood.co.kr/uploads/brand/4b9a2a4c-a257-48a8-b4da-f63bbd4fe651.png"
+                alt=""
+              />
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/7507b95a-e5fc-474d-b254-8f76f0fffa7f.png"
+                alt=""
+              />
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/f4c90fe7-a1db-4c32-b804-677066facc82.png"
+                alt=""
+              />
+            </div>
+            <div class="sub6">
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/101db18c-d5b8-4c0b-b401-bdae05dec587.png"
+                alt=""
+              /><img
+                src="https://www.wjfood.co.kr/uploads/brand/68a17608-0532-4e7a-89bf-5e002b5fdfe5.png"
+                alt=""
+              /><img
+                src="https://www.wjfood.co.kr/uploads/brand/8b60c790-47e2-4e46-85ac-7fd95a192a7b.png"
+                alt=""
+              /><img
+                src="https://www.wjfood.co.kr/uploads/brand/d1cec35e-a60c-4aef-962f-9f3a2ba497e5.png"
+                alt=""
+              /><img
+                src="https://www.wjfood.co.kr/uploads/brand/7189de5b-92ca-4a6b-8b7e-080b43fae7ff.png"
+                alt=""
+              />
+            </div>
+            <div class="sub7">
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/ebf54189-0e17-4376-89ce-842511533d2d.png"
+                alt=""
+              />
+            </div>
+            <div class="sub8">
+              <img
+                src="https://www.wjfood.co.kr/uploads/brand/4733126d-f06f-47b5-ab27-1944b7a540e6.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="화살표"><p class="화살표2"></p></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

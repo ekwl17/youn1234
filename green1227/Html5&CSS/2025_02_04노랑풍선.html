@@ -15,11 +15,11 @@
       list-style: none;
     }
     ul.yellow {
+      background: wheat;
       width: 1480px;
       margin: 50px auto;
       height: 500px;
       display: flex;
-      /* justify-content: space-between; */
       gap: calc(10% / 7);
     }
     ul.yellow li {
@@ -34,63 +34,136 @@
       display: flex;
       transition: 0.5s;
     }
-    ul.yellow li div {
+    ul.yellow li .box {
       width: 80%;
       position: relative;
       top: 10%;
-      background: yellowgreen;
     }
-    ul.yellow li div p {
+    ul.yellow li .box p {
       word-break: keep-all;
     }
-    ul.yellow li:hover div {
+    ul.yellow li:hover .box {
       top: 0%;
     }
-    ul.yellow li div p:first-child {
+    ul.yellow li .box .txt1 {
       background: violet;
-
-      transition: 2s;
+      transition: 0s;
     }
-    ul.yellow li:hover div p:first-child {
-      display: none;
+    ul.yellow li:hover .box .txt1 {
+      font-size: 30px;
+      transition: 0s;
     }
-    ul.yellow li div p:last-child {
+    ul.yellow li .box .txt2 {
       opacity: 0;
       width: 100%;
       position: absolute;
     }
-    ul.yellow li:hover div p:last-child {
+    ul.yellow li:hover .box .txt2 {
       opacity: 1;
       transition: 0.5s 0.5s;
     }
     ul.yellow li:hover {
       width: 300px;
     }
+    ul.yellow li:hover .txt2 {
+      background: none;
+    }
+
+    .yellow :nth-child (1) {
+      background-image: url(https://company.ybtour.co.kr/images/bg/bg_category_1.jpg);
+    }
+    .yellow :nth-child(2) {
+      background-image: url(https://company.ybtour.co.kr/images/bg/bg_category_2.jpg);
+    }
+    .yellow :nth-child(3) {
+      background-image: url(https://company.ybtour.co.kr/images/bg/bg_category_3.jpg);
+    }
+    .yellow :nth-child(4) {
+      background-image: url(https://company.ybtour.co.kr/images/bg/bg_category_4.jpg);
+    }
+    .yellow :nth-child(5) {
+      background-image: url(https://company.ybtour.co.kr/images/bg/bg_category_5.jpg);
+    }
+
+    .yellow :nth-child(6) {
+      background-image: url(https://company.ybtour.co.kr/images/bg/bg_category_6.jpg);
+    }
+    .yellow :nth-child(7) {
+      background-image: url(https://company.ybtour.co.kr/images/bg/bg_category_7.jpg);
+    }
+    .yellow :nth-child(8) {
+      background-image: url(https://company.ybtour.co.kr/images/bg/bg_category_8.jpg);
+    }
   </style>
   <body>
     <ul class="yellow">
       <li>
-        <div>
-          <p>package</p>
-          <p>
+        <div class="box">
+          <p class="txt1">package</p>
+          <p class="txt2">
             전세계 맞춤 패키지여행으로 연인, 친구, 가족과 함꼐 행복한 추억을
             만듭니다.
           </p>
         </div>
       </li>
       <li>
-        <div>
-          <p>package</p>
-          <p>
+        <div class="box">
+          <p class="txt1">package</p>
+          <p class="txt2">
             전세계 맞춤 패키지여행으로 연인, 친구, 가족과 함꼐 행복한 추억을
             만듭니다.
           </p>
         </div>
       </li>
       <li>
-        <div>
-          <p>package</p>
-          <p>
+        <div class="box">
+          <p class="txt1">package</p>
+          <p class="txt2">
+            전세계 맞춤 패키지여행으로 연인, 친구, 가족과 함꼐 행복한 추억을
+            만듭니다.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <p class="txt1">package</p>
+          <p class="txt2">
+            전세계 맞춤 패키지여행으로 연인, 친구, 가족과 함꼐 행복한 추억을
+            만듭니다.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <p class="txt1">package</p>
+          <p class="txt2">
+            전세계 맞춤 패키지여행으로 연인, 친구, 가족과 함꼐 행복한 추억을
+            만듭니다.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <p class="txt1">package</p>
+          <p class="txt2">
+            전세계 맞춤 패키지여행으로 연인, 친구, 가족과 함꼐 행복한 추억을
+            만듭니다.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <p class="txt1">package</p>
+          <p class="txt2">
+            전세계 맞춤 패키지여행으로 연인, 친구, 가족과 함꼐 행복한 추억을
+            만듭니다.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="box">
+          <p class="txt1">package</p>
+          <p class="txt2">
             전세계 맞춤 패키지여행으로 연인, 친구, 가족과 함꼐 행복한 추억을
             만듭니다.
           </p>

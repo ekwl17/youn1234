@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>파스텔 왕복 애니메이션</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 50px;
+      }
+
+      p {
+        font-size: 9px;
+        padding-top: 20px;
+        text-align: center;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        animation-name: move;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        transition: background 1s ease-in-out;
+      }
+
+      .q {
+        animation-timing-function: ease;
+      }
+      .w {
+        animation-timing-function: ease-in;
+      }
+      .e {
+        animation-timing-function: ease-out;
+      }
+      .r {
+        animation-timing-function: ease-in-out;
+      }
+      .t {
+        animation-timing-function: linear;
+      }
+      .y {
+        animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+      }
+
+      @keyframes move {
+        0% {
+          top: 0;
+          background: #ffadad;
+        }
+        33% {
+          background: #ffd6a5;
+        }
+        66% {
+          background: #fdffb6;
+        }
+        100% {
+          top: 250px;
+          background: #caffbf;
+        }
+      }
+
+      @keyframes move {
+        0% {
+          top: 0;
+          background: #ffadad;
+        }
+        33% {
+          background: #ffd6a5;
+        }
+        66% {
+          background: #fdffb6;
+        }
+        100% {
+          top: 250px;
+          background: #caffbf;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <dotlottie-player
+      src="https://lottie.host/e831a072-77bf-4884-8f64-8ec8a5aec87c/oJFgkKlrZf.lottie"
+      background="transparent"
+      speed="1"
+      style="width: 300px; height: 300px"
+      loop
+      autoplay
+    ></dotlottie-player>
+    <div class="container">
+      <p class="q">'__'</p>
+      <p class="w">' ㅂ '</p>
+      <p class="e1" style="animation-delay: 0s">' ㅅ '</p>
+      <p class="e2" style="animation-delay: 0.2s">' ㅅ '</p>
+      <p class="e3" style="animation-delay: 0.4s">' ㅅ '</p>
+      <p class="e4" style="animation-delay: 0.6s">' ㅅ '</p>
+      <p class="e5" style="animation-delay: 0.8s">' ㅅ '</p>
+      <p class="e6" style="animation-delay: 1s">' ㅅ '</p>
+      <p class="e7" style="animation-delay: 1.2s">' ㅅ '</p>
+      <p class="e8" style="animation-delay: 1.4s">' ㅅ '</p>
+      <p class="e9" style="animation-delay: 1.6s">' ㅅ '</p>
+      <p class="e10" style="animation-delay: 1.8s">' ㅅ '</p>
+      <p class="e11" style="animation-delay: 2s">' ㅅ '</p>
+      <p class="e12" style="animation-delay: 2.2s">' ㅅ '</p>
+      <p class="e13" style="animation-delay: 2.4s">' ㅅ '</p>
+      <p class="e14" style="animation-delay: 2.6s">' ㅅ '</p>
+      <p class="e15" style="animation-delay: 2.8s">' ㅅ '</p>
+      <p class="e16" style="animation-delay: 3s">' ㅅ '</p>
+      <p class="e17" style="animation-delay: 3.2s">' ㅅ '</p>
+      <p class="e18" style="animation-delay: 3.4s">' ㅅ '</p>
+      <p class="e19" style="animation-delay: 3.6s">' ㅅ '</p>
+      <p class="r">' 0 '</p>
+      <p class="t">ㅠ _ ㅠ</p>
+      <p class="y">ㅡ ㅂ ㅡ</p>
+    </div>
+  </body>
+</html>

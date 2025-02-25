@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>파스텔 왕복 애니메이션</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 50px;
+      }
+
+      p {
+        padding-top: 40px;
+        text-align: center;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        animation-name: move;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        transition: background 1s ease-in-out;
+      }
+
+      .q {
+        animation-timing-function: ease;
+      }
+      .w {
+        animation-timing-function: ease-in;
+      }
+      .e {
+        animation-timing-function: ease-out;
+      }
+      .r {
+        animation-timing-function: ease-in-out;
+      }
+      .t {
+        animation-timing-function: linear;
+      }
+      .y {
+        animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+      }
+
+      @keyframes move {
+        0% {
+          top: 0;
+          background: #ffadad;
+        }
+        33% {
+          background: #ffd6a5;
+        }
+        66% {
+          background: #fdffb6;
+        }
+        100% {
+          top: 250px;
+          background: #caffbf;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="q">'__'</p>
+      <p class="w">' ㅂ '</p>
+      <p class="e">' ㅅ '</p>
+      <p class="r">' 0 '</p>
+      <p class="t">ㅠ _ ㅠ</p>
+      <p class="y">ㅡ ㅂ ㅡ</p>
+    </div>
+  </body>
+</html>

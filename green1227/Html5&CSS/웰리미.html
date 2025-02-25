@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      align-items: center;
+      display: flex;
+      margin: 0 auto;
+      width: 1400px;
+      height: 82px;
+    }
+    .sub {
+      display: block;
+      padding: 0;
+      margin: 0;
+      height: 40px;
+      width: 167px;
+    }
+    .sub2 {
+      position: relative;
+      display: block;
+      width: 99px;
+      left: 0px;
+    }
+    .one {
+      mix-blend-mode: multiply;
+      width: 39%;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 0px;
+    }
+    .one img {
+      width: 100%;
+      opacity: 1;
+      transform: scale(1);
+      border: 0 none;
+      width: 100%;
+    }
+    .two {
+      mix-blend-mode: multiply;
+      width: 39%;
+      display: inline-block;
+      top: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+    .two img {
+      width: 100%;
+      opacity: 1;
+      transform: scale(1);
+    }
+    .three {
+      mix-blend-mode: multiply;
+      width: 39%;
+      display: inline-block;
+      top: 50%;
+      position: absolute;
+      right: 0px;
+    }
+    .three img {
+      width: 100%;
+      opacity: 1;
+      transform: scale(1);
+    }
+  </style>
+  <body>
+    <div class="header">
+      <div class="sub">
+        <div class="sub2">
+          <span class="one"
+            ><img
+              src="https://hg.mirae-n.com/front/images/main_new/logo01.svg"
+              alt=""
+          /></span>
+          <span class="two"
+            ><img
+              src="https://hg.mirae-n.com/front/images/main_new/logo02.svg"
+              alt=""
+          /></span>
+          <span class="three"
+            ><img
+              src="https://hg.mirae-n.com/front/images/main_new/logo03.svg"
+              alt=""
+          /></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
