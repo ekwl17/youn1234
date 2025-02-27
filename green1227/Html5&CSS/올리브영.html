@@ -10,15 +10,34 @@
       margin: 0;
       padding: 0;
     }
-    img {
+    div {
       position: absolute;
       width: 960px;
       height: 640px;
       object-fit: cover;
     }
+    img {
+      position: absolute;
+      width: 960px;
+      height: 640px;
+      object-fit: cover;
+      transition: 1s;
+    }
+    .big {
+      overflow: hidden;
+      height: 640px;
+      width: 960px;
+    }
+    div:hover .big > img {
+      align-items: center;
+      text-align: center;
+      transform: scale(10);
+    }
   </style>
   <body>
-    <img src="./images/photo1.jpg" alt="" />
-    <img src="./images/shape.svg" alt="" />
+    <div>
+      <img src="./images/photo1.jpg" alt="" />
+      <div class="big"><img src="./images/shape.svg" alt="" /></div>
+    </div>
   </body>
 </html>

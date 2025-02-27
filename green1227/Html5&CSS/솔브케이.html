@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      display: block;
+      min-height: 750px;
+      top: 0;
+      left: 0;
+      width: 1912px;
+      height: 953px;
+      position: relative;
+      transition: 0.3s;
+      box-sizing: border-box;
+      overflow: auto;
+    }
+
+    .header {
+      top: 0px;
+      transition: 0.3s;
+      background: none;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      position: fixed;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      vertical-align: baseline;
+      background-origin: padding-box;
+      align-items: center;
+      height: 74px;
+    }
+    .head {
+      height: 34px;
+      font-size: 14px;
+      vertical-align: baseline;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      min-width: 200px;
+    }
+    .head .logo {
+      align-content: center;
+      box-sizing: border-box;
+      display: flex;
+      margin: 0px;
+      perspective: 1000px;
+      height: 34px;
+      width: 34px;
+      z-index: 3;
+      justify-content: center;
+      vertical-align: baseline;
+    }
+    .head .logo a {
+      display: block;
+      color: #000;
+      text-decoration: none;
+    }
+    .logo svg {
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-size: cover;
+      fill: rgb(35, 35, 35);
+      color: black;
+      height: 34px;
+      width: 34px;
+    }
+    .right {
+      width: 34px;
+      height: 34px;
+      margin: 0;
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+    }
+    .right button {
+      width: 34px;
+      height: 29px;
+      display: block;
+      box-sizing: border-box;
+      color: #000;
+      background: none;
+      border: none;
+    }
+    .menubox {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      width: 34px;
+      gap: 7px;
+      display: flex;
+      flex-direction: column;
+      background: #0000;
+      position: relative;
+      z-index: 3;
+      transition: 0.3s;
+    }
+    .menubox span {
+      cursor: pointer;
+      background: turquoise;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      transition: 0.3s;
+      height: 5px;
+      width: 34px;
+    }
+    .menu {
+      text-align: center;
+      top: 0;
+      left: 100%;
+      position: absolute;
+      width: 1912px;
+      height: 953px;
+      background-color: rgb(0 0 0);
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      justify-content: center;
+      align-items: center;
+      transition: 1s;
+    }
+    .main {
+      width: 1912px;
+      height: 8824.59px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      display: block;
+    }
+    .mainimg {
+      width: 100% !important;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: #fff;
+      justify-content: center;
+      object-fit: cover;
+      align-items: center;
+    }
+    .web {
+      justify-content: center;
+      align-items: center;
+      object-fit: cover;
+      height: 100%;
+      display: flex;
+    }
+    .section3 {
+      width: 1912px;
+      height: 1048.3px;
+      display: block;
+    }
+    .this {
+      margin: 0 auto;
+      background-color: #ffd678;
+      justify-content: center;
+      align-items: center;
+      height: 110vh;
+      display: grid;
+      overflow: hidden;
+      min-height: 932px;
+    }
+    .this2 {
+      height: 650px;
+      width: 650px;
+      transition-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+      opacity: 1;
+      transform: translateZ(0);
+      transition-duration: 0.8s;
+      transition-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+      transition-property: opacity, transform;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .imgg {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: url(https://solvek.co.kr/css/img/c-txt-box.png) 50% 50% /
+        contain no-repeat;
+      height: 800px;
+      width: 800px;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      animation: rotatebox 38 slinear infinite;
+      transform-origin: 50% 50%;
+      animation-name: rotate;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    .imgg2 {
+      vertical-align: baseline;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      width: 650px;
+      height: 650px;
+      background-color: #fff;
+      border-radius: 1000px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      transition: 0.3s;
+    }
+    .imgg2-1 {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: baseline;
+      opacity: 1;
+      transform: translateZ(0);
+      background: url(https://solvek.co.kr/css/img/y-bg.png) 50% 50% / contain
+        no-repeat;
+      width: 393px;
+      height: 332px;
+      transition-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+      transition-property: opacity, transform;
+      animation-name: ruru 0.5s infinite alternate;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation: move 0.5s infinite alternate;
+    }
+    .but1 {
+      opacity: 1;
+      transform: translateZ(0);
+      text-transform: uppercase;
+      background: initial;
+      border: 1px solid #000;
+      border-radius: 500px;
+      font-size: 20px;
+      width: 274px;
+      height: 80px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-timing-function: linear;
+      transition-property: opacity, transform;
+    }
+    @keyframes move {
+      0% {
+        transform: translateY(0);
+        animation-timing-function: ease-in;
+      }
+      50% {
+        transform: translateY(5px);
+      }
+      100% {
+        transform: translateY(10px);
+        animation-timing-function: ease-out;
+      }
+    }
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    .me {
+      transition: 0.3s;
+      position: relative;
+      height: 82px;
+      margin: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .list {
+      text-transform: uppercase;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      font-weight: 900;
+      color: #fff;
+      font-size: 80px;
+      height: 80px;
+    }
+    .list a {
+      text-decoration: none;
+      color: #fff;
+      display: flex;
+    }
+    .list a .atxt {
+      display: flex;
+    }
+    #menu-toggle:checked ~ .menu {
+      left: 0;
+    }
+    #menu-toggle:checked ~ button label div :nth-child(2) {
+      position: absolute;
+      opacity: 0;
+    }
+    #menu-toggle:checked ~ button label div :nth-child(1) {
+      position: absolute;
+      left: 0px;
+      top: 0;
+      transform: rotate(46deg);
+    }
+    #menu-toggle:checked ~ button label div :nth-child(3) {
+      position: absolute;
+      left: 0px;
+      top: 0;
+      transform: rotate(-46deg);
+    }
+    .toggle {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      transition: 0.3s;
+      height: 5px;
+      width: 34px;
+    }
+  </style>
+  <body>
+    <header class="header">
+      <div class="head">
+        <h1 class="logo">
+          <a href="#"
+            ><svg
+              class="img"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0.2 30C0.0895431 30 0 29.9105 0 29.8V5.00005C0 5.00001 3.03049e-05 4.99998 6.76878e-05 4.99998C8.56398e-05 4.99998 0.000102999 4.99997 0.000115693 4.99996L4.9415 0.0585787C4.97901 0.0210714 5.02988 0 5.08292 0H14.8C14.9105 0 15 0.0895426 15 0.2V4.51718C15 4.69536 15.2154 4.7846 15.3414 4.6586L19.9414 0.0585787C19.979 0.0210714 20.0298 0 20.0829 0H29.8C29.9105 0 30 0.0895431 30 0.2V9.91711C30 9.97015 29.9789 10.021 29.9414 10.0585L25.1413 14.8586C25.0632 14.9367 25.0632 15.0633 25.1413 15.1414L29.9414 19.9415C29.9789 19.979 30 20.0299 30 20.0829V29.8C30 29.9105 29.9105 30 29.8 30H20.0827C20.0297 30 19.9788 29.9789 19.9413 29.9414L15.1413 25.1414C15.0632 25.0633 14.9366 25.0633 14.8585 25.1414L10.0585 29.9414C10.021 29.9789 9.97015 30 9.91711 30H0.2Z"
+              ></path></svg
+          ></a>
+        </h1>
+        <div class="right">
+          <input type="checkbox" id="menu-toggle" class="toggle" />
+          <button type="button">
+            <label for="menu-toggle">
+              <div class="menubox">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </label>
+          </button>
+          <div class="menu">
+            <div class="me">
+              <div class="list">
+                <a href="#"><div class="atxt">ABOUT</div></a>
+              </div>
+            </div>
+            <div class="me">
+              <div class="list">
+                <a href="#"><div class="atxt">OUR PROJECT</div></a>
+              </div>
+            </div>
+            <div class="me">
+              <div class="list">
+                <a href="#"><div class="atxt">CONTENTS</div></a>
+              </div>
+            </div>
+            <div class="me">
+              <div class="list">
+                <a href="#"><div class="atxt">BRAND</div></a>
+              </div>
+            </div>
+            <div class="me">
+              <div class="list">
+                <a href="#"><div class="atxt">JOIN US</div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="mainimg">
+        <video width="100%" class="web" loop autoplay>
+          <source
+            src="https://solvek.co.kr/css/img/brand_web1.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </section>
+      <section class="section2"></section>
+      <section class="section3">
+        <div class="this">
+          <div class="this2">
+            <div class="imgg"></div>
+            <div class="imgg2">
+              <div class="imgg2-1"></div>
+              <button class="but1">Join us!</button>
+              <div class="imgg2-2"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section4"></section>
+    </main>
+    <div class="contents"></div>
+    <div class="page"></div>
+    <div class="company"></div>
+    <div class="join"></div>
+  </body>
+</html>

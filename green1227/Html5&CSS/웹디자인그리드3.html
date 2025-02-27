@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title></head
+  ><style>
+    /* grid-template-columns: 100px 200px 300px ; */
+    /* column-gap: 10px;
+      row-gap: 20px; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(3, 1fr); */
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .grid {
+      height: 700px;
+      /* grid-template-columns: repeat(3, 300px); */
+      grid-template-areas:
+        "a b c "
+        "d e e "
+        " d f f ";
+      grid-template-columns: 200px 400px auto;
+      grid-template-rows: auto 60px 60px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-area: auto;
+    }
+
+    .logo {
+      background-color: wheat;
+      grid-area: a;
+    }
+    .menu {
+      background-color: turquoise;
+
+      grid-area: b;
+    }
+    .slid {
+      background-color: whitesmoke;
+      grid-area: c;
+    }
+    .notiec {
+      background-color: tomato;
+      grid-area: d;
+    }
+
+    .go {
+      background-color: aqua;
+      grid-area: e;
+    }
+
+    .copyright {
+      background-color: steelblue;
+      grid-area: f;
+    }
+    .sns {
+      background-color: snow;
+      grid-area: g;
+    }
+  </style>
+  <body>
+    <div class="grid">
+      <div class="logo">logoba</div>
+      <div class="menu">menu</div>
+      <div class="slid">slid</div>
+      <div class="notiec">notiec</div>
+      <div class="go">go</div>
+      <div class="copyright">copyright</div>
+    </div>
+  </body>
+</html>
