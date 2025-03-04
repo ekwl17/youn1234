@@ -1,0 +1,238 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+body {
+  font-family: Arial, 돋움, Dotum, sans-serif;
+}
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 200px);
+  grid-template-rows: 100px 300px 200px 100px;
+  grid-template-areas:
+    "logo menu menu menu menu menu"
+    "slide slide slide slide slide slide"
+    "c1 c1 banner banner go go"
+    "footlogo copyright copyright copyright copyright sns";
+}
+.wrap .logo {
+  line-height: 100px;
+  grid-area: logo;
+}
+.wrap .logo img {
+  vertical-align: middle;
+}
+.wrap .menu {
+  position: relative;
+  grid-area: menu;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.wrap .menu > ul {
+  height: 50px;
+  width: 600px;
+  display: flex;
+}
+.wrap .menu > ul > li {
+  width: 25%;
+  position: relative;
+  background: yellow;
+}
+.wrap .menu > ul > li > a {
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  height: 100%;
+  display: block;
+  border: 1px solid #333;
+  border-left: none;
+  box-sizing: border-box;
+}
+.wrap .menu > ul > li:hover > a,
+.wrap .menu > ul > li .sub li a:hover {
+  background: #333;
+  color: aliceblue;
+}
+.wrap .menu > ul > li:first-child > a {
+  border-left: 1px solid #333;
+}
+.wrap .menu > ul > li .sub {
+  z-index: 1;
+
+  left: 0;
+  width: 100%;
+  top: 50px;
+  position: absolute;
+  text-align: center;
+  transition: 0.5s;
+  height: 0;
+  overflow: hidden;
+}
+.wrap .menu > ul:hover > li .sub {
+  height: 120px;
+}
+/* .wrap .menu > ul > li:nth-child(1) .sub {
+  border-left: 1px solid #333;
+}
+.wrap .menu > ul > li:nth-child(4) .sub {
+  border-right: 1px solid #333;
+} */
+.wrap .menu > ul > li .sub li a {
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 30px;
+  border-bottom: 1px solid #333;
+}
+.wrap .menu .bg {
+  transition: 0.5s;
+  left: -200px;
+  background: #333;
+  height: 0;
+  width: 1200px;
+  top: 75px;
+  position: absolute;
+}
+.wrap .menu > ul:hover ~ .bg {
+  height: 120px;
+}
+.wrap .slide {
+  grid-area: slide;
+}
+.wrap .notice {
+  grid-area: notice;
+}
+.wrap .banner {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  background: whitesmoke;
+  grid-area: banner;
+}
+.wrap .banner img {
+  height: 150px;
+  margin-right: 20px;
+  display: flex;
+  height: 60px;
+}
+.wrap .go {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  background: whitesmoke;
+  grid-area: go;
+}
+.wrap .go img {
+  margin-right: 20px;
+  display: flex;
+  height: 60px;
+}
+.wrap .footlogo {
+  grid-area: footlogo;
+}
+
+.wrap .copyright {
+  grid-area: copyright;
+}
+.wrap .sns {
+  grid-area: sns;
+}
+.wrap .c1 {
+  grid-area: c1;
+}
+.wrap .c1 .notice {
+  width: 90%;
+  margin: 10px auto;
+}
+.wrap .c1 .notice .btn {
+  position: relative;
+  z-index: 1;
+  height: 40px;
+}
+.wrap .c1 .notice input {
+  display: none;
+}
+.wrap .c1 .notice .btn li {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #333;
+  border-right: none;
+  background: #fff;
+}
+.wrap .c1 .notice .btn li:last-child {
+  left: 100px;
+  border-right: 1px solid #333;
+}
+.wrap .c1 .notice .btn li:last-child {
+  left: 100px;
+  border: 1px solid #333;
+}
+.wrap .c1 .notice .con {
+  border: 1px solid #333;
+  height: 145px;
+  position: relative;
+  top: -1px;
+}
+.wrap .c1 .notice .con li div {
+  width: 360px;
+  align-items: center;
+  height: 140px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.wrap .c1 .notice .con img {
+  width: 100px;
+}
+.wrap .c1 .notice .con li {
+  display: none;
+  position: absolute;
+}
+#notice:checked ~ .btn li:first-child,
+#gallery:checked ~ .btn li:last-child {
+  border-bottom: none;
+}
+#notice:checked ~ .con li:first-child table {
+  height: 100%;
+  table-layout: fixed;
+  width: 100%;
+  font-size: 14px;
+}
+#notice:checked ~ .con li:first-child table td {
+  padding: 2px;
+}
+
+#notice:checked ~ .con li:first-child table td:first-child {
+  width: 70%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#notice:checked ~ .con li:first-child table td:last-child {
+  text-align: right;
+}
+#notice:checked ~ .con li:first-child,
+#gallery:checked ~ .con li:last-child {
+  display: block;
+}
+.wrap .c3 {
+  grid-area: c3;
+}
