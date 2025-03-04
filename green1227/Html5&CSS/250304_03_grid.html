@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    body {
+      font-family: Arial, 돋움, Dotum, sans-serif;
+    }
+    .wrap {
+      display: grid;
+      height: 700px;
+      width: 1200px;
+      margin: 0 auto;
+      grid-template-columns: repeat(6, 200px);
+      grid-template-rows: 100px 300px 200px 100px;
+      grid-template-areas:
+        "logo menu menu menu menu menu"
+        "slide slide slide slide slide slide"
+        "c1 c1 c3 c3 c4 c4"
+        "ftlogo copy copy copy copy sns";
+    }
+    .logo {
+      background: whitesmoke;
+      grid-area: logo;
+    }
+    .menu {
+      background: wheat;
+      grid-area: menu;
+    }
+    .slide {
+      background: teal;
+      grid-area: slide;
+    }
+    .c1 {
+      background: skyblue;
+      grid-area: c1;
+    }
+    .c3 {
+      background: slategray;
+      grid-area: c3;
+    }
+    .c4 {
+      background: salmon;
+      grid-area: c4;
+    }
+    .ftlogo {
+      background: sandybrown;
+      grid-area: ftlogo;
+    }
+    .copy {
+      background: plum;
+      grid-area: copy;
+    }
+    .sns {
+      background: pink;
+      grid-area: sns;
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <div class="logo">로고</div>
+      <div class="menu"></div>
+      <div class="slide">슬라이드</div>
+      <div class="c1">공지사항갤러리</div>
+      <div class="c3">배너</div>
+      <div class="c4">바로가기</div>
+      <div class="ftlogo">로고2</div>
+      <div class="copy">카피라이트</div>
+      <div class="sns">sns</div>
+    </div>
+  </body>
+</html>
