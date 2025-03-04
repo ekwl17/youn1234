@@ -168,6 +168,7 @@ body {
   display: none;
 }
 .wrap .c1 .notice .btn li {
+  background: silver;
   box-sizing: border-box;
   position: absolute;
   width: 100px;
@@ -176,17 +177,22 @@ body {
   text-align: center;
   border: 1px solid #333;
   border-right: none;
-  background: #fff;
 }
-.wrap .c1 .notice .btn li:last-child {
-  left: 100px;
-  border-right: 1px solid #333;
+.wrap .c1 .notice .btn li label {
+  display: block;
+  height: 100%;
+  cursor: pointer;
+  width: 100px;
 }
+
 .wrap .c1 .notice .btn li:last-child {
   left: 100px;
   border: 1px solid #333;
 }
 .wrap .c1 .notice .con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #333;
   height: 145px;
   position: relative;
@@ -208,6 +214,7 @@ body {
 }
 #notice:checked ~ .btn li:first-child,
 #gallery:checked ~ .btn li:last-child {
+  background: #fff;
   border-bottom: none;
 }
 #notice:checked ~ .con li:first-child table {
@@ -235,4 +242,39 @@ body {
 }
 .wrap .c3 {
   grid-area: c3;
+}
+#popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+#popup .inner {
+  left: 50%;
+  top: 50%;
+  background: #fff;
+  height: 350px;
+  width: 600px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#popup .inner h3 {
+  padding: 20px;
+}
+#popup .inner p {
+  padding: 20px 20px 0;
+}
+#popup .inner p.close {
+  text-align: right;
+}
+#popup .inner p.close a {
+  border: 1px solid #333;
+  padding: 10px 20px;
+}
+#popup:target {
+  display: block;
 }
