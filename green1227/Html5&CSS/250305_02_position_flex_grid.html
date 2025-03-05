@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body > div {
+      width: 500px;
+      height: 500px;
+      border: 30px groove aquamarine;
+      margin: 20px;
+    }
+    .con1 {
+      position: relative;
+    }
+    /* p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border: 1px solid;
+      height: 200px;
+      width: 200px;
+    } */
+    .con1 p {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      background: yellow;
+    }
+    .con2 {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+    .con3 {
+      align-items: center;
+      justify-content: center;
+      display: grid;
+    }
+    .con4 {
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid;
+      height: 200px;
+      justify-content: center;
+      justify-items: center;
+      align-content: center;
+      align-items: center;
+      text-align: center;
+      display: grid;
+    }
+    .con4 a {
+      border: 1px solid;
+      width: 200px;
+      height: auto;
+      position: relative;
+    }
+    .co1 {
+      display: grid;
+      border: 1px solid;
+      justify-content: center;
+    }
+    .co2 {
+      justify-items: center;
+      display: grid;
+      border: 1px solid;
+    }
+    .co3 {
+      align-content: center;
+      display: grid;
+      border: 1px solid;
+    }
+    .co4 {
+      align-items: center;
+      display: grid;
+      border: 1px solid;
+    }
+    .co5 {
+      text-align: center;
+      display: grid;
+      border: 1px solid;
+    }
+    p {
+      background: wheat;
+    }
+  </style>
+  <body>
+    <div class="con1">
+      <p>positiona</p>
+    </div>
+    <div class="con2"><p>flex</p></div>
+    <div class="con3"><p>grid</p></div>
+    <section class="con4">
+      <a href="">grid<br />123456789<br />123456789</a>
+      <a href="">grid</a>
+      <a href="">grid</a>
+      <a href="">grid</a>
+    </section>
+    <div class="co1">
+      <p>안녕하세요<br />안녕하세요</p>
+      <p>안녕하세요</p>
+    </div>
+    <div class="co2">
+      <p>안녕하세요<br />안녕하세요</p>
+      <p>안녕하세요</p>
+    </div>
+    <div class="co3">
+      <p>안녕하세요<br />안녕하세요</p>
+      <p>안녕하세요</p>
+    </div>
+    <div class="co4">
+      <p>안녕하세요<br />안녕하세요</p>
+      <p>안녕하세요</p>
+    </div>
+    <div class="co5">
+      <p>안녕하세요<br />안녕하세요</p>
+      <p>안녕하세요</p>
+    </div>
+  </body>
+</html>

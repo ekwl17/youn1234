@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      margin: 20px 20px;
+      border: 2px solid red;
+      list-style: none; /* 기본 리스트 스타일(점 등)을 제거 */
+      display: grid; /* 부모 요소인 ul을 그리드 컨테이너로 설정 */
+      grid-template: 100px 300px 200px 100px / 200px 200px 400px 200px 200px;
+      /* 그리드의 행(row)과 열(column) 크기 정의 */
+      /* 행 크기: 100px, 300px, 200px, 100px */
+      /* 열 크기: 200px, 200px, 400px, 200px, 200px */
+
+      /* grid:grid-template-rows /gird-template-columns; */
+    }
+
+    ul li {
+      background: gray;
+      border: 2px dotted;
+    }
+
+    ul li:first-child {
+      grid-column-start: 3; /* 첫 번째 li 요소가 3번째 열부터 시작하도록 설정 */
+    }
+
+    ul:first-child {
+      grid-auto-flow: column; /* 첫 번째 ul 요소에 대해 아이템이 열 방향으로 흐르도록 설정 */
+    }
+
+    ul:nth-child(2) {
+      grid-auto-flow: row; /* 두 번째 ul 요소에 대해 아이템이 행 방향으로 흐르도록 설정 */
+    }
+
+    ul:nth-child(3) {
+      grid-auto-flow: dense; /* 세 번째 ul 요소에 대해 빈 공간을 채우도록 설정 */
+    }
+  </style>
+  <body>
+    <ul>
+      <li>logo</li>
+      <li>munu</li>
+      <li>slide</li>
+      <li>notice</li>
+      <li>gallery</li>
+      <li>바로가기</li>
+      <li>로고</li>
+      <li>copyright</li>
+      <li>sns</li>
+    </ul>
+    <ul>
+      <li>logo</li>
+      <li>munu</li>
+      <li>slide</li>
+      <li>notice</li>
+      <li>gallery</li>
+      <li>바로가기</li>
+      <li>로고</li>
+      <li>copyright</li>
+      <li>sns</li>
+    </ul>
+    <ul>
+      <li>logo</li>
+      <li>munu</li>
+      <li>slide</li>
+      <li>notice</li>
+      <li>gallery</li>
+      <li>바로가기</li>
+      <li>로고</li>
+      <li>copyright</li>
+      <li>sns</li>
+    </ul>
+  </body>
+</html>

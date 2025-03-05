@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title></head
+  ><style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      position: relative;
+      height: 60px;
+      width: 84px;
+      margin: 50px;
+    }
+    .on::before,
+    .on::after {
+      background: #333;
+      height: 1px;
+      content: "";
+      position: absolute;
+    }
+    .on::before {
+      width: 77px;
+      top: 0;
+      left: 3.5px;
+    }
+    .on::after {
+      width: 600px;
+      bottom: 0;
+      left: 102%;
+    }
+
+    .on span {
+      line-height: 60px;
+      text-align: center;
+      width: 100%;
+
+      display: inline-block;
+      position: relative;
+    }
+    p span::before,
+    p span::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 1px;
+      height: 60px;
+      background: #333;
+    }
+    p span::before {
+      left: 0;
+      transform: rotate(5deg);
+    }
+    p span::after {
+      right: 0;
+      transform: rotate(-5deg);
+    }
+    .mein {
+      border-top: none;
+      border-left: 1px solid;
+      border-right: 1px solid;
+      border-bottom: 1px solid;
+      position: absolute;
+      border-bottom: 1px solid;
+      width: 685px;
+      height: 500px;
+      top: 59px;
+      left: -2.6px;
+      z-index: -1;
+      background: yellow;
+    }
+  </style>
+  <body>
+    <p class="on"><span>공지사항</span></p>
+    <p class="mein"></p>
+  </body>
+</html>

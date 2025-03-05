@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .on {
+      margin: 20px 20px;
+      border: 2px solid;
+      list-style: none;
+      display: grid;
+      /* grid-template: 100px 300px 200px 100px / 200px 200px 400px 200px 200px; */
+      /* 그리드의 행(row)과 열(column) 크기 정의 */
+      /* 행 크기: 100px, 300px, 200px, 100px */
+      /* 열 크기: 200px, 200px, 400px, 200px, 200px */
+      /* grid:grid-template-rows /gird-template-columns; */
+      grid: auto-flow dense 100px / 200px 400px 400px;
+    }
+
+    li {
+      background: whitesmoke;
+      border: 2px solid blue;
+    }
+
+    .on li:nth-child(4) {
+      grid-column-start: 3;
+      grid-row-start: 1;
+      z-index: 1;
+      background: wheat;
+      order: 4;
+    }
+
+    .on li:nth-child(3) {
+      order: 2;
+    }
+    .on li:first-child {
+      border: 2px solid yellow;
+      grid-column-start: 3;
+      grid-row-start: 1;
+    }
+    div {
+      border: 1px solid;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    div p:nth-child(1) {
+      background: turquoise;
+      order: 4;
+    }
+    div p:nth-child(2) {
+      background: thistle;
+      order: 2;
+    }
+    div p:nth-child(3) {
+      background: steelblue;
+      order: 1;
+    }
+    div p:nth-child(4) {
+      background: snow;
+      order: 3;
+    }
+  </style>
+  <body>
+    <ul class="on">
+      <li>logo</li>
+      <li>munu</li>
+      <li>slide</li>
+      <li>notice</li>
+      <li>gallery</li>
+      <li>바로가기</li>
+      <li>로고</li>
+      <li>copyright</li>
+      <li>sns</li>
+    </ul>
+    <div>
+      <p>1</p>
+      <p>2</p>
+      <p>3</p>
+      <p>4</p>
+    </div>
+  </body>
+</html>
