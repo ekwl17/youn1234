@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .main {
+      height: auto;
+      width: 100%;
+      position: relative;
+    }
+    .header {
+      z-index: 9999;
+      position: fixed;
+      background: rgba(0, 0, 0, 0.5);
+      height: 100px;
+      width: 100%;
+    }
+    .sub {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+    .top {
+      z-index: -1;
+      height: 29vw;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-image: url(https://www.lotternd.com/assets/images/sub/visual_2.jpg);
+      background-size: cover;
+    }
+    .menu {
+      position: relative;
+      top: -4vw;
+      margin: 0 auto;
+      height: auto;
+      width: 100%;
+    }
+    .menu1-1 {
+      justify-content: center;
+      height: 4vw;
+      width: 100%;
+      display: flex;
+    }
+    .menu1 {
+      width: 70vw;
+      margin: 0 30px;
+      justify-items: center;
+      align-items: center;
+      background: wheat;
+      display: flex;
+      justify-content: space-between;
+    }
+    .menu1 ul {
+      height: 100%;
+      background: violet;
+      gap: 20px;
+      display: flex;
+    }
+    .menu1 ul li {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      background: teal;
+    }
+    .menu2 {
+      background: tomato;
+      height: 1800px;
+      width: 100%;
+    }
+    .menu2-1 {
+      margin: 2vw 0;
+      gap: 1vw;
+      background: wheat;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+    .menu2-1 a {
+      font-size: 1vw;
+      border-radius: 15px;
+      padding: 0.5vw 2vw;
+      background: slategray;
+      color: aliceblue;
+      text-decoration: none;
+    }
+    .banner1 {
+      margin: 3vw 0;
+      background: yellow;
+      height: 20vw;
+      width: 100%;
+    }
+    .banner {
+      display: flex;
+      position: relative;
+      background: steelblue;
+      height: 100%;
+      width: 100%;
+    }
+    .banner img {
+      object-position: center;
+      width: 100%;
+      object-fit: cover;
+    }
+    .banner2 {
+      padding: 0 150px;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      background: springgreen;
+    }
+    .in {
+      background: whitesmoke;
+    }
+    .inin {
+      height: 100%;
+      top: 0;
+      width: 39vw;
+      background: turquoise;
+      position: absolute;
+    }
+    .side {
+      position: fixed;
+      background: slateblue;
+    }
+
+    .side2 {
+      width: 50vw;
+      background: skyblue;
+      text-align: center;
+    }
+    p img {
+      width: 100%;
+    }
+    .me {
+      height: 100%;
+      width: 100%;
+    }
+    .me li {
+      height: 100%;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="header"></div>
+      <div class="sub">
+        <div class="top"></div>
+        <div class="menu">
+          <div class="menu1-1">
+            <div class="menu1">
+              <p>R&S AREAS</p>
+              <ul>
+                <li>연구분야</li>
+                <li>연구성과</li>
+                <li>논문 및 특허</li>
+                <li>수상 및 인증</li>
+              </ul>
+            </div>
+          </div>
+          <div class="menu2">
+            <div class="menu2-1">
+              <a href="">연구개발</a>
+              <a href="">연구개발</a>
+              <a href="">연구개발</a>
+              <a href="">연구개발</a>
+              <a href="">연구개발</a>
+            </div>
+            <ul class="me">
+              <li>
+                <div class="banner1">
+                  <p class="banner">
+                    <img
+                      src="https://www.lotternd.com/assets/images/sub/research/research-ban1.jpg"
+                      alt=""
+                    />
+                  </p>
+                </div>
+                <div class="banner2">
+                  <div class="inin">
+                    <div class="side">
+                      <a href="">제품개발</a>
+                      <a href="">품질개선</a>
+                    </div>
+                  </div>
+                  <div class="in">
+                    <div class="side2">
+                      <p>
+                        <img
+                          src="https://www.lotternd.com/assets/images/sub/research/rnd-img1.jpg"
+                          alt=""
+                        />
+                      </p>
+                      <p>
+                        제품개발 롯데웰푸드, 롯데칠성음료, 롯데GRS와 같은 롯데
+                        식품 계열사를 비롯해 유통사 PB 등 각종 신제품의 연구
+                        개발을 진행합니다. 소비자와 시장에 대한 철저한 분석을
+                        기반으로 제품의 컨셉을 선정하고, 원료 선별 및 배합 등의
+                        과정을 거칩니다. 이에 대한 지속적 검증을 기반으로 제품
+                        규격 설정, 디자인, 안전성 확보 단계를 거쳐 제품을
+                        출시합니다. 모든 과정을 꼼꼼하게 점검해 맛과 품질은 갖춘
+                        것은 물론, 소비자의 건강과 행복에 기여할 수 있는 제품을
+                        시장에 내놓을 수 있도록 최선을 다하고 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class=""></div>
+      </div>
+    </div>
+  </body>
+</html>

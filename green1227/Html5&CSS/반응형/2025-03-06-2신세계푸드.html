@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,user-scalable=yes,minimum-scale=1.0,maximum-scale=2.0"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .mein {
+      width: 100%;
+      display: block;
+      padding: 0;
+      margin: 0;
+      padding-top: 105px;
+      background: none;
+      padding-bottom: 100px;
+    }
+    .sub {
+      display: block;
+      color: #444;
+      word-wrap: break-word;
+      word-break: keep-all;
+      margin: 0;
+      padding: 0;
+    }
+    .sub2 {
+      display: block;
+      width: 100%;
+      display: grid;
+      padding-bottom: 129px;
+      text-align: center;
+      box-sizing: border-box;
+      padding-top: 90px;
+      background: #f0f0f0;
+    }
+
+    .wrap {
+      color: #000;
+      text-align: center;
+      padding: 0;
+      position: relative;
+      margin: 100px auto;
+      max-width: 940px;
+      z-index: 100;
+      width: 100%;
+    }
+    .flex {
+      width: 100%;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 40px;
+    }
+    .flex li {
+      overflow: hidden;
+      background-size: cover;
+      position: relative;
+      padding-top: 50%;
+      flex: 1 0 40%;
+      border-radius: 70px 0 70px 0;
+    }
+    .flex li:nth-child(1) {
+      margin-top: -55px;
+    }
+    .flex li:nth-child(3) {
+      margin-top: -55px;
+    }
+
+    .flex li:nth-child(1) {
+      background-image: url("https://www.shinsegaefood.com/images/background/bg_vs_value_1.jpg");
+    }
+    .flex li:nth-child(2) {
+      background-image: url("https://www.shinsegaefood.com/images/background/bg_vs_value_2.jpg");
+    }
+    .flex li:nth-child(3) {
+      background-image: url("https://www.shinsegaefood.com/images/background/bg_vs_value_3.jpg");
+    }
+    .flex li:nth-child(4) {
+      background-image: url("https://www.shinsegaefood.com/images/background/bg_vs_value_4.jpg");
+    }
+    .txt {
+      transform: translateY(-50%);
+      left: 0;
+      top: 50%;
+      position: absolute;
+      -webkit-text-size-adjust: none;
+      width: 100%;
+      padding: 30px 0;
+      background: rgba(0, 0, 0, 0.3);
+      color: #fff;
+      box-sizing: border-box;
+    }
+    h1 {
+      color: #fff;
+      display: block;
+      font-size: 32px;
+      line-height: 1.1;
+    }
+    h2 {
+      font-weight: 400;
+      display: block;
+      color: #fff;
+      display: block;
+      margin-top: 26px;
+      padding: 0 10px;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+    .txt p {
+      display: block;
+      color: #fff;
+      display: block;
+      margin-top: 26px;
+      padding: 0 10px;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+    @media screen and (max-width: 960px) {
+      .flex li {
+        border-radius: 50px 0 50px 0;
+      }
+      section {
+        padding: 0 15px;
+      }
+      .flex {
+        gap: 20px;
+      }
+      .flex ul li {
+        border-radius: 40px 0 40px 0;
+      }
+      section.core ul li:nth-child(odd) {
+        margin-top: -30px;
+      }
+      .flex li .txt {
+        padding: 20px 0;
+      }
+      .flex ul li .txt strong {
+        font-size: 16px;
+      }
+      .flex ul li .txt p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-top: 14px;
+      }
+      .flex li .txt p br {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 950px) {
+      h1 {
+        font-size: 3vw;
+        display: block;
+        display: grid;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+      h2 {
+        font-size: 2vw;
+        display: block;
+        display: grid;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  </style>
+  <body>
+    <div class="mein">
+      <section class="sub">
+        <div class="sub2">
+          <h1>Core Value</h1>
+          <div class="wrap">
+            <ul class="flex">
+              <li>
+                <div class="txt">
+                  <h1>Taste &amp; Quality</h1>
+                  <h2>최선의 '품질'을통해 <br />최상의 '맛'을 구현합니다</h2>
+                </div>
+              </li>
+              <li>
+                <div class="txt">
+                  <h1>Convenience</h1>
+                  <h2>
+                    보관/조리/폐기 전반에 걸친 고객 중심 마인드로 <br />최적화된
+                    편의를 제공합니다.
+                  </h2>
+                </div>
+              </li>
+              <li>
+                <div class="txt">
+                  <h1>Health &amp; Wellness</h1>
+                  <h2>
+                    고객의 건강과 라이프스타일을 지원하는 <br />맞춤형 푸드
+                    옵션을 제공합니다.
+                  </h2>
+                </div>
+              </li>
+              <li>
+                <div class="txt">
+                  <h1>Value</h1>
+
+                  <h2>
+                    지구와 사회에 긍정적인 영향을 주는 <br />지속 가능하고
+                    책임감 있는 사업을 이어갑니다.
+                  </h2>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

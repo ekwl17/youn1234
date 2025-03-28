@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .main {
+      position: relative;
+      height: auto;
+      width: 100%;
+    }
+    .sub {
+      display: flex;
+      background: thistle;
+      height: 450px;
+      width: 100%;
+    }
+    .menu {
+      background: turquoise;
+      flex: 1;
+    }
+    .img {
+      background: steelblue;
+      flex: 3;
+    }
+    a {
+      font-size: 32px;
+      color: black;
+      text-decoration: none;
+    }
+    ul {
+      gap: 20px;
+      flex-direction: column;
+      display: flex;
+      list-style: none;
+    }
+    li {
+      cursor: pointer;
+      font-size: 28px;
+    }
+    .img p img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+    .img p {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      opacity: 0;
+    }
+    .img p.active {
+      opacity: 1;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="sub">
+        <div class="menu">
+          <a href="#">What's <br />New</a>
+          <ul>
+            <li>보도자료</li>
+            <li>언론보도</li>
+            <li>CJBS Now</li>
+            <li>미디어</li>
+            <li>뉴스구독</li>
+          </ul>
+        </div>
+        <div class="img">
+          <p><img src="../images/photo1.jpg" alt="" /></p>
+          <p><img src="../images/photo2.jpg" alt="" /></p>
+          <p><img src="../images/photo3.jpg" alt="" /></p>
+          <p><img src="../images/photo4.jpg" alt="" /></p>
+          <p><img src="../images/photo5.jpg" alt="" /></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll(".img p")[0].classList.add("active");
+      function myremove() {
+        document.querySelectorAll(".img p").forEach(function (v, k) {
+          v.classList.remove("active");
+        });
+      }
+
+      document.querySelectorAll(".menu ul li").forEach(function (v, k) {
+        v.onclick = function () {
+          myremove();
+          document.querySelectorAll(".img p")[k].classList.add("active");
+        };
+      });
+    </script>
+  </body>
+</html>

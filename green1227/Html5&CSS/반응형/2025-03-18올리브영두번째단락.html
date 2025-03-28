@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title></head
+  ><style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    ul {
+      list-style: none;
+    }
+    .main {
+      background: whitesmoke;
+      display: block;
+      position: relative;
+      height: 2859px;
+      width: 99vw;
+    }
+    .main2 {
+      background: thistle;
+      padding-top: 14vh;
+    }
+    .inner {
+      margin: 0 auto;
+      max-width: 1420px;
+      display: flex;
+    }
+    .inner1 {
+      background: turquoise;
+      width: 30vw;
+      top: 135px;
+      position: sticky;
+      align-self: baseline;
+    }
+    .inner2 {
+      background: teal;
+      margin-left: auto;
+      width: 85vh;
+    }
+    .info {
+      margin-left: 100px;
+      flex: 1;
+    }
+    .title {
+      display: inline-block;
+      margin-top: 46px;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    .desc {
+      font-weight: 500;
+      margin-top: 34px;
+    }
+    .mainul {
+      flex-direction: column;
+      margin-top: 60px;
+      gap: 16px;
+      display: flex;
+    }
+    .mainul li {
+      vertical-align: top;
+    }
+    .mainul li a {
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    .inner2 div {
+      flex-direction: column;
+      display: flex;
+      justify-content: space-between;
+      opacity: 1;
+    }
+    .inner2-2 {
+      margin-top: 140px;
+    }
+    .thumb {
+      width: 100%;
+      height: 100%;
+      background: yellow;
+      padding-bottom: 56%;
+      position: relative;
+    }
+    .thumb img {
+      top: 0;
+      vertical-align: top;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      position: absolute;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .spans {
+      display: none;
+    }
+    .num {
+      position: absolute;
+    }
+    #this1,
+    #this2,
+    #this3 {
+      scroll-margin-top: 140px; /* 50px 만큼 위에 여백 줌 */
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="main2">
+        <div class="inner">
+          <div class="inner1">
+            <h3 class="title">OLIVE YOUNG<br />Platforms</h3>
+            <ul class="mainul">
+              <li>
+                <a href="#this1">올리브영 매장</a>
+              </li>
+              <li>
+                <a href="#this2">올리브영 Online (국내)</a>
+              </li>
+              <li>
+                <a href="#this3">올리브영 글로벌</a>
+              </li>
+            </ul>
+          </div>
+          <div class="inner2">
+            <div class="inner2-1" id="this1">
+              <span class="num">01</span>
+              <div class="info">
+                <span class="spans">올리브영 매장(국내)</span>
+                <div class="thumb">
+                  <img
+                    src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg;jsessionid=5E902F99C5EA06D6BB94C73BCB6A3FA7"
+                    alt=""
+                  />
+                </div>
+                <strong class="title"
+                  >고객과 가장 가까운 곳에서<br />건강한 아름다움을
+                  제안합니다.</strong
+                >
+                <p class="desc">
+                  우리는 1,370여개의 매장을 기반으로 고객에게 뷰티&amp;헬스
+                  상품을 큐레이션합니다.<br />또한 체험형 콘텐츠와 커머스의
+                  연계를 통해 파트너사들에게 <br />매력적인 브랜딩, 마케팅
+                  채널로 진화하고 있습니다.
+                </p>
+                <a href="#"></a>
+              </div>
+            </div>
+            <div class="inner2-2" id="this2">
+              <span class="num">01</span>
+              <div class="info">
+                <span class="spans">올리브영 매장(국내)</span>
+                <div class="thumb">
+                  <img
+                    src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg;jsessionid=5E902F99C5EA06D6BB94C73BCB6A3FA7"
+                    alt=""
+                  />
+                </div>
+                <strong class="title"
+                  >고객과 가장 가까운 곳에서<br />건강한 아름다움을
+                  제안합니다.</strong
+                >
+                <p class="desc">
+                  우리는 1,370여개의 매장을 기반으로 고객에게 뷰티&amp;헬스
+                  상품을 큐레이션합니다.<br />또한 체험형 콘텐츠와 커머스의
+                  연계를 통해 파트너사들에게 <br />매력적인 브랜딩, 마케팅
+                  채널로 진화하고 있습니다.
+                </p>
+                <a href="#"></a>
+              </div>
+            </div>
+            <div class="inner2-2" id="this3">
+              <span class="num">01</span>
+              <div class="info">
+                <span class="spans">올리브영 매장(국내)</span>
+                <div class="thumb">
+                  <img
+                    src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg;jsessionid=5E902F99C5EA06D6BB94C73BCB6A3FA7"
+                    alt=""
+                  />
+                </div>
+                <strong class="title"
+                  >고객과 가장 가까운 곳에서<br />건강한 아름다움을
+                  제안합니다.</strong
+                >
+                <p class="desc">
+                  우리는 1,370여개의 매장을 기반으로 고객에게 뷰티&amp;헬스
+                  상품을 큐레이션합니다.<br />또한 체험형 콘텐츠와 커머스의
+                  연계를 통해 파트너사들에게 <br />매력적인 브랜딩, 마케팅
+                  채널로 진화하고 있습니다.
+                </p>
+                <a href="#"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .main {
+      flex-direction: column;
+      display: flex;
+      padding: 0 30px;
+      position: relative;
+      background: whitesmoke;
+
+      width: 100%;
+    }
+    a {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      font-size: 1.5vw;
+
+      color: black;
+      text-decoration: none;
+    }
+    #business {
+      height: 500px;
+      width: 100%;
+      display: flex;
+      position: relative;
+      background: wheat;
+    }
+    #business ul {
+      justify-content: center;
+      width: 100%;
+      list-style: none;
+      gap: 30px;
+      align-items: center;
+      display: flex;
+      margin: 0 auto;
+      background: url(https://www.shinsegaefood.com/images/business/business_bg_food.jpg);
+      background-size: cover;
+    }
+    #business ul li {
+      overflow: hidden;
+      display: flex;
+      height: 10vw;
+      width: 10vw;
+      border-radius: 50%;
+      border: 1px solid black;
+      background: rgb(203, 255, 172);
+    }
+    #business ul li.this {
+      background: whitesmoke;
+      border: 10px solid rgb(255, 226, 231);
+    }
+    .main2 {
+      padding: 0 20px;
+      width: 100%;
+      background: violet;
+      height: 900px;
+    }
+    .box {
+      background: whitesmoke;
+      height: 100%;
+      width: 100%;
+      display: grid;
+    }
+  </style>
+  <body>
+    <!DOCTYPE html>
+    <html lang="ko">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style></style>
+      </head>
+      <body>
+        <div class="main">
+          <div id="business">
+            <ul>
+              <li>
+                <a href="#">
+                  <span>식품제조/<br />유통</span>
+                </a>
+              </li>
+              <li>
+                <a href="#"> <span>푸드서비스</span></a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>프리미엄<br />다이닝</span></a
+                >
+              </li>
+              <li>
+                <a href="#"> <span>베이커리</span></a>
+              </li>
+              <li>
+                <a href="#"> <span>프랜차이즈</span></a>
+              </li>
+              <li>
+                <a href="#"> <span>자회사</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="main2"><div class="box"></div></div>
+        </div>
+
+        <script>
+          const me = [
+            "url(https://www.shinsegaefood.com/images/business/business_bg_food.jpg)",
+            "url(https://www.shinsegaefood.com/images/business/business_bg_foodService.jpg)",
+            "url(https://www.shinsegaefood.com/images/business/business_bg_premiumService.jpg)",
+            "url(https://www.shinsegaefood.com/images/business/business_bg_bakery.jpg)",
+            "url(https://www.shinsegaefood.com/images/business/business_bg_franchise.jpg)",
+            "url(https://www.shinsegaefood.com/images/business/business_bg_subsidiary.jpg)",
+          ];
+          const ul = document.querySelector("#business ul");
+          document.querySelectorAll("li")[0].classList.add("this");
+          function myremove() {
+            document.querySelectorAll("li").forEach(function (v, k) {
+              v.classList.remove("this");
+            });
+          }
+
+          document.querySelectorAll("li").forEach(function (v, k) {
+            v.onclick = function () {
+              myremove();
+              document.querySelectorAll("li")[k].classList.add("this");
+              ul.style.background = me[k];
+              ul.style.backgroundSize = "cover"; // 배경을 꽉 차게
+            };
+          });
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

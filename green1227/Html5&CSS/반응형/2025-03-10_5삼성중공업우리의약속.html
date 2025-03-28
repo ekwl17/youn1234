@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100%;
+        background: wheat;
+        min-width: 320px;
+        word-break: keep-all;
+        box-sizing: border-box;
+        height: 100%;
+        display: block;
+      }
+      .in {
+        background: turquoise;
+        font-size: 1.8rem;
+        line-height: 1.5rem;
+        position: relative;
+        width: 100%;
+        margin-top: 9rem;
+      }
+      .inner {
+        background: whitesmoke;
+        padding: 0 30px;
+        position: relative;
+        margin: 0 auto;
+        max-width: 1460px;
+        width: 100%;
+      }
+      .inner1 {
+        background: tomato;
+        width: 50%;
+      }
+
+      h2 {
+        line-height: 1.2;
+        font-size: 3rem;
+        font-weight: 700;
+      }
+      .inner2 {
+        align-items: center;
+        justify-content: flex-end;
+        display: flex;
+      }
+      .inner2-1 {
+        max-width: 480px;
+        width: 45%;
+      }
+      .inner2-2 {
+        margin-top: -8.4rem;
+        width: 45%;
+        margin-left: 10%;
+      }
+      .ner2,
+      .n2 {
+        margin-top: 3rem;
+      }
+
+      a {
+        margin-top: 2.5rem;
+        padding: 0 3px;
+        display: inline-block;
+        position: relative;
+        line-height: 2;
+        color: black;
+        text-decoration: none;
+        font-size: 1.5rem;
+      }
+      a::before {
+        height: 2px;
+        width: 100%;
+        content: "";
+        background: #000;
+        position: absolute;
+        bottom: 0;
+        display: block;
+      }
+
+      .nner2 {
+        margin-top: 10rem;
+      }
+      img {
+        vertical-align: top;
+        max-width: 100%;
+      }
+
+      strong {
+        line-height: 1.2;
+        font-weight: 700;
+        font-size: 3rem;
+      }
+      p {
+        background: thistle;
+        margin-top: 1.5rem;
+        line-height: 1.5;
+        font-size: 1.1rem;
+      }
+      @media screen and (max-width: 1280px) {
+        h2 {
+          font-size: 2.8rem;
+        }
+        strong {
+          font-size: 2.7rem;
+        }
+        .inner2 {
+          margin-top: 5rem;
+        }
+        .in {
+          margin-top: 12rem;
+        }
+      }
+      @media screen and (max-width: 960px) {
+        h2 {
+          font-size: 2.6rem;
+        }
+        strong {
+          font-size: 2.4rem;
+        }
+        .inner2 {
+          margin-top: 3rem;
+        }
+        .in {
+          margin-top: 12rem;
+        }
+        ul {
+          flex-direction: column;
+        }
+      }
+      @media screen and (max-width: 960px) {
+        h2 {
+          font-size: 2.6rem;
+        }
+        strong {
+          font-size: 2.4rem;
+        }
+        .inner2 {
+          margin-top: 3rem;
+        }
+        .in {
+          margin-top: 12rem;
+        }
+        ul {
+          margin-top: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <section class="in">
+        <div class="inner">
+          <div class="inner1">
+            <h2>우리의 약속</h2>
+            <p class="txt1">
+              급격한 대내외 변화에 대응하기 위해 비전과 목표, 체계 등을
+              수립하고<br />지속적인 개선활동을 수행하여 ESG 경영 실천에 대한
+              의지를 표명하고자 합니다
+            </p>
+          </div>
+          <div class="inner2">
+            <div class="inner2-1">
+              <div class="ner">
+                <div class="ner1">
+                  <img
+                    src="https://www.samsungshi.com/ESG/Kor/images/main/promise_e.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="ner2">
+                  <strong class="s1">환경</strong>
+                  <p class="txt2">
+                    사업 전반에 있어서 환경을 먼저 생각하고, 기후변화 대응에
+                    앞장서겠습니다.
+                  </p>
+                </div>
+                <a href="#" class="a1">자세히 보기</a>
+              </div>
+            </div>
+            <div class="inner2-2">
+              <div class="nner1">
+                <div class="nner1-1">
+                  <img
+                    src="https://www.samsungshi.com/ESG/Kor/images/main/promise_s.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="nner1-2 n2">
+                  <strong class="s2">사회적 책임</strong>
+                  <p class="txt3">
+                    이해관계자의 가치를 존중하고, 사회적 책임을 다하겠습니다.
+                  </p>
+                </div>
+                <a href="#" class="a2">자세히보기</a>
+              </div>
+              <div class="nner2">
+                <div class="nner2-1">
+                  <img
+                    src="https://www.samsungshi.com/ESG/Kor/images/main/promise_g.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="nner2-2 n2">
+                  <strong>거버넌스</strong>
+                </div>
+                <a href="#">자세히보기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

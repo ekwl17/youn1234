@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style></style>
+  <script>
+    //1.웹페이지가 모두 로드가 된 다음에 실행되는 코드
+    window.onload = function () {
+      console.log("onload");
+      document.body.style.backgroundColor = "skyblue";
+      document.getElementById("onload").style.width = "200px";
+      document.getElementById("onload").style.height = "200px";
+      document.getElementById("onload").style.backgroundColor = "pink";
+    };
+    //2.문서가 로드가 된 후 실행되는 코드
+    window.addEventListener("load", function () {
+      console.log("load");
+    });
+    //3.DOM 구성이 완료가 된후 실행되는 코드
+    document.addEventListener("DOMContentKiaded", function () {
+      console.log("DOMContentKiaded");
+    });
+    function my() {
+      document.getElementById("onload").style.backgroundColor = "red";
+    }
+    function mys() {
+      document.getElementById("onload").style.backgroundColor = "pink";
+    }
+  </script>
+  <body>
+    <button onclick="my()">색상변경</button>
+    <button onclick="mys()">분홍색</button>
+
+    <p id="onload">sss</p>
+    <p id="load">sss</p>
+    <p id="DOMContentKiaded">sss</p>
+  </body>
+</html>

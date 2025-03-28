@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=2.0"
+    />
+    <title>Responsive Centered Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+        text-align: center;
+      }
+      .mein {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 1700px;
+        padding: 50px 20px;
+      }
+      h1 {
+        font-size: 2vw;
+      }
+      p {
+        margin-top: 20px;
+        line-height: 1.8;
+        font-size: 1vw;
+      }
+      .wrap {
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 5vh;
+        width: 100%;
+        padding: 50px 0;
+      }
+      .flex {
+        margin: 0 auto;
+
+        width: 65vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        list-style: none;
+      }
+      .flex li {
+        width: 30vw;
+        border-radius: 2vh;
+        overflow: hidden;
+      }
+      .flex img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      @media screen and (max-width: 1250px) {
+        h1 {
+          font-size: 3vw;
+        }
+        p {
+          font-size: 2vw;
+        }
+        .wrap {
+          margin-top: 3vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mein">
+      <section class="sub">
+        <div class="sub2">
+          <h1>
+            생활 속에서 함께하는<br />
+            식품 제조 선도 기업
+          </h1>
+          <p>
+            신세계푸드는 글로벌 수준의 R&D센터와 식품 제조 인프라를 갖추고
+            있습니다.<br />
+            프리미엄 가정 간편식, 베이커리, Fresh Food, 대안식품 등을 <br />직접
+            연구개발 및 생산하며 식품시장을 선도해 가고 있습니다.
+          </p>
+          <div class="wrap">
+            <ul class="flex">
+              <li>
+                <img
+                  src="https://www.shinsegaefood.com/images/business/business_item_hotelCollection.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="https://www.shinsegaefood.com/images/business/business_item_vecchiaEnuovo.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="https://www.shinsegaefood.com/images/business/business_item_olbaan.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="https://www.shinsegaefood.com/images/business/business_item_ywe.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="https://www.shinsegaefood.com/images/business/business_item_betterMeat.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="https://www.shinsegaefood.com/images/business/business_item_brand.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="https://www.shinsegaefood.com/images/business/business_item_recette.jpg"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

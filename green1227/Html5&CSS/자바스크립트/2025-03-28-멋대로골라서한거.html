@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Background</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      .video-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100vw;
+        height: 100vh;
+        transform: translate(-50%, -50%);
+        pointer-events: none; /* 클릭 방지 */
+      }
+      .content {
+        font-size: 10vw;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: url("https://player.vimeo.com/video/936494494?autoplay=1&loop=1&background=1&muted=1");
+        background-size: cover;
+        background-position: center;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="video-container">
+      <iframe
+        src="https://player.vimeo.com/video/936494494?autoplay=1&loop=1&background=1&muted=1"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+      ></iframe>
+    </div>
+    <div class="content">
+      <h1>안녕하세요</h1>
+      <h1>반갑습니다</h1>
+    </div>
+  </body>
+</html>

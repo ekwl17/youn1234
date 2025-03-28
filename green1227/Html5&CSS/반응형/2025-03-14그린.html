@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title></head
+  ><style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    ul {
+      list-style: none;
+    }
+    .main {
+      height: 1280px;
+      width: 100%;
+    }
+    .sub {
+      margin-top: 6rem;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 2.2rem;
+      background: yellow;
+      display: grid;
+    }
+    .flex {
+      background: wheat;
+      max-width: 180rem;
+      margin: 0 auto;
+      padding: 0 3rem;
+      flex-wrap: wrap;
+      display: flex;
+    }
+    .flex1 {
+      background: teal;
+    }
+    .flex2 {
+      background: slateblue;
+    }
+
+    .sub1 {
+      position: relative;
+      grid-template-rows: 1fr 1fr;
+      gap: 1.3rem;
+      display: grid;
+      background: yellowgreen;
+    }
+    .sub1 div:nth-child(1) {
+      border-radius: 2rem;
+      background: violet;
+    }
+    .sub1 div:nth-child(2) {
+      border-radius: 2rem;
+      background: whitesmoke;
+    }
+    .sub2 {
+      height: 100%;
+      gap: 1.3rem;
+      grid-template-rows: 2;
+      grid-template-columns: 1fr 1fr;
+      display: grid;
+      background: tomato;
+    }
+    .sub2 div:nth-child(1) {
+      border-radius: 2rem;
+      background: turquoise;
+    }
+    .sub2 div:nth-child(2) {
+      border-radius: 2rem;
+      background: teal;
+    }
+    .sub2 div:nth-child(3) {
+      border-radius: 2rem;
+      background: slategrey;
+    }
+    .sub2 div:nth-child(4) {
+      border-radius: 2rem;
+      background: sienna;
+    }
+    .in {
+      padding: 20px;
+      word-break: keep-all;
+    }
+    .in h1 {
+      font-size: 4vw;
+    }
+    .in span {
+      font-weight: bold;
+      font-size: 2vw;
+      color: aquamarine;
+    }
+    .box {
+      position: relative;
+      overflow: hidden;
+    }
+    .box span {
+      height: 100%;
+      width: 100%;
+      background: rgba(1, 1, 1, 0.5);
+      z-index: 1;
+      position: absolute;
+      display: flex;
+      font-weight: 800;
+      font-size: 1.5vw;
+      color: white;
+    }
+    .box p {
+      position: absolute;
+      top: 80%;
+      left: 10%;
+    }
+    .box2 span {
+      height: 100%;
+      width: 100%;
+      background: rgba(1, 1, 1, 0.5);
+      z-index: 1;
+      position: absolute;
+      display: block;
+      font-weight: 800;
+      font-size: 1.5vw;
+      color: white;
+    }
+    .box2 p {
+      position: absolute;
+      top: 80%;
+      left: 10%;
+    }
+
+    .box2 {
+      overflow: hidden;
+      border-radius: 2rem;
+      position: relative;
+    }
+    img {
+      z-index: -999;
+      transition: 0.4s ease-in-out;
+      vertical-align: middle;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    span:hover ~ img {
+      scale: 1.2;
+    }
+    span:hover {
+      background: none;
+    }
+    .menu {
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      position: fixed;
+      background: honeydew;
+    }
+    .menusub {
+      background: yellowgreen;
+      align-items: center;
+      padding: 0 6rem;
+      height: 6rem;
+      align-items: ;
+      justify-content: space-between;
+      display: flex;
+    }
+    .logo {
+      display: block;
+      overflow: hidden;
+      background: wheat;
+      height: 3.7rem;
+      width: 12rem;
+    }
+    .logo img {
+      vertical-align: middle;
+      transform: translateY(-50%);
+      max-width: 100%;
+      height: auto;
+    }
+    .menulist {
+      background: tomato;
+      margin: 0 3rem;
+    }
+    .this1 {
+      background: rebeccapurple;
+
+      display: flex;
+    }
+    .list {
+      padding-right: 5rem;
+      background: sandybrown;
+      height: 6rem;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+    .list a {
+      background: whitesmoke;
+    }
+    .sssub {
+      background: turquoise;
+      position: relative;
+    }
+
+    .sssub > li {
+      font-weight: bold;
+      color: navy;
+      margin-top: 1.5rem;
+      background: white;
+      text-align: left;
+    }
+    .menulist > ul > li > a {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.3rem;
+      position: relative;
+    }
+    .listin {
+      background: whitesmoke;
+      left: 54%;
+      /* opacity: 0; */
+      transform: translate(-50%, 100%);
+      position: absolute;
+      bottom: 0;
+      display: flex;
+    }
+    .listin > li {
+      text-align: center;
+      text-align: left;
+      padding: 3rem 1rem;
+      position: relative;
+      width: 12rem;
+    }
+    .listin > li > a {
+      background: snow;
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .listin {
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    }
+    .list:hover .listin {
+      opacity: 1;
+    }
+
+    .list:hover .bg {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      content: "";
+      transition: 0.24s;
+      position: absolute;
+    }
+
+    .bg {
+      padding: 3.5rem 2rem;
+      z-index: -111;
+      transition: height 0.3s ease-out; /* 부드러운 전환 효과 */
+      left: 0;
+      margin: 0;
+      padding: 0;
+      top: 6rem;
+      position: absolute;
+      background: whitesmoke;
+      width: 100%;
+      overflow: hidden;
+      height: 0; /* 기본적으로 높이를 0으로 설정 */
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="menu">
+        <div class="menusub">
+          <div class="logo">
+            <a href="">
+              <img
+                src="https://gggs.kaist.ac.kr/html/images/common/logo.svg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="menulist">
+            <ul class="this1">
+              <li class="list">
+                <a href="#">대학원소개</a>
+                <ul class="listin">
+                  <li>
+                    <a href="">인사말</a>
+                  </li>
+                  <li>
+                    <a href="">미션 및 비전</a>
+                  </li>
+                  <li><a href="">연혁</a></li>
+                  <li><a href="">오시는길</a></li>
+                </ul>
+              </li>
+              <li class="list">
+                <a href="#">구성원</a>
+                <ul class="listin">
+                  <li>
+                    <a href="">교수소개</a>
+                    <ul class="sssub">
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="">재학생</a>
+                    <ul class="sssub">
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                    </ul>
+                  </li>
+                  <li><a href="">졸업생</a></li>
+                  <li><a href="">사무실</a></li>
+                </ul>
+              </li>
+              <li class="list">
+                <a href="#">입학</a>
+                <ul class="listin">
+                  <li>
+                    <a href="">교수소개</a>
+                    <ul class="sssub">
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="list">
+                <a href="#">교육</a>
+                <ul class="listin">
+                  <li>
+                    <a href="">개요</a>
+                  </li>
+                  <li>
+                    <a href="">이수요건</a>
+                    <ul class="sssub">
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                    </ul>
+                  </li>
+                  <li><a href="">집중분야 이수제도</a></li>
+                  <li>
+                    <a href="">교과목 일람표</a>
+                    <ul class="sssub">
+                      <li>전체교과목</li>
+                      <li>현재학기개설교과목</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="list">
+                <a href="#">연구</a>
+                <ul class="listin">
+                  <li>
+                    <a href="">교수소개</a>
+                    <ul class="sssub">
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="">재학생</a>
+                    <ul class="sssub">
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                    </ul>
+                  </li>
+                  <li><a href="">졸업생</a></li>
+                  <li><a href="">사무실</a></li>
+                </ul>
+              </li>
+              <li class="list">
+                <a href="#">커뮤니티</a>
+                <ul class="listin">
+                  <li>
+                    <a href="">교수소개</a>
+                    <ul class="sssub">
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="">재학생</a>
+                    <ul class="sssub">
+                      <li>전체교수진</li>
+                      <li>전체교수진</li>
+                    </ul>
+                  </li>
+                  <li><a href="">졸업생</a></li>
+                  <li><a href="">사무실</a></li>
+                </ul>
+              </li>
+              <div class="bg"></div>
+            </ul>
+          </div>
+          <div class="right"></div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="sub">
+          <div class="flex1">
+            <div class="sub1">
+              <div class="in">
+                <h1>PROGRAM</h1>
+                <span>KAIST GGGS</span>에서는 녹색성장과 지속가능성 문제해결을
+                위해 탄소중립기후기술 및 정책 금융에 대한 통섭적인 이해를 갖춘
+                국가 핵심인재를 양성합니다.
+              </div>
+              <div class="box">
+                <span>
+                  <p>석사과정</p>
+                </span>
+                <img
+                  src="https://gggs.kaist.ac.kr/html/images/main/sec03_tab03.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="flex2">
+            <div class="sub2">
+              <div class="box2">
+                <span>
+                  <p>석사과정</p>
+                </span>
+                <img
+                  src="https://gggs.kaist.ac.kr/html/images/main/sec03_tab01.png"
+                  alt=""
+                />
+              </div>
+              <div class="box2">
+                <span>
+                  <p>석사과정</p>
+                </span>
+                <img
+                  src="https://gggs.kaist.ac.kr/html/images/main/sec03_tab01.png"
+                  alt=""
+                />
+              </div>
+              <div class="box2">
+                <span>
+                  <p>석사과정</p>
+                </span>
+                <img
+                  src="https://gggs.kaist.ac.kr/html/images/main/sec03_tab01.png"
+                  alt=""
+                />
+              </div>
+              <div class="box2">
+                <span>
+                  <p>석사과정</p>
+                </span>
+                <img
+                  src="https://gggs.kaist.ac.kr/html/images/main/sec03_tab01.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const bg = document.querySelector(".bg");
+        const listItems = document.querySelectorAll(".list");
+
+        listItems.forEach((item) => {
+          const submenu = item.querySelector(".listin");
+
+          item.addEventListener("mouseenter", function () {
+            if (submenu) {
+              const submenuHeight = submenu.scrollHeight;
+              bg.style.height = submenuHeight + "px"; // 서브메뉴 크기에 맞게 조정
+            }
+          });
+
+          item.addEventListener("mouseleave", function () {
+            bg.style.height = "0"; // 마우스 벗어나면 배경 크기 초기화
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

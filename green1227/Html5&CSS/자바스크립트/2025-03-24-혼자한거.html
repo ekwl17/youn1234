@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 변경</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .main {
+        height: auto;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .sub {
+        margin: 0 auto;
+        max-width: 1800px;
+        height: 700px;
+        width: 100%;
+        display: flex;
+      }
+
+      .me1 {
+        flex: 1;
+        padding: 20px;
+      }
+
+      .me1 ul {
+        list-style: none;
+      }
+
+      .me1 li {
+        cursor: pointer;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .me1 li:hover {
+        background: rgba(0, 0, 0, 0.1);
+      }
+
+      .me2 {
+        flex: 2;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      a {
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+      }
+
+      .me2 img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        position: absolute;
+        opacity: 0;
+      }
+      .me {
+        margin-bottom: 40px;
+        font-size: 50px;
+      }
+      ul li {
+        font-size: 50px;
+      }
+      /* .active 클래스가 추가되면 이미지가 보이도록 설정 */
+      .me2 img.active {
+        opacity: 1; /* 이미지가 보이게 됨 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="sub">
+        <div class="me1">
+          <p class="me">What's<br />New</p>
+          <ul>
+            <li data-index="0"><a href="">보도자료</a></li>
+            <li data-index="1"><a href="">언론보도</a></li>
+            <li data-index="2"><a href="">now</a></li>
+            <li data-index="3"><a href="">미디어</a></li>
+            <li data-index="4"><a href="">뉴스구독</a></li>
+          </ul>
+        </div>
+
+        <div class="me2">
+          <img src="../images/photo1.jpg" alt="이미지 1" class="active" />
+          <!-- 기본으로 첫 번째 이미지가 보임 -->
+          <img src="../images/photo2.jpg" alt="이미지 2" />
+          <img src="../images/photo3.jpg" alt="이미지 3" />
+          <img src="../images/photo4.jpg" alt="이미지 4" />
+          <img src="../images/photo5.jpg" alt="이미지 5" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // li 요소들을 선택하여 클릭 이벤트 처리
+        const listItems = document.querySelectorAll(".me1 li");
+
+        // 이미지 요소들 선택
+        const images = document.querySelectorAll(".me2 img");
+
+        // 각 li에 클릭 이벤트를 추가
+        listItems.forEach((li) => {
+          li.addEventListener("click", function () {
+            // 클릭된 li의 data-index 값을 가져옴
+            const index = li.getAttribute("data-index");
+
+            // 모든 이미지에서 active 클래스를 제거하고
+            // 클릭한 이미지에만 active 클래스를 추가하여 보여지게 함
+            images.forEach((img, imgIndex) => {
+              if (imgIndex == index) {
+                img.classList.add("active"); // 클릭한 이미지만 보이도록 함
+              } else {
+                img.classList.remove("active"); // 나머지 이미지는 보이지 않게 함
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

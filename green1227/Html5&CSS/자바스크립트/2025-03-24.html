@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.title = "자바스크립트";
+      console.log(123 + "123" + "/n" + "abc");
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Paragraph changed.";
+        document.getElementById("demo").style.backgroundColor = "pink";
+      }
+      function myFunction2() {
+        document.getElementById("demo").innerHTML = "변경";
+        document.getElementById("demo").style.backgroundColor = "black";
+      }
+      console.log(123.456 + 111);
+      console.log(1, 000 + 2, 000);
+    </script>
+  </head>
+
+  <body>
+    <p id="demo">변경전</p>
+    <button onclick="myFunction()">클릭</button>
+    <button onclick="myFunction2()">다시</button>
+    <script>
+      document.title = "자바스크립트변경";
+      document.body.style.backgroundColor = "#f233";
+      // document/getElementById("demo").innerText = "변경후<br>";
+      document.getElementById("demo").innerHTML = "변경후<br>";
+      document.getElementById("demo").style.color = "#f00";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title></head
+  ><style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .main {
+      background: turquoise;
+    }
+    .sub {
+      text-align: center;
+      font-size: 0.9vw;
+      box-sizing: border-box;
+      display: block;
+      background: salmon;
+      padding: 8vmax;
+    }
+    .con {
+      background: wheat;
+    }
+    .con h2 {
+      background: yellow;
+      line-height: 1.3;
+      font-weight: 500;
+      font-size: 4vw;
+      margin-bottom: 6vw;
+      text-align: center;
+    }
+    .in {
+      height: 25vw;
+      gap: 1vw;
+      background: violet;
+      display: flex;
+    }
+
+    .in > div {
+      background: tan;
+      flex: 1;
+      border-radius: 1.5vw;
+      flex-direction: column;
+      display: flex;
+      padding: 2vw;
+      justify-content: center;
+      align-items: center;
+      background: whitesmoke;
+    }
+
+    .in2 div {
+      background: springgreen;
+      word-wrap: break-word;
+      word-break: keep-all;
+      flex-direction: column;
+    }
+    .icon {
+      margin-bottom: 1vh;
+      height: 50%;
+      display: block;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .txt {
+      margin-bottom: 1vh;
+    }
+    .txt2 {
+      padding-top: 2vh;
+      border-top: 0.1vh solid black;
+    }
+    .txtbox {
+      width: 100%;
+    }
+    @media screen and (max-width: 770px) {
+      .in {
+        flex-direction: column;
+      }
+      .in2 div {
+        background: turquoise;
+      }
+      .in > div {
+        gap: 2rem;
+        display: flex;
+        padding: 4vw;
+        justify-content: left;
+        background: wheat;
+        text-align: left;
+        flex-direction: row;
+      }
+      .icon {
+        background: tomato;
+        margin-bottom: 0;
+        height: 100%;
+      }
+      .in2 {
+        background: violet;
+      }
+      .sub {
+        font-size: 2vw;
+        padding: 3vmax;
+      }
+
+      .txtbox {
+        width: 100%;
+      }
+    }
+  </style>
+  <body>
+    <div class="main">
+      <section class="sub">
+        <div class="con">
+          <h2>Our Brand Values</h2>
+          <div class="in">
+            <div class="in2">
+              <div class="icon">
+                <img
+                  src="https://www.hanwha.com/assets/img/main/sustainable-and-inclusive-growth.svg"
+                  alt=""
+                />
+              </div>
+              <div class="txtbox">
+                <div class="txt"><h1>dssss</h1></div>
+                <div class="txt txt2">
+                  <p>
+                    we lay the foundation for a fulfilling life through<br />our
+                    technologies, products, and services
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="in2">
+              <div class="icon">
+                <img
+                  src="https://www.hanwha.com/assets/img/main/sustainable-and-inclusive-growth.svg"
+                  alt=""
+                />
+              </div>
+              <div class="txtbox">
+                <div class="txt"><h1>dssss</h1></div>
+                <div class="txt txt2">
+                  <p>
+                    we lay the foundation for a fulfilling life through<br />our
+                    technologies, products, and services
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="in2">
+              <div class="icon">
+                <img
+                  src="https://www.hanwha.com/assets/img/main/sustainable-and-inclusive-growth.svg"
+                  alt=""
+                />
+              </div>
+              <div class="txtbox">
+                <div class="txt"><h1>dssss</h1></div>
+                <div class="txt txt2">
+                  <p>
+                    we lay the foundation for a fulfilling life through<br />our
+                    technologies, products, and services
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

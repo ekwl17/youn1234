@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .main {
+      gap: 30px;
+      flex-direction: column;
+      display: flex;
+      padding: 20px;
+      background: wheat;
+      height: 500px;
+      width: 100%;
+    }
+    .sub {
+      gap: 15px;
+      text-align: center;
+      flex-direction: column;
+      display: flex;
+      margin: 0 auto;
+      background: whitesmoke;
+      height: 100px;
+    }
+    .menu {
+      display: flex;
+      background: turquoise;
+      height: 50px;
+      width: 100%;
+    }
+    .menu ul {
+      align-items: center;
+      gap: 15px;
+      display: flex;
+      margin: 0 auto;
+      background: whitesmoke;
+    }
+    ul {
+      list-style: none;
+    }
+    .menu ul li {
+      cursor: pointer;
+      font-size: 15px;
+      height: 100%;
+      padding: 10px 15px;
+      background: sandybrown;
+    }
+    .me {
+      padding: 0 70px;
+      justify-content: center;
+      align-items: center;
+      background: teal;
+      width: 100%;
+    }
+    .img {
+      flex-direction: column;
+      padding: 0 200px;
+      justify-content: center;
+      display: flex;
+      position: relative;
+      background: tomato;
+      height: auto;
+      width: 100%;
+    }
+    .in {
+      justify-content: center;
+      overflow: hidden;
+      display: flex;
+      background: yellow;
+      width: 100%;
+    }
+    .img ul {
+      width: 1220px;
+      gap: 30px;
+      justify-content: left;
+      position: relative;
+      justify-content: left;
+      background: whitesmoke;
+      display: flex;
+    }
+    .me ul li {
+      display: flex;
+      border: 1px solid black;
+      position: relative;
+    }
+    .img1 ul li {
+      background: violet;
+    }
+    .img2 ul li {
+      background: turquoise;
+    }
+    .img3 ul li {
+      background: yellowgreen;
+    }
+    .img4 ul li {
+      background: tomato;
+    }
+    .img5 ul li {
+      background: whitesmoke;
+    }
+    .img6 ul li {
+      background: steelblue;
+    }
+    .img7 ul li {
+      background: silver;
+    }
+    .img8 ul li {
+      background: skyblue;
+    }
+    .img ul li a {
+      display: flex;
+    }
+    a img {
+      opacity: 0;
+      object-fit: contain;
+    }
+    .me.this {
+      display: flex;
+    }
+    .me {
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="sub">
+        <h1>웅진브랜드</h1>
+        <p>맛잇고 건강한 웅진식품 대표 브랜드를 확인해보세요.</p>
+      </div>
+      <div class="menu">
+        <ul>
+          <li>주스</li>
+          <li>차</li>
+          <li>곡물</li>
+          <li>어린이</li>
+          <li>생수/탄산/이온</li>
+          <li>홍삼/건강/드링크</li>
+          <li>제과</li>
+          <li>해외수입제품</li>
+        </ul>
+      </div>
+      <div class="img">
+        <div class="img1 me">
+          <div class="in">
+            <ul>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="img2 me">
+          <div class="in">
+            <ul>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="img3 me">
+          <div class="in">
+            <ul>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="img4 me">
+          <div class="in">
+            <ul>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="img5 me">
+          <div class="in">
+            <ul>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="img6 me">
+          <div class="in">
+            <ul>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="img7 me">
+          <div class="in">
+            <ul>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="img8 me">
+          <div class="in">
+            <ul>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img
+                    src="https://www.wjfood.co.kr/uploads/brand/988f4c9d-4968-4fff-ac87-bee8bf0ca79d.png"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll(".img > div")[0].classList.add("this");
+
+      function myremove() {
+        document.querySelectorAll(".img > div").forEach(function (v, k) {
+          v.classList.remove("this");
+        });
+      }
+
+      document.querySelectorAll(".menu ul li").forEach(function (v, k) {
+        v.onclick = function () {
+          myremove();
+          document.querySelectorAll(".img > div")[k].classList.add("this");
+        };
+      });
+      // 지금 클릭했을 때 홀수 만 나오는 오류는 .img div 이기 때문임. .img 하단에 있는 div만 선택된 게 아니고 div 안에있는 div 까지 전부 선택돼서 없는 것 처럼 보이는 것.
+    </script>
+  </body>
+</html>

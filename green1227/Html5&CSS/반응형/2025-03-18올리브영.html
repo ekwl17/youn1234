@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .main {
+      height: 858.391px;
+      background: turquoise;
+      display: block;
+      width: 100%;
+      min-width: 100%;
+    }
+    .main2 {
+      height: 100%;
+      box-sizing: border-box;
+      padding-right: 60px;
+      padding-left: 60px;
+      width: 100%;
+      margin: 0 auto;
+      background: tan;
+      margin-top: 37px;
+    }
+    .sub {
+      height: 100%;
+      width: 100%;
+      max-width: 1420px;
+      margin: 0 auto;
+    }
+    .box {
+      height: 100%;
+      width: 100%;
+      background: whitesmoke;
+      display: flex;
+    }
+    .box1 {
+      background: wheat;
+      margin-right: 20px;
+      width: 580px;
+    }
+    .box2 {
+      overflow: hidden;
+      background: violet;
+      width: 820px;
+    }
+    .box2 ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+    }
+    .box2 ul li {
+      background-color: aquamarine;
+      position: relative;
+      list-style: none;
+      margin-bottom: 10px;
+    }
+    .box2 ul li:nth-child(1),
+    .box2 ul li:nth-child(2) {
+      width: calc(50% - 10px);
+      height: 400px;
+    }
+    /* 아래쪽 왼쪽 하나 (큰 박스, 66.66%) */
+    .box2 ul li:nth-child(3) {
+      width: calc(66.66% - 10px);
+      height: 250px;
+    }
+    /* 아래쪽 오른쪽 두 개 (각 33.33%) */
+    .box2 ul li:nth-child(4),
+    .box2 ul li:nth-child(5) {
+      width: calc(33.33% - 10px);
+      height: 250px;
+    }
+    .box2 ul li a {
+      height: 100%;
+
+      color: aliceblue;
+    }
+    .img {
+      vertical-align: top;
+      height: 100%;
+      left: 0;
+      top: 0;
+      width: 100%;
+      position: absolute;
+    }
+    .img img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+      display: block;
+    }
+    .txt {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      top: 0;
+      justify-content: flex-end;
+      flex-direction: column;
+      padding: 30px;
+      display: flex;
+    }
+    .box1 a {
+      flex-direction: column;
+      height: 100%;
+      display: flex;
+    }
+    .top {
+      padding-bottom: 100%;
+      background: turquoise;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+    .top img {
+      position: absolute;
+      object-fit: cover;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .bottom {
+      color: aliceblue;
+      justify-content: flex-end;
+      background: yellowgreen;
+      flex: 1;
+      position: relative;
+      padding: 30px;
+      display: flex;
+    }
+    .bottom span {
+      background-color: rgba(0, 0, 0, 0.4);
+      font-weight: 700;
+      color: aliceblue;
+      box-sizing: border-box;
+      border-radius: 24px;
+      padding: 5px 12px;
+      margin-bottom: 16px;
+      align-self: baseline;
+    }
+    .bottom p {
+      font-weight: 700;
+      word-break: keep-all;
+      word-wrap: break-word;
+      display: block;
+      font-size: 1.8rem;
+    }
+    .this {
+      color: aliceblue;
+      font-weight: 700;
+      background-color: rgba(0, 0, 0, 0.4);
+      box-sizing: border-box;
+      border-radius: 24px;
+      padding: 5px 12px;
+      margin-bottom: 16px;
+      align-self: baseline;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="main2">
+        <div class="sub">
+          <div class="box">
+            <div class="box1">
+              <a href="#">
+                <div class="top">
+                  <img
+                    src="./올리브영 사진/[CJ올리브영] CJ올리브영이 오는 3월 19일부터 4월 3일까지 진행하는 신입사원 채용 대표 이미지.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="bottom">
+                  <span class="this">보도자료</span>
+                  <p>cj올리브영, 2025상반기 신입사원 채용</p>
+                </div>
+              </a>
+            </div>
+            <div class="box2">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><div class="img">
+                      <img
+                        src="./올리브영 사진/2_MB_외국인 관광객.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="txt">
+                      <span>보도자료</span>
+                      <p>
+                        189개 국적 외국인 942만건 결제… 올리브영, ‘글로벌 K뷰티
+                        게이트웨이’ 자리매김
+                      </p>
+                    </div></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><div class="img">
+                      <img
+                        src="./올리브영 사진/[Harvard Business School Newsroom] Baker Library_Bloomberg Center.jpg"
+                        alt=""
+                      /></div
+                  ></a>
+                </li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

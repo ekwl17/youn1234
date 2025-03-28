@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>충전 애니메이션</title>
+    <style>
+      .progress-container {
+        width: 300px;
+        height: 30px;
+        background-color: #ddd;
+        border-radius: 15px;
+        overflow: hidden;
+        border: 2px solid #333;
+      }
+
+      .progress-bar {
+        width: 0%;
+        height: 100%;
+        background-color: #4caf50;
+        animation: fillProgress 2s infinite;
+      }
+
+      .banner {
+        position: relative;
+        background: slateblue;
+        height: 500px;
+        width: 500px;
+      }
+
+      .banner > div {
+        position: absolute;
+        width: 0%;
+        height: 100%;
+      }
+
+      .bannerin1 {
+        background-color: violet;
+      }
+      .bannerin2 {
+        background-color: turquoise;
+      }
+      .bannerin3 {
+        background-color: yellow;
+      }
+      .bannerin4 {
+        background-color: thistle;
+      }
+      .bannerin5 {
+        background-color: springgreen;
+      }
+      .bannerin6 {
+        animation: forwards;
+        background-color: seashell;
+      }
+
+      @keyframes fillProgress {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="bannerin1"></div>
+      <div class="bannerin2"></div>
+      <div class="bannerin3"></div>
+      <div class="bannerin4"></div>
+      <div class="bannerin5"></div>
+      <div class="bannerin6"></div>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+
+    <script>
+      function startAnimation(element, delay) {
+        function animate() {
+          element.style.animation = "none"; // 애니메이션 초기화
+          element.style.width = "0%"; // 다시 0%로 초기화
+          void element.offsetWidth; // 강제 리렌더링
+          element.style.animation = "fillProgress 0.5s forwards"; // 애니메이션 재적용
+
+          setTimeout(animate, delay + 500); // 애니메이션 끝난 후 일정 시간 뒤 다시 실행
+        }
+
+        setTimeout(animate, delay);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const banners = document.querySelectorAll(".banner > div");
+
+        banners.forEach((banner, index) => {
+          startAnimation(banner, (index + 1) * 2000); // 2초 간격으로 실행
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .new {
+      position: fixed;
+      color: #f00;
+    }
+    .size {
+      font-size: 50px;
+    }
+    .new1 {
+      position: fixed;
+      color: BLUE;
+    }
+    .size1 {
+      font-size: 60px;
+    }
+    .new2 {
+      position: fixed;
+      color: blueviolet;
+    }
+    .size2 {
+      font-size: 70px;
+    }
+  </style>
+  <body>
+    <p class="txt">하나아 두울</p>
+    <button>글자색바꾸기(빨강)</button>
+    <button>글자색바꾸기(파랑)</button>
+    <button>토그리</button>
+    <script>
+      document.getElementsByTagName("button")[0].onclick = function () {
+        document.querySelector(".txt").classList.add("new");
+        document.querySelector(".txt").classList.add("size");
+      };
+      document.getElementsByTagName("button")[1].onclick = function () {
+        document.querySelector(".txt").classList.add("new1");
+        document.querySelector(".txt").classList.add("size1");
+      };
+      document.getElementsByTagName("button")[2].onclick = function () {
+        document.querySelector(".txt").classList.toggle("new2");
+        document.querySelector(".txt").classList.toggle("size2");
+      };
+    </script>
+  </body>
+</html>

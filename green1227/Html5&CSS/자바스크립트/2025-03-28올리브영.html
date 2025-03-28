@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .this {
+      background: wheat;
+      height: 100%;
+      width: 100%;
+    }
+    .main {
+      gap: 150px;
+      background: slateblue;
+      flex-direction: column;
+      display: flex;
+      margin: 0 auto;
+      max-width: 1420px;
+      margin-top: 80px;
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+    .main2 {
+      width: 100%;
+      margin: 0 auto;
+      gap: 20px;
+      display: flex;
+      background: rgb(255, 255, 200);
+      position: relative;
+      height: 900px;
+    }
+    .header {
+      top: 0;
+      position: absolute;
+      background: turquoise;
+      height: 80px;
+      width: 100%;
+    }
+    .main2-1 {
+      position: relative;
+      height: 100%;
+      width: 560px;
+      flex-direction: column;
+      display: flex;
+      background: violet;
+    }
+    .img1 {
+      flex: 2;
+      position: relative;
+      height: 100%;
+    }
+    .img1 p {
+      height: 100%;
+      overflow: hidden;
+      padding-bottom: 100%;
+      position: relative;
+      background: whitesmoke;
+    }
+
+    .img1 p img {
+      display: block;
+      vertical-align: top;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .txt1 {
+      flex: 1;
+      align-items: flex-end;
+      justify-items: flex-end;
+      display: flex;
+      padding: 20px;
+      background: yellowgreen;
+      color: aliceblue;
+      font-size: 30px;
+      font-weight: 500;
+    }
+    .in1 {
+      background: yellow;
+    }
+    .in2 {
+      background: violet;
+    }
+    .in3 {
+      background: wheat;
+    }
+    .in4 {
+      flex-direction: column;
+      gap: 20px;
+      display: flex;
+      background: teal;
+    }
+    .in4 div {
+      height: 100%;
+      width: 100%;
+      background: whitesmoke;
+    }
+    .main2-2 {
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      display: grid;
+      flex: 1;
+      background: thistle;
+    }
+    .main3 {
+      width: 100%;
+      background: slategray;
+      display: flex;
+      max-width: 1420px;
+    }
+    .main3-1 {
+      background: violet;
+      width: 580px;
+      top: 135px;
+      position: sticky;
+    }
+    .main3-2 {
+      display: flex;
+      margin-left: auto;
+      background: wheat;
+      width: 827px;
+    }
+    .main3-2 div {
+      flex-direction: column;
+      background: seagreen;
+      display: flex;
+      width: 100%;
+      margin-left: 100px;
+    }
+    .right1 p {
+      width: 100%;
+    }
+    .right1 h1 {
+      margin: 20px 0;
+    }
+    img {
+      width: 100%;
+    }
+  </style>
+  <body>
+    <div class="header"></div>
+    <div class="this">
+      <div class="main">
+        <div class="main2">
+          <div class="main2-1">
+            <div class="img1">
+              <p><img src="./img/250320_글로벌몰_mo.png" alt="" /></p>
+            </div>
+            <div class="txt1">
+              <p>
+                中企 등용문 CJ올리브영, '글로벌몰<br />
+                올영세일'로 K-뷰티&헬스 흥행 이끈다
+              </p>
+            </div>
+          </div>
+          <div class="main2-2">
+            <div class="in1"></div>
+            <div class="in2"></div>
+            <div class="in3"></div>
+            <div class="in4">
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="main3">
+          <div class="main3-1"></div>
+          <div class="main3-2">
+            <div class="right1">
+              <p>
+                <img
+                  src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg;jsessionid=3645A9D7EB5151C449AB71173F05C406"
+                  alt=""
+                />
+              </p>
+              <h1>
+                고객과 가장 가까운곳에서<br />건강한 아름다움을 제안합니다
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

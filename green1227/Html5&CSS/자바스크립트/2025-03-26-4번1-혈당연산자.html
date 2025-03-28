@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숫자 증가 버튼</title>
+    <style>
+      body {
+        margin-top: 50px;
+      }
+      #counter {
+        font-size: 2em;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="increaseNumber()">클릭하면 숫자 증가</button>
+    <div id="counter">0</div>
+    <a href="">클릭할때마다 1씩 증가</a>
+    <p>0</p>
+
+    <script>
+      let a = 0;
+      let count = 0;
+      document.querySelector("a").onclick = function (e) {
+        e.preventDefault();
+        document.querySelector("p").innerText = ++a;
+      };
+      function increaseNumber() {
+        count++;
+        document.getElementById("counter").innerText = count;
+      }
+    </script>
+  </body>
+</html>

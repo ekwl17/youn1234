@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      list-style: none;
+    }
+    .lush {
+      display: flex;
+      width: 100%;
+      height: 720px;
+      background-color: aliceblue;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      justify-content: center;
+      align-items: center;
+    }
+    .lush ul {
+      gap: 94px 177px;
+      grid-template-columns: repeat(3, 1fr);
+      display: grid;
+    }
+
+    .lush ul li {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: whitesmoke;
+      height: 180px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #222;
+      border-radius: 50%;
+      cursor: pointer;
+      width: 180px;
+      display: flex;
+    }
+    a {
+      color: aliceblue;
+      text-decoration: none;
+      font-size: 50px;
+    }
+  </style>
+  <body>
+    <div class="lush">
+      <ul>
+        <li><a href="#">'ㅂ'</a></li>
+        <li><a href="#">'ㅂ'</a></li>
+        <li><a href="#">'ㅂ'</a></li>
+        <li><a href="#">'ㅂ'</a></li>
+        <li><a href="#">'ㅂ'</a></li>
+        <li><a href="#">'ㅂ'</a></li>
+      </ul>
+    </div>
+    <script>
+      let me = [
+        "#FFDDC1",
+        "#FFC1E3",
+        "#C1FFD7",
+        "#C1E1FF",
+        "#FFF7C1",
+        "#D7C1FF",
+      ];
+      const lush = document.querySelector(".lush");
+      const li = document.querySelectorAll(".lush ul li");
+
+      li.forEach(function (v, k) {
+        v.onmouseover = function () {
+          // 배경 변경
+          lush.style.background = me[k];
+          lush.style.backgroundSize = "cover";
+
+          // 모든 li 배경 투명화
+          li.forEach((li) => {
+            li.style.background = "transparent";
+          });
+
+          // 현재 호버된 li만 원래 색상 유지
+          v.style.background = "#222"; // 원래 색 유지
+        };
+
+        v.onmouseleave = function () {
+          // 마우스가 벗어나면 원래 스타일로 복원
+          li.forEach((li) => {
+            li.style.background = "#222"; // 원래 색상
+          });
+        };
+      });
+    </script>
+  </body>
+</html>

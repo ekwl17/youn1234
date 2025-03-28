@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .main {
+      min-width: 1420px;
+      flex: 1 0 auto;
+      box-sizing: border-box;
+      display: flex;
+      width: 100%;
+    }
+    .main2 {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .box {
+      display: block;
+      background-attachment: fixed;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      background-size: 1920px auto;
+      background-position: center -350px;
+      background-position-x: 50%;
+      background-image: url(https://corp.oliveyoung.com/img/visual/img_sustain-fb738ee318c4667089cd575b18ca5b1a.jpg);
+      flex-direction: column;
+      position: relative;
+      justify-content: space-between;
+      display: flex;
+      overflow: hidden;
+      min-height: 774px;
+    }
+    .box::before {
+    }
+    .boxtop {
+      background: whitesmoke;
+      z-index: 1;
+      flex-direction: column;
+      display: flex;
+      padding-bottom: 65px;
+      align-items: center;
+    }
+    .boxbottom {
+      height: 8000px;
+      background: wheat;
+      position: relative;
+      flex: 0 0 auto;
+      padding-top: 140px;
+      margin-top: 400px;
+    }
+    .boxh2 {
+      font-weight: 400;
+      display: flex;
+      padding-top: 78px;
+      box-sizing: border-box;
+    }
+    .boxspan {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .boxst {
+      box-sizing: border-box;
+      font-weight: 700;
+      font-size: 3rem;
+      margin-top: 28px;
+    }
+    .tomp {
+      box-sizing: border-box;
+      font-size: 2rem;
+      margin: 0 auto;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="main2">
+        <section class="box">
+          <div class="boxtop">
+            <h2 class="boxh2"><span class="boxspan">지속가능경영</span></h2>
+            <strong class="boxst">
+              올리브영은 지속가능한 뷰티&amp;헬스 <br />산업의 발전을 위해
+              노력합니다</strong
+            >
+          </div>
+          <div class="boxbottom"><p class="tomp"></p></div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

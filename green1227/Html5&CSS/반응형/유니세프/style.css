@@ -1,0 +1,20 @@
+@charset "utf-8";
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.wrap {
+  display: block;
+  min-width: 1340px;
+}
+.header {
+  margin: 0 auto;
+  width: 1280px;
+}
+.header_inner {
+  background: yellow;
+  padding: 52px 0 8px;
+  height: 156px;
+  position: relative;
+}

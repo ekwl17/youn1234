@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      padding: 0 max(4vw);
+      vertical-align: baseline;
+      word-wrap: break-word;
+      word-break: keep-all;
+    }
+    .main {
+      padding-top: calc(40px + (1.25vw + 8px) * 2 + 1px);
+      overflow: hidden;
+      min-height: fit-content;
+      width: 100%;
+      background: wheat;
+    }
+    .mainbanner {
+      margin-bottom: 6vmax;
+      height: 29vw;
+      position: relative;
+    }
+    .img {
+      box-sizing: border-box;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+    }
+    .img_in {
+      overflow: hidden;
+      border-radius: 0.8vw;
+      margin: 0 auto;
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+    .img_in img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .bannertxt {
+      z-index: 2;
+      text-align: center;
+      margin: 0;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+    .txtin {
+      font-size: 1.5vw;
+      color: white;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      display: flex;
+    }
+    .txtin h1 {
+      font-size: 4vw;
+    }
+
+    .txts {
+      background: whitesmoke;
+      padding: 0 4.8vw;
+      font-size: 1.2vw;
+      text-align: center;
+      margin-bottom: 4vmax;
+      height: 20vw;
+      word-break: keep-all;
+      word-wrap: break-word;
+    }
+    .txts h1 {
+      margin-bottom: 2vw;
+      font-size: 3.5vw;
+    }
+    .boxs {
+      gap: 1vw;
+      flex-direction: column;
+      background: turquoise;
+      display: flex;
+      height: 30vw;
+      width: 100%;
+    }
+    .boxs1 {
+      gap: 1vw;
+      display: flex;
+      background: tomato;
+      height: 100%;
+      flex: 5;
+      width: 100%;
+    }
+    .boxs1 div {
+      flex: 1;
+    }
+    .boxs1 div:nth-child(1) {
+      background: slategrey;
+    }
+    .boxs1 div:nth-child(2) {
+      background: slateblue;
+    }
+    .boxs1 div:nth-child(3) {
+      background: skyblue;
+    }
+    .boxs2 {
+      gap: 1vw;
+      display: flex;
+      background: springgreen;
+      flex: 4;
+      width: 100%;
+      height: 100%;
+    }
+    .boxs2 div {
+      flex: 1;
+    }
+    .boxs2 div:nth-child(1) {
+      background: slategrey;
+    }
+    .boxs2 div:nth-child(2) {
+      background: slateblue;
+    }
+    .boxs2 div:nth-child(3) {
+      background: skyblue;
+    }
+    .boxs2 div:nth-child(4) {
+      background: sandybrown;
+    }
+    .boxss {
+      border-bottom: 1px solid black;
+      padding-bottom: 5rem;
+    }
+    .boxss p {
+      font-size: 0.8vw;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="mainbanner">
+        <div class="img">
+          <div class="img_in">
+            <img
+              src="https://www.hanwha.com/assets/img/page/about/overview/hanwha-headquarters.webp"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="bannertxt">
+          <div class="txtin">
+            <h1><span>About Hanwha</span></h1>
+            <h2>Sustainable solutions for Earth, for life</h2>
+          </div>
+        </div>
+      </div>
+      <div class="txts">
+        <h1>Who We Are</h1>
+        <p>
+          Hanwha is South Korea’s seventh-largest business group, with
+          innovative businesses in the areas of aerospace & mechatronics, clean
+          energy & ocean solutions, finance, and retail & services. Ranked in
+          the Fortune Global 500®, we’re a multinational company with a robust
+          global network of affiliates, which allows us to leverage synergy to
+          deliver transformative solutions and impactful innovations that
+          catalyze sustainable growth across industries and communities. In
+          2024, we were named to TIME’s list of the TIME 100 Most Influential
+          Companies list. With strong fundamentals in core industries, we
+          enhance lives through our technologies, products, and services. Our
+          relentless commitment to sustainability drives our bold innovation,
+          allowing us to create transformative solutions for individuals,
+          society, and the planet.
+        </p>
+      </div>
+      <div class="boxss">
+        <div class="boxs">
+          <div class="boxs1">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="boxs2">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <p>
+          From TIME. © 2024 TIME USA LLC. All rights reserved. Used under
+          license.
+        </p>
+        <p>
+          From Fortune. © 2024 Fortune Media IP Limited. All rights reserved.
+          Fortune and Fortune Global 500® are registered trademarks of Fortune
+          Media IP Limited and are used under license. <br />Fortune and Fortune
+          Media IP Limited are not affiliated with, and do not endorse products
+          or services of, Hanwha.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0%;
+      padding: 0;
+    }
+    .main {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      background: wheat;
+      height: 80vw;
+      width: 100%;
+    }
+    button {
+      height: 50px;
+      width: 100px;
+    }
+    .main.active {
+      background-color: whitesmoke;
+    }
+    button.me {
+      font-weight: 800;
+      color: aliceblue;
+      background: turquoise;
+    }
+    p a.on {
+      color: black;
+      background: whitesmoke;
+    }
+    #popup {
+      height: 500px;
+      width: 500px;
+      border: 1px solid;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      position: fixed;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="sub"><button>클릭</button></div>
+    </div>
+    <div id="popup">팝업<a href="#">닫기</a></div>
+  </body>
+  <script>
+    // document.querySelectorAll("button").forEach(function (v, k) {
+    //   v.onclick = function () {
+    //     document.querySelectorAll(".main")[k].classList.toggle("active");
+    //     document.querySelectorAll("button")[k].classList.toggle("me");
+    //   };
+    // });
+    document.querySelector("button").addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector("body").classList.toggle("on");
+      this.classList.toggle("on");
+    });
+  </script>
+</html>

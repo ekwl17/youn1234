@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아날로그 시계</title>
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        background-color: #f4f4f4;
+      }
+
+      .clock {
+        width: 100px;
+        height: 100px;
+        border: 8px solid black;
+        border-radius: 50%;
+        position: relative;
+        background: white;
+      }
+
+      .hand {
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform-origin: bottom;
+        transform: translateX(-50%) rotate(0deg);
+        transition: transform 0.1s linear;
+      }
+
+      .hour {
+        width: 3px;
+        height: 30px;
+        background: black;
+      }
+
+      .minute {
+        width: 2px;
+        height: 40px;
+        background: black;
+      }
+
+      .second {
+        width: 2px;
+        height: 40px;
+        background: red;
+      }
+
+      .center {
+        width: 10px;
+        height: 10px;
+        background: black;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="hand hour" id="hour"></div>
+      <div class="hand minute" id="minute"></div>
+      <div class="hand second" id="second"></div>
+      <div class="center"></div>
+    </div>
+
+    <script>
+      function updateClock() {
+        const now = new Date();
+        const hours = now.getHours() % 12;
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+
+        const hourDeg = hours * 30 + minutes * 0.5;
+        const minuteDeg = minutes * 6 + seconds * 0.1;
+        const secondDeg = seconds * 6;
+
+        document.getElementById(
+          "hour"
+        ).style.transform = `translateX(-50%) rotate(${hourDeg}deg)`;
+        document.getElementById(
+          "minute"
+        ).style.transform = `translateX(-50%) rotate(${minuteDeg}deg)`;
+        document.getElementById(
+          "second"
+        ).style.transform = `translateX(-50%) rotate(${secondDeg}deg)`;
+      }
+
+      setInterval(updateClock, 1000);
+      updateClock(); // 페이지 로드 시 초기 세팅
+    </script>
+  </body>
+</html>
