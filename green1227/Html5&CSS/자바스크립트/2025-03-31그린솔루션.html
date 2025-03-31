@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .header {
+        justify-content: space-between;
+        padding: 0 80px;
+        display: flex;
+        background: rgba(255, 190, 255, 0.274);
+        height: 80px;
+        width: 100%;
+        position: absolute;
+      }
+
+      .logo {
+        background: whitesmoke;
+        padding: 20px 0;
+        display: flex;
+      }
+
+      .logo a {
+        height: 100%;
+      }
+      .logo a img {
+        height: 100%;
+      }
+      .menu {
+        display: flex;
+        width: 100%;
+        background: yellowgreen;
+      }
+      .menuin {
+        background: wheat;
+      }
+
+      .bg {
+        position: absolute;
+      }
+      .con {
+        background-attachment: fixed;
+        height: 952px;
+        background: url(https://www.samsungshi.com/images/sub/sVisual_01.jpg);
+      }
+      .con ul {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .con ul li a {
+        font-size: 22px;
+        color: rgba(255, 255, 255, 0.3);
+        display: block;
+        width: 180px;
+        height: 80px;
+        border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+        line-height: 80px;
+        white-space: nowrap;
+        transition: 0.5s;
+        position: relative;
+      }
+      .con ul li a.on {
+        border-bottom: 4px solid rgba(255, 255, 255, 1);
+      }
+      .con ul li a p {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.5s;
+        letter-spacing: -3px;
+      }
+      .con ul li a p.on {
+        left: 0;
+        color: rgba(255, 255, 255, 1);
+        transform: translateX(0);
+      }
+      .con ul li a span {
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        transform: rotate(0deg);
+        transition: 0.5s;
+      }
+      .con ul li a span.on {
+        opacity: 1;
+        transform: rotate(180deg);
+      }
+      .bg {
+        transition: 0.5s ease-in-out;
+        top: 0;
+        left: 0;
+        margin-top: 80px;
+        background: white;
+        height: 1px;
+        width: 100%;
+      }
+      .bg.on {
+        height: 400px;
+      }
+      .main {
+        background: whitesmoke;
+        height: 100%;
+        width: 100%;
+      }
+      .main1 {
+        flex-direction: column;
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        background: yellow;
+        margin: 0 auto;
+        max-width: 1200px;
+      }
+      .tilte {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        background: yellowgreen;
+        padding: 40px 0;
+      }
+      .tilte h1 {
+        background: whitesmoke;
+      }
+      .mimenu {
+        gap: 5px;
+        display: flex;
+        background: turquoise;
+        margin: 0 auto;
+      }
+      .mimenu a {
+        font-weight: 700;
+        transition: 0.2s ease-in-out;
+        color: black;
+        z-index: 1;
+        overflow: hidden;
+        position: relative;
+        border-radius: 10px;
+        padding: 10px 0;
+        text-align: center;
+        width: 200px;
+        font-size: 20px;
+      }
+      .mimenu a::before {
+        z-index: -1;
+        transition: 0.2s ease-in-out;
+        color: aliceblue;
+        content: "";
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        background: black;
+        width: 100%;
+        position: absolute;
+      }
+      .mimenu a.on::before {
+        height: 100%;
+      }
+      .mimenu a.on {
+        color: aliceblue;
+      }
+      .drg {
+        margin: 20px 0;
+        background: tomato;
+        height: 60px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <a href="#"
+          ><img src="https://www.samsungshi.com/images/logo.png" alt=""
+        /></a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li class="menuin">
+            <a href="#">제품 | 기술</a>
+            <ul>
+              <li></li>
+            </ul>
+            <div class="bg"></div>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <a href="#"
+          ><img src="https://www.samsungshi.com/images/50_log_01.png" alt=""
+        /></a>
+      </div>
+    </div>
+    <div class="con">
+      <ul>
+        <li>
+          <a href="./250331_08_service.html"
+            ><p>제품|서비스</p>
+            <span
+              ><img
+                src="	https://www.samsungshi.com/images/sub/sVIsual_icon.png"
+                alt="arrow" /></span
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            ><p>그린솔루션</p>
+            <span
+              ><img
+                src="	https://www.samsungshi.com/images/sub/sVIsual_icon.png"
+                alt="arrow" /></span
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            ><p>디지털솔루선</p>
+            <span
+              ><img
+                src="	https://www.samsungshi.com/images/sub/sVIsual_icon.png"
+                alt="arrow" /></span
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            ><p>스마트야드 솔루션</p>
+            <span
+              ><img
+                src="	https://www.samsungshi.com/images/sub/sVIsual_icon.png"
+                alt="arrow" /></span
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="main1">
+        <div class="tilte"><h1>제품 | 서비스</h1></div>
+        <div class="mimenu">
+          <a href="#">조선</a><a href="#">해양</a><a href="#">엔지니어링</a>
+        </div>
+        <div class="drg"></div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".con ul li").forEach(function (v, k) {
+        v.onmouseenter = function () {
+          v.querySelector("a").classList.add("on");
+          v.querySelector("p").classList.add("on");
+          v.querySelector("span").classList.add("on");
+        };
+        v.onmouseleave = function () {
+          v.querySelector("a").classList.remove("on");
+          v.querySelector("p").classList.remove("on");
+          v.querySelector("span").classList.remove("on");
+        };
+      });
+      document.querySelectorAll(".menu").forEach(function (v, k) {
+        v.onmouseenter = function () {
+          v.querySelector(".bg").classList.add("on");
+        };
+      });
+      document.querySelectorAll(".header").forEach(function (v, k) {
+        v.onmouseleave = function () {
+          v.querySelector(".bg").classList.remove("on");
+        };
+      });
+      document.querySelectorAll(".mimenu > a").forEach(function (v) {
+        v.onmouseenter = function () {
+          v.classList.add("on"); // a 태그에 클래스 추가
+        };
+        v.onmouseleave = function () {
+          v.classList.remove("on"); // a 태그에서 클래스 제거
+        };
+      });
+    </script>
+  </body>
+</html>

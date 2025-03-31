@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .mains {
+      background: violet;
+      height: 900px;
+      width: 100%;
+    }
+    .main {
+      margin: 0 auto;
+      max-width: 1200px;
+      background: wheat;
+      height: 100%;
+      width: 100%;
+    }
+    h1 {
+      font-size: 50px;
+      text-align: center;
+    }
+    .his {
+      width: 500px;
+    }
+    .sub1 {
+      padding: 40px 0;
+      background: rgb(255, 226, 255);
+      display: flex;
+      width: 100%;
+    }
+    .sub1 li {
+      display: flex;
+      background: wheat;
+    }
+    .sub1 li a {
+      width: 200px;
+    }
+    .sub {
+      display: flex;
+      list-style: none;
+      padding: 40px 0;
+      border-bottom: 1px solid black;
+      background: yellowgreen;
+      position: relative;
+    }
+    .sub li {
+      background: teal;
+      display: flex;
+    }
+    .subs {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      background: violet;
+      padding-right: 200px;
+    }
+    .subs a {
+      width: 150px;
+      background: wheat;
+    }
+    img {
+      width: 100%;
+    }
+    .this {
+      gap: 20px;
+      flex-direction: column;
+      width: 400px;
+      background: violet;
+      display: flex;
+    }
+    .this li {
+      justify-content: space-between;
+      display: flex;
+      background: whitesmoke;
+    }
+    .this li p {
+      flex: 1;
+      background: wheat;
+    }
+    .this li strong {
+      width: 40px;
+      background: turquoise;
+    }
+    .button {
+      background: tomato;
+    }
+  </style>
+  <body>
+    <div class="mains">
+      <div class="main">
+        <h1>이마트24는 오늘도<br />고객과 경영주님께 다가갑니다</h1>
+        <ul class="sub1">
+          <li>
+            <a href=""
+              ><img
+                src="https://emart24.co.kr/assets/assets/imgs/brandStory/history.png"
+                alt=""
+            /></a>
+          </li>
+        </ul>
+        <ul class="sub">
+          <li class="subs">
+            <a href=""
+              ><img
+                src="https://emart24.co.kr/assets/assets/imgs/brandStory/2023.png"
+                alt=""
+            /></a>
+            <ul class="this">
+              <li>
+                <strong>3월</strong>
+                <p>
+                  - 상품전시회 “딜리셔스 페스티벌” 개최<br />
+                  *3/8(수) ~ 10(금), 서울 양재 AT센터
+                </p>
+              </li>
+              <li>
+                <strong>8월</strong>
+                <p>- 해외사업 진출 MOU <br />*캄보디아</p>
+              </li>
+              <li>
+                <strong>9월</strong>
+                <p>
+                  - 업계 최초 간편집밥 CAT.K 추진<br />
+                  *신선반찬 플랫폼기업 ‘슈퍼키친’ 콜라보
+                </p>
+              </li>
+            </ul>
+          </li>
+          <li class="subs1"></li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      document.querySelector("button").addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector("body").classList.toggle("on");
+        this.classList.toggle("on");
+      });
+    </script>
+  </body>
+</html>
