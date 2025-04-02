@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        align-items: center;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        margin: 0 auto;
+        height: 210px;
+        width: 1200px;
+      }
+      .main::before {
+        background-image: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/text_to_img1.jpg);
+        content: "YUHANCARE";
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-background-clip: text;
+        font-size: 190px;
+        font-weight: 900;
+        color: transparent;
+        white-space: nowrap;
+      }
+      .sub {
+        position: absolute;
+        clip-path: circle(0%); /* 초기에 안 보이게 설정 */
+        transition: clip-path 1s ease-out; /* 부드러운 전환 */
+        background-size: 1200px;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/text_to_img1.jpg);
+      }
+      .button {
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        background: yellow;
+        height: 100px;
+        width: 100%;
+        position: relative;
+      }
+      .button a {
+        border-radius: 20px;
+        padding: 10px 0;
+        text-align: center;
+        width: 180px;
+        color: black;
+        text-decoration: none;
+        font-size: 25px;
+        background: wheat;
+      }
+      .mains {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mains">
+      <div class="main">
+        <span class="sub"></span>
+      </div>
+      <div class="button">
+        <a href="#">기업소개</a><a href="#">사업소개</a><a href="#">기업문화</a>
+      </div>
+    </div>
+    <script>
+      setTimeout(() => {
+        document.querySelector(".sub").style.clipPath = "circle(100%)";
+      }, 1000); // 2초 후 나타남
+    </script>
+  </body>
+</html>

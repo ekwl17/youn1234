@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title></head
+  ><style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .main {
+      background: wheat;
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+    .sub {
+      position: relative;
+      transition: 0.3s ease-in-out;
+      background: turquoise;
+      height: auto;
+      margin: 0 auto;
+      max-width: 1500px;
+    }
+    .slide {
+      transition: 0.3s ease-in-out;
+      display: flex;
+      gap: 20px;
+      background: rgb(255, 195, 255);
+      height: 600px;
+      width: 100%;
+    }
+    .slide > div {
+      display: flex;
+      overflow: hidden;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+      border-radius: 15px;
+    }
+    .sl1 {
+      width: 80px;
+    }
+    .sl2 {
+      width: 80px;
+    }
+    .sl3 {
+      width: 80px;
+    }
+
+    .slide div.on {
+      transition: 0.3s ease-in-out;
+      width: 100%;
+    }
+
+    img {
+      object-fit: cover;
+      transition: 0.3s ease-in-out;
+      height: 100%;
+      width: 100%;
+    }
+    .img {
+      overflow: hidden;
+      position: relative;
+      flex: 1;
+      width: 100%;
+      height: 100%;
+    }
+    .me {
+      height: 100%;
+      width: 100%;
+    }
+    .in {
+      position: relative;
+      opacity: 0;
+      background: rgb(127, 255, 191);
+      transition: 0.3s ease-in-out;
+    }
+    .inin {
+      padding: 80px 60px;
+      justify-content: space-between;
+      flex-direction: column;
+      display: flex;
+      background: rgb(255, 213, 209);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+    .inin h1 {
+      font-size: 50px;
+    }
+    .inin p {
+      font-size: 20px;
+    }
+    .in.on {
+      opacity: 1;
+      flex: 2;
+    }
+    .txt {
+      background: yellow;
+      transition: 0.3s ease-in-out;
+      font-weight: bold;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      width: 100%;
+      height: 80px;
+      position: absolute;
+      bottom: 15px;
+      font-size: 50px;
+    }
+    .txt > p.on {
+      transform: rotate(0deg);
+    }
+    .txt p {
+      transform: rotate(-90deg);
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      white-space: nowrap;
+    }
+    .special {
+      justify-content: center;
+      flex-direction: column;
+      display: flex;
+      background: thistle;
+    }
+    .mitxt {
+      padding: 50px 0;
+      text-align: center;
+      background: steelblue;
+    }
+    .mi1 {
+      text-align: center;
+    }
+    .mi2 {
+      text-align: left;
+    }
+    .mitxt h1 {
+      margin-bottom: 5px;
+      font-size: 50px;
+    }
+    .mitxt p {
+      font-size: 18px;
+    }
+    .specialin {
+      gap: 30px;
+      background: violet;
+      display: flex;
+    }
+    .specialin > div {
+      flex-direction: column;
+      overflow: hidden;
+      display: flex;
+      border-radius: 30px;
+      background: whitesmoke;
+      height: 650px;
+      width: 100%;
+    }
+    .bt {
+      overflow: hidden;
+      border-radius: 20px;
+      height: 60px;
+      width: 400px;
+      position: relative;
+      background: springgreen;
+    }
+    .button1 {
+      margin: 30px auto;
+    }
+    .bt h1 {
+      transition: 0.2s ease-in-out;
+      gap: 10px;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      display: flex;
+      position: relative;
+      font-size: 20px;
+      color: white;
+      background: slateblue;
+    }
+
+    .bt h1 img {
+      height: 20px;
+      width: 20px;
+    }
+    .bt h1:hover {
+      gap: 20px;
+    }
+    .slides {
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      position: relative;
+    }
+    .dif {
+      flex-direction: column;
+      display: flex;
+      height: auto;
+      width: 100%;
+    }
+    .difbox {
+      overflow: hidden;
+      position: relative;
+      background: turquoise;
+      height: 600px;
+      width: 100%;
+    }
+    .difbox::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 15rem;
+      height: 100%;
+      right: 24px;
+      top: 0px;
+      z-index: 5;
+      background: linear-gradient(
+        to left,
+        rgb(255, 255, 255),
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0)
+      );
+    }
+    .box1 {
+      background: violet;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      position: absolute;
+      height: 500px;
+      width: 700px;
+    }
+    .box2 {
+      align-items: baseline;
+      gap: 30px;
+      display: flex;
+      background: silver;
+      z-index: 2;
+      left: 550px;
+      bottom: 0;
+      position: absolute;
+      height: 500px;
+      width: auto;
+    }
+    .box2 p {
+      overflow: hidden;
+      border-radius: 5vh;
+      height: 250px;
+      width: 400px;
+    }
+    .box2 p.on {
+      overflow: hidden;
+      width: 680px;
+      height: 100%;
+    }
+    .boxin {
+      overflow: hidden;
+      margin: 0 24px;
+      position: relative;
+      background: tomato;
+      height: 100%;
+    }
+    .buttons1,
+    .buttons2 {
+      cursor: pointer;
+      top: 45%;
+      z-index: 9999;
+      position: absolute;
+      background: springgreen;
+      height: 50px;
+      width: 50px;
+    }
+    .buttons2 {
+      right: 0;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="banner">
+        <p>
+          <img
+            src="https://www.inspirekorea.com/sites/default/files/2025-03/250321%20Splash%20Bay_Main%20Banner_1920x550%202.jpg"
+            alt=""
+          />
+        </p>
+      </div>
+      <div class="sub">
+        <div class="special">
+          <div class="mitxt mi1">
+            <h1>SPECIAL OFFERS</h1>
+            <p>
+              끝없는 영감이 당신을 일깨우고, 반복되는 일상으로부터 자유로워지는
+              곳.<br />
+              인스파이어만의 특별한 프로모션과 함께 즐거운 여행을 계획해 보세요.
+            </p>
+          </div>
+          <div class="specialin">
+            <div>
+              <div>
+                <img
+                  src="https://www.inspirekorea.com/sites/default/files/2025-03/Splash%20Bay%20All%20Day%20Cabana%20Package%20-%20Thumbnail.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <h1>스플래시 베이 카바나 패키지</h1>
+                <p>
+                  객실 1박 + 스플래시 베이 & 카바나 이용권(투숙객 전원) + 카바나
+                  푸드&드링크 세트
+                </p>
+              </div>
+            </div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="button1 bt">
+            <h1>
+              전체 보기
+              <img
+                src="https://www.inspirekorea.com/static/media/link-arrow.6e2068e260561c2fc2139d5b50cfbadf.svg"
+                alt=""
+              />
+            </h1>
+          </div>
+        </div>
+        <div class="slides">
+          <div class="mitxt mi1">
+            <h1>SPECIAL OFFERS</h1>
+            <p>
+              끝없는 영감이 당신을 일깨우고, 반복되는 일상으로부터 자유로워지는
+              곳.<br />
+              인스파이어만의 특별한 프로모션과 함께 즐거운 여행을 계획해 보세요.
+            </p>
+          </div>
+          <div class="slide">
+            <div class="sl1">
+              <div class="img">
+                <div class="txt">
+                  <p>Forest Tower</p>
+                </div>
+                <p class="me">
+                  <img
+                    src="https://www.inspirekorea.com/sites/default/files/2023-09/2.%20Towers%20-%20Keycard_Forest%20Tower_4.jpg"
+                    alt=""
+                  />
+                </p>
+              </div>
+              <div class="in">
+                <div class="inin">
+                  <div class="inintxt">
+                    <h1>Forest Tower</h1>
+                    <p>
+                      자연의 생기와 다양한 색채를 품은 포근한 안식처, 포레스트
+                      타워에서 <br />평온하면서도 활기 가득한 쉼을 누리세요.
+                    </p>
+                  </div>
+                  <div class="button2 bt">
+                    <h1>
+                      더 알아보기
+                      <img
+                        src="https://www.inspirekorea.com/static/media/link-arrow.6e2068e260561c2fc2139d5b50cfbadf.svg"
+                        alt=""
+                      />
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sl2">
+              <div class="img">
+                <div class="txt">
+                  <p>Forest Tower</p>
+                </div>
+                <p class="me">
+                  <img
+                    src="https://www.inspirekorea.com/sites/default/files/2023-09/2.%20Towers%20-%20Keycard_Ocean%20Tower_4.jpeg"
+                    alt=""
+                  />
+                </p>
+              </div>
+              <div class="in"><div class="inin"></div></div>
+            </div>
+            <div class="sl3">
+              <div class="img">
+                <div class="txt">
+                  <p>Forest Tower</p>
+                </div>
+                <p class="me">
+                  <img
+                    src="https://www.inspirekorea.com/sites/default/files/2023-09/ssss.jpg"
+                    alt=""
+                  />
+                </p>
+              </div>
+              <div class="in">
+                <div class="inin"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dif">
+          <div class="mitxt mi2">
+            <h1>SPECIAL OFFERS</h1>
+            <p>
+              끝없는 영감이 당신을 일깨우고, 반복되는 일상으로부터 자유로워지는
+              곳.<br />
+              인스파이어만의 특별한 프로모션과 함께 즐거운 여행을 계획해 보세요.
+            </p>
+          </div>
+          <div class="difbox">
+            <div class="buttons1 btt"></div>
+            <div class="buttons2 btt"></div>
+            <div class="boxin">
+              <div class="box1"></div>
+              <div class="box2">
+                <p>
+                  <img
+                    src="https://www.inspirekorea.com/sites/default/files/2024-01/Forest%20Deluxe%20King_2.jpg"
+                    alt=""
+                  />
+                </p>
+                <p>
+                  <img
+                    src="https://www.inspirekorea.com/sites/default/files/2024-01/Forest%20Deluxe%20King_2.jpg"
+                    alt=""
+                  />
+                </p>
+                <p>
+                  <img
+                    src="https://www.inspirekorea.com/sites/default/files/2024-01/Forest%20Deluxe%20King_2.jpg"
+                    alt=""
+                  />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll(".slide > div")[0].classList.add("on");
+      document.querySelectorAll(".in")[0].classList.add("on");
+      document.querySelectorAll(".txt p")[0].classList.add("on");
+      document.querySelectorAll(".box2 p")[0].classList.add("on");
+      document.querySelectorAll(".slide > div").forEach(function (v) {
+        v.onclick = function () {
+          document.querySelectorAll(".slide > div").forEach(function (el) {
+            el.classList.remove("on");
+          });
+          document.querySelectorAll(".in").forEach(function (el) {
+            el.classList.remove("on");
+          });
+          document.querySelectorAll(".txt p").forEach(function (el) {
+            el.classList.remove("on");
+          });
+
+          v.classList.add("on");
+          let inElement = v.querySelector(".in");
+          let txt = v.querySelector(".txt p");
+          if (inElement) {
+            inElement.classList.add("on");
+          }
+          if (txt) {
+            txt.classList.add("on");
+          }
+        };
+      });
+      v.onclick = function () {
+        document.querySelectorAll(".btt")[0].forEach(function (v, k) {
+          v.classList.removes("on");
+        });
+        let bttt = v.querySelector(".box2");
+        if (bttt) {
+          bttt.classList.add("on");
+        }
+      };
+    </script>
+  </body>
+</html>

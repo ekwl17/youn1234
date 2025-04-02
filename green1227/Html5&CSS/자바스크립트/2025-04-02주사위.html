@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      .scene {
+        width: 200px;
+        height: 200px;
+        perspective: 600px;
+      }
+      .cube {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateX(0deg) rotateY(0deg);
+        transition: transform 0.3s ease-out;
+      }
+      .face {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: rgba(0, 128, 255, 0.7);
+        border: 2px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .front {
+        transform: translateZ(100px);
+      }
+      .back {
+        transform: rotateY(180deg) translateZ(100px);
+      }
+      .right {
+        transform: rotateY(90deg) translateZ(100px);
+      }
+      .left {
+        transform: rotateY(-90deg) translateZ(100px);
+      }
+      .top {
+        transform: rotateX(90deg) translateZ(100px);
+      }
+      .bottom {
+        transform: rotateX(-90deg) translateZ(100px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scene">
+      <div class="cube" id="cube">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face right">3</div>
+        <div class="face left">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+      </div>
+    </div>
+    <script>
+      let x = 0; // x축 회전 각도를 저장하는 변수
+      let y = 0; // y축 회전 각도를 저장하는 변수
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowUp") {
+          x -= 90; // 위쪽 화살표 키가 눌리면 x축을 -90도 회전
+        } else if (event.key === "ArrowDown") {
+          x += 90; // 아래쪽 화살표 키가 눌리면 x축을 +90도 회전
+        } else if (event.key === "ArrowLeft") {
+          y -= 90; // 왼쪽 화살표 키가 눌리면 y축을 -90도 회전
+        } else if (event.key === "ArrowRight") {
+          y += 90; // 오른쪽 화살표 키가 눌리면 y축을 +90도 회전
+        }
+        // 변경된 xRotation과 yRotation 값을 이용해 주사위를 회전시킴
+        document.getElementById(
+          "cube"
+        ).style.transform = `rotateX(${x}deg) rotateY(${y}deg)`;
+      });
+    </script>
+  </body>
+</html>

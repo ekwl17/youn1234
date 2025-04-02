@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>랜덤 배경색 변경</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-family: Arial, sans-serif;
+        transition: background-color 0.5s ease;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const pastelColors = [
+          "#FFDDC1",
+          "#FFABAB",
+          "#FFC3A0",
+          "#D5AAFF",
+          "#85E3FF",
+          "#B9FBC0",
+          "#FFFFD1",
+        ];
+        const randomColor =
+          pastelColors[Math.floor(Math.random() * pastelColors.length)];
+        document.body.style.backgroundColor = randomColor;
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
