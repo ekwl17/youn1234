@@ -238,24 +238,55 @@
       width: 700px;
     }
     .box2 {
-      align-items: baseline;
-      gap: 30px;
-      display: flex;
+      overflow: hidden;
       background: silver;
       z-index: 2;
       left: 550px;
       bottom: 0;
       position: absolute;
       height: 500px;
-      width: auto;
+      width: 300%;
+    }
+    .box2in.on {
+      left: -680px;
+    }
+    .box2in {
+      transition: 0.5s ease-in-out;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+
+    .box2-1 p {
+      width: 100%;
+      display: flex;
+    }
+    .box2-1 {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      height: 100%;
+      align-items: baseline;
+      gap: 30px;
+      display: flex;
     }
     .box2 p {
+      height: 100%;
+      position: relative;
+      background: whitesmoke;
+      width: 680px;
       overflow: hidden;
+    }
+    .box2 p img {
       border-radius: 5vh;
+      bottom: 0;
+      position: absolute;
       height: 250px;
       width: 400px;
     }
-    .box2 p.on {
+    .box2 p img.on {
       overflow: hidden;
       width: 680px;
       height: 100%;
@@ -420,24 +451,28 @@
             <div class="boxin">
               <div class="box1"></div>
               <div class="box2">
-                <p>
-                  <img
-                    src="https://www.inspirekorea.com/sites/default/files/2024-01/Forest%20Deluxe%20King_2.jpg"
-                    alt=""
-                  />
-                </p>
-                <p>
-                  <img
-                    src="https://www.inspirekorea.com/sites/default/files/2024-01/Forest%20Deluxe%20King_2.jpg"
-                    alt=""
-                  />
-                </p>
-                <p>
-                  <img
-                    src="https://www.inspirekorea.com/sites/default/files/2024-01/Forest%20Deluxe%20King_2.jpg"
-                    alt=""
-                  />
-                </p>
+                <div class="box2in">
+                  <div class="box2-1">
+                    <p>
+                      <img
+                        src="https://www.inspirekorea.com/sites/default/files/2024-01/Forest%20Deluxe%20King_2.jpg"
+                        alt=""
+                      />
+                    </p>
+                    <p>
+                      <img
+                        src="https://www.inspirekorea.com/sites/default/files/2024-01/Forest%20Deluxe%20King_2.jpg"
+                        alt=""
+                      />
+                    </p>
+                    <p>
+                      <img
+                        src="https://www.inspirekorea.com/sites/default/files/2024-01/Forest%20Deluxe%20King_2.jpg"
+                        alt=""
+                      />
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -448,7 +483,7 @@
       document.querySelectorAll(".slide > div")[0].classList.add("on");
       document.querySelectorAll(".in")[0].classList.add("on");
       document.querySelectorAll(".txt p")[0].classList.add("on");
-      document.querySelectorAll(".box2 p")[0].classList.add("on");
+      document.querySelectorAll(".box2 p img")[0].classList.add("on");
       document.querySelectorAll(".slide > div").forEach(function (v) {
         v.onclick = function () {
           document.querySelectorAll(".slide > div").forEach(function (el) {
@@ -464,6 +499,7 @@
           v.classList.add("on");
           let inElement = v.querySelector(".in");
           let txt = v.querySelector(".txt p");
+
           if (inElement) {
             inElement.classList.add("on");
           }
@@ -472,14 +508,15 @@
           }
         };
       });
-      v.onclick = function () {
-        document.querySelectorAll(".btt")[0].forEach(function (v, k) {
-          v.classList.removes("on");
-        });
-        let bttt = v.querySelector(".box2");
-        if (bttt) {
-          bttt.classList.add("on");
-        }
+      let currentLeft = 0;
+      document.querySelector(".buttons1").onclick = function () {
+        currentLeft -= 675;
+        document.querySelector(".box2in").style.left = currentLeft + "px";
+      };
+
+      document.querySelector(".buttons2").onclick = function () {
+        currentLeft += 675;
+        document.querySelector(".box2in").style.left = currentLeft + "px";
       };
     </script>
   </body>

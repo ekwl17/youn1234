@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>슬라이드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        background: wheat;
+        position: relative;
+        height: 100%;
+        width: 100%;
+      }
+      .sub {
+        display: flex;
+        margin: 0 auto;
+        background: turquoise;
+        height: 80vh;
+        max-width: 80vw;
+        align-items: center;
+        justify-content: center;
+      }
+      .slide {
+        position: relative;
+        overflow: hidden;
+        height: 600px;
+        width: 100%;
+        background: violet;
+      }
+      .slide ul {
+        left: 0;
+        height: 100%;
+        display: flex;
+        position: absolute;
+        transition: left 0.5s ease;
+        width: 500%;
+      }
+      .slide ul li {
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+      }
+      .slide ul li img {
+        height: 100%;
+        object-fit: cover;
+      }
+      .slide button {
+        position: relative;
+        margin: 10px 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        z-index: 10;
+      }
+      .button-box {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <section>
+        <div class="sub">
+          <div class="slide">
+            <ul id="slideList">
+              <li><img src="../images/photo1.jpg" alt="사진1" /></li>
+              <li><img src="../images/photo2.jpg" alt="사진2" /></li>
+              <li><img src="../images/photo3.jpg" alt="사진3" /></li>
+              <li><img src="../images/photo4.jpg" alt="사진4" /></li>
+              <li><img src="../images/photo5.jpg" alt="사진5" /></li>
+            </ul>
+          </div>
+          <div class="button-box">
+            <button data-index="0">사진1</button>
+            <button data-index="1">사진2</button>
+            <button data-index="2">사진3</button>
+            <button data-index="3">사진4</button>
+            <button data-index="4">사진5</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      const buttons = document.querySelectorAll(".button-box button");
+      const slideList = document.getElementById("slideList");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const index = parseInt(this.getAttribute("data-index"));
+          const movePercent = index * -100;
+          slideList.style.left = movePercent + "%";
+        });
+      });
+    </script>
+  </body>
+</html>

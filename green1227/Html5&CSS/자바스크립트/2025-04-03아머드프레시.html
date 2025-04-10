@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      list-style: none;
+    }
+    .main {
+      color: burlywood;
+      position: relative;
+      display: block;
+      background: wheat;
+      height: 100%;
+      width: 100%;
+    }
+    .sub {
+      margin: 0 auto;
+      background: violet;
+      height: auto;
+      max-width: 1200px;
+    }
+    .title p {
+      font-weight: 600;
+      font-size: 50px;
+    }
+    .title {
+      padding: 40px 0;
+      background: turquoise;
+    }
+    li {
+      cursor: pointer;
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border: 1px solid burlywood;
+      padding: 25px 0;
+      background: whitesmoke;
+    }
+    h1 {
+      width: 100%;
+      font-weight: 450;
+      font-size: 50px;
+    }
+    h2 {
+      align-items: center;
+      padding-left: 35px;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      position: relative;
+      font-weight: 500;
+      font-size: 30px;
+    }
+    h2.on {
+      font-weight: 800;
+    }
+
+    i {
+      transition: 0.5s ease-in-out;
+      top: 37px;
+      left: 8px;
+      position: absolute;
+      display: inline-block;
+      width: 1.3rem;
+      height: 1.3rem;
+    }
+    i.on {
+      transform: rotate(50deg);
+    }
+
+    i::before,
+    i::after {
+      margin-top: 2px;
+      content: "";
+      position: absolute;
+      background-color: currentColor;
+      border-radius: 2px;
+    }
+
+    i::before {
+      width: 100%;
+      height: 0.19rem;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    i::after {
+      width: 0.2rem;
+      height: 100%;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+    p {
+      bottom: 0;
+      overflow: hidden;
+      max-height: 0;
+      width: 100%;
+      padding: 0 30px;
+      transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    }
+    p img {
+      height: 100%;
+      width: 100%;
+    }
+    p.on {
+      max-height: 500px;
+      padding: 30px;
+      position: relative;
+    }
+  </style>
+  <body>
+    <section>
+      <div class="main">
+        <div class="sub">
+          <div class="title"><p>RETAIL</p></div>
+          <div class="box1">
+            <ul>
+              <li>
+                <h1>Slices - Oat Base</h1>
+              </li>
+              <li>
+                <h2>AMERICAN</h2>
+                <i></i>
+                <p>
+                  <img
+                    src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-AMERICAN-pc.jpg"
+                    alt=""
+                  />
+                </p>
+              </li>
+              <li>
+                <h2>CHEDDAR</h2>
+                <i></i>
+                <p>
+                  <img
+                    src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-CHEDDAR-pc.jpg"
+                    alt=""
+                  />
+                </p>
+              </li>
+              <li>
+                <h2>PEEPER JACK</h2>
+                <i></i>
+                <p>
+                  <img
+                    src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-PEPPERJACK-pc.jpg"
+                    alt=""
+                  />
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="box2">
+            <ul>
+              <li>
+                <h1>Parmesan - Oat Base</h1>
+              </li>
+
+              <li>
+                <h2>GRATED PARMESAN</h2>
+                <i></i>
+                <p>
+                  <img
+                    src="https://www.armoredfresh.com/theme/af_v02/layout/_img/parmesan-pc.jpg"
+                    alt=""
+                  />
+                </p>
+              </li>
+
+              <li>
+                <h2>GRATED KIMCHI PARMESAN</h2>
+                <i></i>
+                <p>
+                  <img
+                    src="https://www.armoredfresh.com/theme/af_v02/layout/_img/parmesan-kimchi-pc.jpg"
+                    alt=""
+                  />
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.querySelectorAll("ul li").forEach(function (v, k) {
+        v.onclick = function () {
+          v.querySelector("p").classList.toggle("on");
+          v.querySelector("i").classList.toggle("on");
+          v.querySelector("h2").classList.toggle("on");
+        };
+      });
+    </script>
+  </body>
+</html>

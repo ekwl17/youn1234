@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title></head
+  ><style>
+    body {
+      width: 100%;
+      cursor: url(), auto;
+      height: 1000px;
+    }
+    .con {
+      background: violet;
+      height: 20px;
+      width: 20px;
+      top: 0;
+      left: 0;
+      position: fixed;
+      border-radius: 50%;
+      animation: circle 1s infinite;
+    }
+    @keyframes circle {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    .page {
+      margin: 500px 0;
+      border: 1px solid #000;
+      height: 500px;
+    }
+  </style>
+  <body>
+    <div class="con"></div>
+    <div class="page"></div>
+    <script>
+      document.querySelector(".page").onmousemove = function (e) {
+        let x = e.clientX;
+        let y = e.clientY;
+        document.querySelector(".con").style.left = x + "px";
+        document.querySelector(".con").style.top = y + "px";
+      };
+    </script>
+  </body>
+</html>

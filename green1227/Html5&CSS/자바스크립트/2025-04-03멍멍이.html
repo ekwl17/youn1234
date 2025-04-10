@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    import matplotlib.pyplot as plt
+      from matplotlib.patches import Circle, Polygon, Ellipse
+
+      # 캔버스 설정
+      fig, ax = plt.subplots(figsize=(4, 4))
+      ax.set_xlim(0, 100)
+      ax.set_ylim(0, 100)
+      ax.set_aspect('equal')
+      ax.axis('off')
+
+      # 배경 색상 (파스텔 하늘색)
+      fig.patch.set_facecolor('#a8d8ea')
+      ax.set_facecolor('#a8d8ea')
+
+      # 강아지 얼굴 (원형)
+      face = Circle((50, 60), 20, edgecolor='none', facecolor='white')
+      ax.add_patch(face)
+
+      # 강아지 귀 (두 개의 삼각형)
+      ear_left = Polygon([[35, 70], [45, 85], [45, 70]], closed=True, facecolor='white', edgecolor='none')
+      ear_right = Polygon([[65, 70], [55, 85], [55, 70]], closed=True, facecolor='white', edgecolor='none')
+      ax.add_patch(ear_left)
+      ax.add_patch(ear_right)
+
+      # 눈 (두 개의 작은 원)
+      eye_left = Circle((43, 65), 2, facecolor='black')
+      eye_right = Circle((57, 65), 2, facecolor='black')
+      ax.add_patch(eye_left)
+      ax.add_patch(eye_right)
+
+      # 코 (작은 타원)
+      nose = Ellipse((50, 55), 4, 2, angle=0, facecolor='black')
+      ax.add_patch(nose)
+
+      # 앱 이름 텍스트
+      plt.text(50, 25, 'PawPal', fontsize=16, color='#333333', fontweight='bold',
+               ha='center', va='center')
+
+      plt.tight_layout()
+      plt.savefig("image.png", dpi=150, bbox_inches='tight')
+      plt.show()
+  </style>
+  <body></body>
+</html>
