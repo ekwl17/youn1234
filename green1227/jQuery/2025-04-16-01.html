@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script> -->
+    <script>
+      // $(document).ready(function () {
+      //   $("body").css("background-color", "#f00");
+      // });
+      $(function () {
+        $("p").css("color", "#f00");
+        $("p").css({ color: "#f00" });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>jquery</h1>
+    <script>
+      // document.querySelector("body").style.backgroundColor = "#f00";
+      $("body")
+        .css("background-color", "#f00")
+        .css("color", "#fff")
+        .css("fontSize", "100px");
+      $("body").css({ color: "#fff", "background-color": "#f00" });
+    </script>
+  </body>
+</html>
+
+안에있는 p를 다바꾸고 싶으면 all로 설정해야함 그냥 셀렉터 p 하면 맨처음거
+태그네임ㅁ p 스타일 컬러 로 해도 색은 안바뀜 에러뜸 "너 피 일케 많은데 누구한테
+줄건데" 선택자 $

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>스크롤 이벤트 예제</title>
+  </head>
+  <body style="height: 2000px">
+    <h1>스크롤</h1>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        console.log("스크롤 중입니다!");
+        console.log("현재 스크롤 위치:", window.scrollY);
+      });
+      window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > 300) {
+          console.log("300px 이상 스크롤되었습니다!");
+        }
+      });
+    </script>
+  </body>
+</html>

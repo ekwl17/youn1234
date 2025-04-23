@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>슬라이드 - margin 방식</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        background: #000;
+      }
+
+      .slider-container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .slider-track {
+        display: flex;
+        height: 100%;
+        margin-left: 0;
+        transition: margin-left 0.5s ease;
+      }
+
+      .slider-track img {
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        flex-shrink: 0;
+      }
+
+      .progress-bars {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 10;
+      }
+
+      .progress-item {
+        text-align: center;
+      }
+
+      .bar {
+        width: 80px;
+        height: 6px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+        overflow: hidden;
+      }
+
+      .bar-inner {
+        width: 0%;
+        height: 100%;
+        background: white;
+        border-radius: 3px;
+      }
+
+      .bar-label {
+        color: white;
+        font-size: 12px;
+        margin-top: 4px;
+      }
+
+      .slider-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        z-index: 5;
+        transition: opacity 0.6s ease, filter 0.6s ease;
+        pointer-events: none;
+        white-space: nowrap;
+      }
+      @keyframes fillBar {
+        from {
+          width: 0%;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      .animate {
+        animation: fillBar 2.2s linear forwards;
+        animation-delay: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="progress-bars">
+        <div class="progress-item">
+          <div class="bar"><div class="bar-inner" id="bar1"></div></div>
+          <div class="bar-label">1</div>
+        </div>
+        <div class="progress-item">
+          <div class="bar"><div class="bar-inner" id="bar2"></div></div>
+          <div class="bar-label">2</div>
+        </div>
+        <div class="progress-item">
+          <div class="bar"><div class="bar-inner" id="bar3"></div></div>
+          <div class="bar-label">3</div>
+        </div>
+      </div>
+
+      <div class="slider-text" id="sliderText">안녕하세요</div>
+
+      <div class="slider-track" id="sliderTrack">
+        <img
+          src="https://www.yuhancare.com/data/yuhancare/inc/img_new/main/visual_1.jpg"
+          alt="1"
+        />
+        <img
+          src="https://www.yuhancare.com/data/yuhancare/inc/img_new/main/visual_2.jpg"
+          alt="2"
+        />
+        <img
+          src="https://www.yuhancare.com/data/yuhancare/inc/img_new/main/visual_3.jpg"
+          alt="3"
+        />
+      </div>
+    </div>
+
+    <script>
+      const track = document.getElementById("sliderTrack");
+      const slideCount = track.children.length;
+
+      // 이미지 복제
+      for (let i = 0; i < slideCount; i++) {
+        const clone = track.children[i].cloneNode(true);
+        track.appendChild(clone);
+      }
+
+      const bars = [
+        document.getElementById("bar1"),
+        document.getElementById("bar2"),
+        document.getElementById("bar3"),
+      ];
+
+      const texts = ["안녕하세요", "반갑습니다", "고맙습니다"];
+      const textElement = document.getElementById("sliderText");
+      let currentText = texts[0];
+
+      let index = 0;
+      const duration = 3000;
+
+      function updateText(idx) {
+        const nextText = texts[idx % 3];
+        if (nextText === currentText) return;
+
+        textElement.style.opacity = "0";
+        textElement.style.filter = "blur(8px)";
+        setTimeout(() => {
+          textElement.textContent = nextText;
+          textElement.style.opacity = "1";
+          textElement.style.filter = "blur(0)";
+          currentText = nextText;
+        }, 300);
+      }
+
+      function animateBar(current) {
+        bars.forEach((bar) => {
+          bar.classList.remove("animate");
+          void bar.offsetWidth;
+        });
+        bars[current % 3].classList.add("animate");
+      }
+
+      function slide() {
+        index++;
+        track.style.marginLeft = `-${index * 100}vw`;
+        updateText(index);
+        animateBar(index);
+
+        if (index === slideCount) {
+          setTimeout(() => {
+            track.style.transition = "none";
+            index = 0;
+            track.style.marginLeft = "0";
+            updateText(index);
+            animateBar(index);
+            setTimeout(() => {
+              track.style.transition = "margin-left 0.5s ease";
+            }, 50);
+          }, 500);
+        }
+      }
+
+      updateText(index);
+      animateBar(index);
+      setInterval(slide, duration);
+    </script>
+  </body>
+</html>

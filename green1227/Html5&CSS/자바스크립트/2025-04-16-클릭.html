@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    p {
+      cursor: pointer;
+    }
+    p.on {
+      color: aqua;
+    }
+  </style>
+  <body>
+    <p>문단태그1</p>
+    <p>문단태그2</p>
+    <p>문단태그3</p>
+    <p>문단태그4</p>
+    <p>문단태그5</p>
+    <p>문단태그6</p>
+    <script>
+      const p = document.querySelectorAll("p");
+      p.forEach(function (v) {
+        v.onclick = function () {
+          p.forEach(function (el) {
+            el.classList.remove("on");
+          });
+          v.classList.add("on");
+        };
+      });
+    </script>
+  </body>
+</html>

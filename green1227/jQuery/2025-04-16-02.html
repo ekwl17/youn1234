@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>첫 번째 문단입니다.</p>
+    <p>두 번째 문단입니다.</p>
+
+    <script>
+      // JavaScript
+      let jsElements = document.getElementsByTagName("p");
+      console.log(jsElements[0].textContent); // → 첫 번째 문단입니다.
+    </script>
+
+    <script>
+      // jQuery
+      let jqElements = $("p");
+      console.log(jqElements.eq(1).text()); // → 두 번째 문단입니다.
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="intro">환영합니다!</div>
+    <div class="intro">다시 오신 걸 환영해요!</div>
+
+    <script>
+      // JavaScript
+      let jsClassEls = document.getElementsByClassName("intro");
+      console.log(jsClassEls[1].textContent); // → 다시 오신 걸 환영해요!
+    </script>
+
+    <script>
+      // jQuery
+      let jqClassEls = $(".intro");
+      console.log(jqClassEls.eq(0).text()); // → 환영합니다!
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="intro">소개 글입니다.</p>
+
+    <script>
+      // JavaScript
+      let jsSelected = document.querySelectorAll("p.intro");
+      console.log(jsSelected[0].textContent); // → 소개 글입니다.
+    </script>
+
+    <script>
+      // jQuery
+      let jqSelected = $("p.intro");
+      console.log(jqSelected.text()); // → 소개 글입니다.
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="textBox">기존 내용</div>
+
+    <script>
+      // JavaScript
+      document.getElementById("textBox").textContent = "변경된 텍스트";
+    </script>
+
+    <script>
+      // jQuery
+      $("#textBox").text("변경된 텍스트 (jQuery)");
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="htmlBox"></div>
+
+    <script>
+      // JavaScript
+      document.getElementById("htmlBox").innerHTML =
+        "<strong>굵은 글씨</strong>";
+    </script>
+
+    <script>
+      // jQuery
+      $("#htmlBox").html("<em>기울임 글씨 (jQuery)</em>");
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="hideMe">숨겨질 요소</div>
+    <button onclick="hideElement()">숨기기</button>
+    <button onclick="showElement()">보이기</button>
+
+    <script>
+      function hideElement() {
+        document.getElementById("hideMe").style.display = "none";
+      }
+
+      function showElement() {
+        document.getElementById("hideMe").style.display = "";
+      }
+
+      // jQuery 예시
+      // $("#hideMe").hide();
+      // $("#hideMe").show();
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo">글꼴 크기를 바꿔보세요</p>
+    <button onclick="changeFont()">크기 변경</button>
+
+    <script>
+      function changeFont() {
+        // JavaScript
+        document.getElementById("demo").style.fontSize = "30px";
+
+        // jQuery
+        // $("#demo").css("font-size", "30px");
+      }
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="removeMe">이 요소는 제거됩니다.</div>
+    <button onclick="removeElement()">제거</button>
+    <script>
+      function removeElement() {
+        document.getElementById("removeMe").remove();
+
+        // jQuery
+        // $("#removeMe").remove();
+      }
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="parentDiv">
+      <p id="child">자식 요소입니다</p>
+    </div>
+
+    <script>
+      // JavaScript
+      let parentName = document.getElementById("child").parentNode.nodeName;
+      console.log(parentName); // → DIV
+
+      // jQuery
+      let parentNameJQ = $("#child").parent().prop("nodeName");
+      console.log(parentNameJQ); // → DIV
+    </script>
+  </body>
+</html>

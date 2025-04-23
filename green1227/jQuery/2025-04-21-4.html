@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        // 마우스 진입 시 p를 작게 애니메이션
+        $("a:nth-of-type(1)").mouseenter(function (e) {
+          e.preventDefault();
+          $("p").animate(
+            { width: "0", height: "0" },
+            1000,
+            "linear",
+            function () {
+              alert("애니메이션 완료");
+            }
+          );
+        });
+
+        // 클릭 시 p를 작게
+        $("a:nth-of-type(2)").click(function (e) {
+          e.preventDefault();
+          $("p").animate({ width: "0", height: "0" }, 1000, "swing");
+        });
+
+        // 클릭 시 p의 너비/높이를 토글
+        $("a:nth-of-type(3)").click(function (e) {
+          e.preventDefault();
+          let wd = $("p").width();
+          if (wd > 0) {
+            $("p").animate({ width: "0", height: "0" }, 1000, "swing");
+          } else {
+            $("p").animate({ width: "100%", height: "100%" }, 1000, "swing");
+          }
+        });
+      });
+    </script>
+    <title>jQuery 애니메이션</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        border: 2px solid #ccc;
+      }
+      p {
+        height: 100%;
+        width: 100%;
+        background: yellowgreen;
+        text-align: center;
+        line-height: 500px;
+        font-size: 24px;
+        color: white;
+      }
+      a {
+        margin-right: 20px;
+        display: inline-block;
+        padding: 10px 20px;
+        background: #ddd;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>문단태그</p>
+    </div>
+    <a href="#">slideDown (mouseenter)</a>
+    <a href="#">slideUp</a>
+    <a href="#">slideToggle</a>
+  </body>
+</html>

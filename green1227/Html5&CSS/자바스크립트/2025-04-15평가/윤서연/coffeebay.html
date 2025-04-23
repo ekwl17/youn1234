@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        overflow-x: hidden;
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      .mainbanner {
+        box-sizing: border-box;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+      }
+      .swiper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .swiper-wrapper img {
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .swiper-button-next {
+        left: 73vw;
+        width: 50px;
+        height: 50px;
+        color: transparent;
+        background-image: url(https://www.coffeebay.com/img/main/main_slide_next_btn.png);
+        background-position: center;
+        background-size: contain;
+        background-color: rgba(238, 238, 238, 0.199);
+      }
+      .swiper-button-prev {
+        left: 70vw;
+        width: 50px;
+        height: 50px;
+        color: transparent;
+        background-image: url(https://www.coffeebay.com/img/main/main_slide_prev_btn.png);
+        background-position: center;
+        background-size: contain;
+        background-color: rgba(238, 238, 238, 0.199);
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        top: 70%;
+        z-index: 10;
+      }
+      .menu1 {
+        z-index: 999999999;
+        justify-content: center;
+        align-items: center;
+        top: 50px;
+        position: fixed;
+        height: 50px;
+        width: 100%;
+      }
+      .top {
+        margin: 0 auto;
+        max-width: 1400px;
+      }
+      .menu {
+        justify-content: space-between;
+        display: flex;
+        position: relative;
+
+        height: 100%;
+        background: rgba(255, 255, 255, 0.438);
+      }
+      .menu > div {
+        align-items: center;
+        display: flex;
+      }
+      .menu > div > p {
+        height: 100%;
+        position: relative;
+        padding: 0 25px;
+        display: flex;
+        align-items: center;
+      }
+      .menu > div > p > a {
+        color: white;
+        font-weight: 550;
+      }
+      .line::after {
+        right: 0;
+        position: absolute;
+        background: white;
+        width: 1px;
+        height: 50%;
+        content: "";
+      }
+      .menu2 {
+        margin: 25px 0;
+        justify-content: space-between;
+        display: flex;
+      }
+      .me {
+        color: #000;
+        font-weight: 700;
+        font-size: 17px;
+        border-radius: 10vh;
+        padding: 8px 30px;
+        background: white;
+        width: 50px;
+      }
+      .mid {
+        gap: 100px;
+        display: flex;
+      }
+      .mid a {
+        font-weight: 600;
+        font-size: 18px;
+        color: white;
+      }
+      .rightt {
+        box-sizing: border-box;
+        gap: 40px;
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        z-index: 99999;
+        right: 0;
+        position: fixed;
+        width: 100px;
+        height: 100%;
+        margin-right: 20px;
+      }
+      .r1 {
+        gap: 10px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        color: white;
+        border-radius: 50px;
+        background: rgb(1, 0, 56);
+        height: 170px;
+        width: 100%;
+      }
+
+      .r1 p {
+        height: 30px;
+        margin: 0;
+      }
+      .numm {
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+      }
+      .num {
+        align-items: center;
+        font-weight: 500;
+        font-size: 24px;
+        display: flex;
+      }
+      .dot {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 10px;
+      }
+      .dot > div {
+        font-size: 13px;
+        line-height: normal;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        list-style: none;
+        color: #666666;
+        text-align: center;
+        width: 6px;
+        height: 6px;
+        background-color: #ffffff;
+        margin: 0 auto;
+        -webkit-border-radius: 6px;
+      }
+      .line2 {
+        padding-top: 7px;
+        font-weight: 600;
+        font-size: 17px;
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        position: relative;
+      }
+      .line2::after {
+        top: 0;
+        position: absolute;
+        background: white;
+        width: 80%;
+        height: 1px;
+        content: "";
+      }
+
+      .r2 {
+        background: rgb(146, 146, 146);
+        color: white;
+        font-weight: 600;
+        font-size: 18px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        border-radius: 50%;
+        width: 100%;
+        height: 100px;
+      }
+      .banner2 {
+        background: wheat;
+        height: 100vh;
+        width: 100vw;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="main">
+      <div class="menu1">
+        <div class="top">
+          <div class="menu">
+            <div>
+              <p class="line"><a href="#">APP다운</a></p>
+              <p><a href="#">가맹점 전용</a></p>
+            </div>
+            <div>
+              <p class="line"><a href="#">GLOBAL </a></p>
+              <p class="line"><a href="#">INSTAGRAM</a></p>
+              <p><a href="#"> BLOG</a></p>
+            </div>
+          </div>
+          <div class="menu2">
+            <p>
+              <img
+                src="https://www.coffeebay.com/img/main/main_logo_tmp.png"
+                alt=""
+              />
+            </p>
+            <div class="mid">
+              <p><a href="#">회사소개</a></p>
+              <p><a href="#">메뉴</a></p>
+              <p><a href="#">매장</a></p>
+              <p><a href="#">멤버십</a></p>
+              <p><a href="#">새소식</a></p>
+            </div>
+            <p><a href="#" class="me">창업안내</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="rightt">
+        <div class="r1">
+          <div class="numm">
+            <p class="num">1644</p>
+            <div class="dot">
+              <div></div>
+            </div>
+            <p class="num">1157</p>
+          </div>
+          <p class="line2">창업문의</p>
+        </div>
+        <div class="r2">고객문의</div>
+      </div>
+      <section class="mainbanner">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20250219184145.2025-%EB%B2%A0%EC%9D%B4%EC%BC%80%EC%9D%B4%EC%85%98(%EC%98%81%EA%B5%AD)-1920x1080px"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20241125154556.2024-%EB%B1%85%EC%87%BC-1920x1080"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+              src=https://www.coffeebay.com/upload/file_20241125154725.2024-%EB%B6%95%EC%96%B4%EB%B9%B5-1920x1080
+              "" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20241002121311.2024%20%EC%9A%B0%EB%A6%AC12%EA%B3%A1%EB%9D%BC%EB%96%BC_%201920x1080_2"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20240905165027.%E1%84%92%E1%85%A9%E1%86%B7%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%86%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%20pc%201920x1080"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20240807090952.jpg"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20240705103106.jpg"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20240605091400.06-%EC%BB%A4%ED%94%BC%EB%B2%A0%EC%9D%B4_%ED%81%AC%EB%A3%A8%ED%82%A4_%EB%A9%94%EC%9D%B8%EC%9D%B4%EB%AF%B8%EC%A7%80_pc_1920x1080"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20240605091108.06-%EC%BB%A4%ED%94%BC%EB%B2%A0%EC%9D%B4_%EB%B2%A0%EC%9D%B4%EA%B8%80%ED%94%BC%EC%9E%90_%EB%A9%94%EC%9D%B8%EC%9D%B4%EB%AF%B8%EC%A7%80_pc_1920x1080"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20240605090912.06-%EC%BB%A4%ED%94%BC%EB%B2%A0%EC%9D%B4_1%EB%A6%AC%ED%84%B0%EB%B3%B4%ED%8B%80_%EB%A9%94%EC%9D%B8%EC%9D%B4%EB%AF%B8%EC%A7%80_pc_1920x1080"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20240523154742.jpg"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20240523154653.jpg"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20240524131849.jpg"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20240523154918.jpg"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20240417101006.jpg"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20240327100709.jpg"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20240222092241.jpg"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20240207095507.jpg"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20231220183828.jpg"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20231116173342.jpg"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.coffeebay.com/upload/file_20230920091801.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+      <section class="banner2"></section>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        speed: 600,
+        effect: "fade",
+        centeredSlides: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

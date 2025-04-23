@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("a:first-of-type").click(function (e) {
+          e.preventDefault();
+          $("p").slideDown(1000, "linear");
+        });
+        $("a:nth-of-type(2)").click(function (e) {
+          e.preventDefault();
+          $("p").slideUp(1000, "linear");
+        });
+        $("a:nth-of-type(3)").click(function (e) {
+          e.preventDefault();
+          $("p").slideToggle(1000, "linear");
+        });
+      });
+    </script>
+    <title>jQuery 슬라이드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 500px;
+        height: 500px;
+      }
+      p {
+        height: 100%;
+        width: 100%;
+        background: yellowgreen;
+        display: none; /* 초기에 숨김 */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>문단태그</p>
+    </div>
+    <a href="#">slideDown</a>
+    <a href="#">slideUp</a>
+    <a href="#">slideToggle</a>
+  </body>
+</html>
