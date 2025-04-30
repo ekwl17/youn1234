@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Timeline Full Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <style>
+      body {
+        padding: 20px;
+      }
+      .box {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+        opacity: 0;
+      }
+      .green {
+        background: green;
+      }
+      .red {
+        background: red;
+      }
+      .blue {
+        background: blue;
+      }
+      .yellow {
+        margin-top: 10vh;
+
+        background: yellow;
+      }
+      button {
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box green"></div>
+    <div class="box red"></div>
+    <div class="box blue"></div>
+    <div class="box yellow"></div>
+
+    <div style="margin-top: 20px">
+      <button class="play">Play</button>
+      <button class="pause">Pause</button>
+      <button class="resume">Resume</button>
+      <button class="restart">Restart</button>
+      <button class="reverse">Reverse</button>
+      <button class="seek">Play from 1s</button>
+      <button class="speedUp">Speed Up</button>
+      <button class="slowDown">Slow Down</button>
+      <button class="kill">Kill (완전종료)</button>
+    </div>
+
+    <script>
+      // ✨ 타임라인 생성
+      const tl = gsap.timeline({ paused: true });
+
+      // ✨ 타임라인에 단계별 애니메이션 추가
+      tl.to(".green", {
+        x: 300,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+      })
+        .to(".red", {
+          y: 100,
+          opacity: 1,
+          duration: 1,
+          ease: "bounce.out",
+        })
+        .to(".blue", {
+          rotation: 360,
+          opacity: 1,
+          duration: 1.5,
+          ease: "power3.inOut",
+        })
+        .to(".yellow", {
+          scale: 2,
+          opacity: 1,
+          duration: 1,
+          ease: "elastic.out(1, 0.5)",
+        });
+
+      // ✨ 버튼 연결
+      document.querySelector(".play").onclick = () => tl.play();
+      document.querySelector(".pause").onclick = () => tl.pause();
+      document.querySelector(".resume").onclick = () => tl.resume();
+      document.querySelector(".restart").onclick = () => tl.restart();
+      document.querySelector(".reverse").onclick = () => tl.reverse();
+      document.querySelector(".seek").onclick = () => tl.play(1); // 1초 위치로 이동 후 플레이
+      document.querySelector(".speedUp").onclick = () => tl.timeScale(2); // 2배 빠르게
+      document.querySelector(".slowDown").onclick = () => tl.timeScale(0.5); // 0.5배 느리게
+      document.querySelector(".kill").onclick = () => tl.kill(); // 애니메이션 완전 종료
+    </script>
+  </body>
+</html>

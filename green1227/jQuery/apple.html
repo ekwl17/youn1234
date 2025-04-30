@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FullPage 데모</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- fullPage.js -->
+    <script src="./fullpage/jquery.fullPage.js"></script>
+    <link href="./fullpage/jquery.fullPage.css" rel="stylesheet" />
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+      .active {
+        justify-content: center !important;
+        display: flex !important;
+      }
+      .active > span {
+        margin: -12px 0 0 -10px !important;
+        height: 20px !important;
+        width: 20px !important;
+        background-color: aqua !important;
+      }
+
+      #fullpage .section {
+        text-align: center;
+        font-size: 3rem;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #section1 {
+        background: yellowgreen;
+      }
+      #section2 {
+        background: tomato;
+      }
+      #section3 {
+        background: skyblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="fullpage">
+      <div class="section" id="section1">Section 1</div>
+      <div class="section" id="section2">Section 2</div>
+      <div class="section" id="section3">Section 3</div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#fullpage").fullpage({
+          autoScrolling: true,
+          navigation: true,
+          scrollingSpeed: 700,
+        });
+      });
+    </script>
+  </body>
+</html>

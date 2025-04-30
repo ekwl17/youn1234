@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery Dimension 예제</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      #myBox {
+        width: 200px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid black;
+        margin: 30px;
+        background-color: #f1f1f1;
+        position: relative;
+      }
+
+      #info {
+        margin-top: 20px;
+        font-family: monospace;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>jQuery Dimension</h2>
+
+    <div id="myBox">박스 요소</div>
+
+    <button id="measureBtn">측정하기</button>
+
+    <div id="info"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#measureBtn").click(function () {
+          const box = $("#myBox");
+
+          const infoText = `
+width:             ${box.width()}
+height:            ${box.height()}
+
+innerWidth:        ${box.innerWidth()}
+innerHeight:       ${box.innerHeight()}
+
+outerWidth:        ${box.outerWidth()}
+outerHeight:       ${box.outerHeight()}
+
+outerWidth(true):  ${box.outerWidth(true)}
+outerHeight(true): ${box.outerHeight(true)}
+
+offset (문서 기준): 
+  top:  ${box.offset().top}
+  left: ${box.offset().left}
+
+position (부모 기준): 
+  top:  ${box.position().top}
+  left: ${box.position().left}
+
+브라우저 뷰포트:
+  window width:  ${$(window).width()}
+  window height: ${$(window).height()}
+`;
+
+          $("#info").text(infoText);
+        });
+      });
+    </script>
+  </body>
+</html>

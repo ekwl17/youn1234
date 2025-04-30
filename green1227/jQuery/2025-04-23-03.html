@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        position: relative;
+        background: #ccc;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+      }
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("a").click(function (e) {
+          e.preventDefault();
+          $("p")
+            .animate({ left: "500px" }, 1000, "swing")
+            .animate({ top: "500px" }, 1000, "swing")
+            .animate({ left: "0" }, 1000, "swing")
+            .animate({ top: "0" }, 1000, "swing");
+        });
+        $("a").trigger("click");
+        setInterval(function () {
+          $("a").click();
+        }, 4000);
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+    <a href="#">클릭</a>
+  </body>
+</html>

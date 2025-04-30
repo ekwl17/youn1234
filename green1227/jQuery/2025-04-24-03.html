@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SK 3D Carousel</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overflow: hidden;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      section {
+        width: 1438px;
+        height: 100vh;
+        margin: 100px auto;
+        display: flex;
+        align-items: center;
+
+        background: url(https://www.skinnovation.com/resources/images/main/s4-bg.jpg)
+          center/cover;
+        font-family: "SUIT", sans-serif;
+      }
+      .left {
+        width: 40%;
+      }
+      .right {
+        width: 60%;
+      }
+      .sk {
+        width: 200px;
+        height: 200px;
+        perspective: 800px;
+        margin: 0 auto;
+        transform-style: preserve-3d;
+        display: flex;
+        justify-content: center;
+      }
+      .earthImg {
+        position: absolute;
+        top: -80%;
+        left: -75%;
+        width: 510px;
+        height: 510px;
+      }
+      .earthImg img {
+        width: 100%;
+      }
+      .inner {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.5s ease;
+        transform-origin: center;
+        position: relative;
+      }
+
+      .item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+      }
+      .item a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding: 18px;
+        flex-direction: column;
+        justify-content: space-between;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05),
+          0 0 15px 0 rgba(0, 0, 0, 0.05);
+        color: #333;
+        box-sizing: border-box;
+      }
+      .item a .icon-box {
+        width: 100%;
+        display: flex;
+      }
+      .item a .icon-box span {
+        display: block;
+        flex: 1;
+      }
+      .item a .icon-box span.link {
+        width: 31px;
+      }
+      .item a .icon-box span.icon {
+        width: 72px;
+        height: 62px;
+      }
+      .item a .icon-box span img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .item h1 {
+        font-size: 14px;
+      }
+      .item .desc {
+        font-size: 10px;
+        line-height: 1.7;
+        color: #555;
+        letter-spacing: -1px;
+        white-space: nowrap;
+      }
+      .left ul li {
+        height: 5vh;
+        position: relative;
+        line-height: 40px;
+      }
+      .left ul li a {
+        margin-left: 2vw;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #333;
+      }
+      .left ul li a.on,
+      .left ul li a:hover {
+        position: relative;
+        margin-left: 2vw;
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: rgb(16, 192, 0);
+      }
+
+      .left ul li a.on::before,
+      .left ul li a:hover::before {
+        content: "";
+        width: 40px;
+        height: 3px;
+        position: absolute;
+        left: -50px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgb(16, 192, 0);
+      }
+      .left h1 {
+        position: relative;
+        margin-bottom: 10vh;
+        font-weight: 800;
+        font-size: 5rem;
+      }
+
+      .leaf {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-image: url("/leaves.png");
+        background-size: cover;
+        opacity: 0.9;
+        pointer-events: none;
+        animation-name: floatLeft, sway;
+        animation-timing-function: linear, ease-in-out;
+        animation-iteration-count: infinite, infinite;
+      }
+
+      #sec03 {
+        height: 100vh;
+      }
+      @keyframes floatLeft {
+        0% {
+          left: 110%;
+          top: var(--start-top);
+          opacity: 1;
+        }
+        100% {
+          left: -10%;
+          top: var(--end-top);
+          opacity: 0;
+        }
+      }
+
+      @keyframes sway {
+        0% {
+          transform: rotate(0deg) translateY(0px);
+        }
+        25% {
+          transform: rotate(15deg) translateY(-20px);
+        }
+        50% {
+          transform: rotate(0deg) translateY(10px);
+        }
+        75% {
+          transform: rotate(-15deg) translateY(-10px);
+        }
+        100% {
+          transform: rotate(0deg) translateY(0px);
+        }
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div id="sec03">
+      <section>
+        <div class="left">
+          <div><h1>SK Innovation Subsidiary</h1></div>
+          <ul>
+            <li><a href="#">SK에너지</a></li>
+            <li><a href="#">SK지오센트릭</a></li>
+            <li><a href="#">SK온</a></li>
+            <li><a href="#">SK엔무브</a></li>
+            <li><a href="#">SK인천석유화학</a></li>
+            <li><a href="#">SK아이이테크놀로지</a></li>
+            <li><a href="#">SK어스온</a></li>
+          </ul>
+        </div>
+        <div class="right">
+          <div class="sk">
+            <p class="earthImg">
+              <img
+                src="https://www.skinnovation.com/resources/images/main/s4-earth.png"
+                alt="지구"
+              />
+            </p>
+            <div class="inner">
+              <div class="item">
+                <a href="">
+                  <h1>SK에너지</h1>
+                  <span class="desc"
+                    >에너지를 통해 고객과 <br />사회의 행복에<br />기여하는
+                    미래형 에너지 기업<br />
+                  </span>
+                  <div class="icon-box">
+                    <span class="link"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
+                        alt=""
+                    /></span>
+                    <span class="icon"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-icon-1.png"
+                        alt=""
+                    /></span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="">
+                  <h1>SK지오센트릭</h1>
+                  <span class="desc"
+                    >고부가 화학소재, 차세대 재활용 <br />기술 기반으로 세상에
+                    <br />필요한 솔루션을 제공하는 기업<br />
+                  </span>
+                  <div class="icon-box">
+                    <span class="link"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
+                        alt=""
+                    /></span>
+                    <span class="icon"
+                      ><img
+                        src="	https://www.skinnovation.com/resources/images/main/s4-icon-2.png"
+                        alt=""
+                    /></span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="">
+                  <h1>SK온</h1>
+                  <span class="desc"
+                    >배터리 기술 혁신으로 더 나은 <br />미래를 열어 나가는
+                    기업<br /><br />
+                  </span>
+                  <div class="icon-box">
+                    <span class="link"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
+                        alt=""
+                    /></span>
+                    <span class="icon"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-icon-3.png"
+                        alt=""
+                    /></span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="">
+                  <h1>SK엔무브</h1>
+                  <span class="desc"
+                    >제품 기술 경쟁력과 액침냉각,<br />
+                    배터리 열관리 등 신규 사업으로 <br />연료/전력 효율성을
+                    높이는 Energy<br />Saving Company
+                  </span>
+                  <div class="icon-box">
+                    <span class="link"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
+                        alt=""
+                    /></span>
+                    <span class="icon"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-icon-4.png"
+                        alt=""
+                    /></span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="">
+                  <h1>SK인천석유화학</h1>
+                  <span class="desc"
+                    >보다 안전하고 <br />깨끗한 에너지로 <br />지역사회와
+                    상생하는 기업<br />
+                  </span>
+                  <div class="icon-box">
+                    <span class="link"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
+                        alt=""
+                    /></span>
+                    <span class="icon"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-icon-5.png"
+                        alt=""
+                    /></span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="">
+                  <h1>SK아이이테크놀로지</h1>
+                  <span class="desc"
+                    >글로벌 탑티어 <br />소재 솔루션 기업 <br /><br /><br
+                  /></span>
+                  <div class="icon-box">
+                    <span class="link"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
+                        alt=""
+                    /></span>
+                    <span class="icon"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-icon-6.png"
+                        alt=""
+                    /></span>
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="">
+                  <h1>SK어스온</h1>
+                  <span class="desc"
+                    >자원의 선순환까지 생각하는<br />
+                    Carbon Neutral Company<br /><br />
+                  </span>
+                  <div class="icon-box">
+                    <span class="link"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-linkarrow.png"
+                        alt=""
+                    /></span>
+                    <span class="icon"
+                      ><img
+                        src="https://www.skinnovation.com/resources/images/main/s4-icon-7.png"
+                        alt=""
+                    /></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      $(function () {
+        // 아이템 총 개수를 구함
+        let totalitem = $(".inner .item").length;
+
+        // 아이템 하나당 배치할 각도 계산 (예: 4개면 360 / 4 = 90도)
+        let degPerItem = 360 / totalitem;
+
+        // 각 아이템을 원형으로 배치
+        $(".item").each(function (index, element) {
+          // 각도별로 Y축 회전시키고, Z축으로 밀어내서 원 형태로 배치
+          $(element).css(
+            "transform",
+            `rotateY(${index * degPerItem}deg) translateZ(320px)`
+          );
+        });
+
+        // 왼쪽 메뉴 클릭 시 회전 이벤트
+        $(".left ul li").click(function (e) {
+          e.preventDefault();
+
+          // 클릭한 li의 순번(0부터 시작)
+          let i = $(this).index();
+
+          // 클릭한 순번에 따라 전체 회전 각도 계산 (정면에 해당 아이템이 오도록)
+          let y = -i * degPerItem;
+
+          // .inner 요소 전체를 Y축 기준으로 회전시킴 → 해당 아이템이 정면에 보이게 됨
+          $(".inner").css("transform", `rotateY(${y}deg)`);
+        });
+      });
+      $("li a").click(function (e) {
+        $("li a").removeClass("on");
+        $(this).addClass("on");
+      });
+    </script>
+    <script>
+      const totalLeaves = 4;
+
+      for (let i = 0; i < totalLeaves; i++) {
+        const leaf = document.createElement("div");
+        leaf.classList.add("leaf");
+
+        // 시작과 끝의 top 위치를 랜덤 설정
+        const startTop = Math.random() * 80 + 5; // 5% ~ 85%
+        const endTop = Math.random() * 80 + 5;
+
+        const delay = Math.random() * 5;
+        const floatDuration = 8 + Math.random() * 5;
+        const swayDuration = 3 + Math.random() * 2;
+
+        leaf.style.setProperty("--start-top", `${startTop}%`);
+        leaf.style.setProperty("--end-top", `${endTop}%`);
+
+        leaf.style.animationDuration = `${floatDuration}s, ${swayDuration}s`;
+        leaf.style.animationDelay = `${delay}s, ${delay}s`;
+
+        document.body.appendChild(leaf);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP + 조건문 예시</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <style>
+      body {
+        padding: 20px;
+      }
+      .box {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+      }
+      .green {
+        background: green;
+      }
+      .red {
+        background: red;
+      }
+      button {
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box green"></div>
+    <div class="box red"></div>
+
+    <div style="margin-top: 20px">
+      <button id="move">Move Box</button>
+    </div>
+
+    <script>
+      let moveAmount = 0; // 이동한 거리 기록
+
+      const greenBox = document.querySelector(".green");
+      const redBox = document.querySelector(".red");
+
+      document.getElementById("move").onclick = () => {
+        moveAmount += 100; // 100px씩 증가시킴
+
+        // ✅ 부등호 조건 사용
+        if (moveAmount > 300) {
+          // 300보다 크면 빨간 박스를 이동시키자
+          gsap.to(redBox, { x: moveAmount - 300, duration: 1 });
+        } else {
+          // 300 이하일 땐 초록 박스만 이동
+          gsap.to(greenBox, { x: moveAmount, duration: 1 });
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery each() 예제</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        padding: 20px;
+      }
+
+      .item {
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+      }
+
+      button {
+        margin-top: 15px;
+        padding: 8px 16px;
+        font-size: 16px;
+      }
+
+      ul#output {
+        margin-top: 20px;
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>jQuery each() 실습 예제</h2>
+
+    <div class="item">🍎 사과</div>
+    <div class="item">🍌 바나나</div>
+    <div class="item">🍇 포도</div>
+    <div class="item">🍊 오렌지</div>
+
+    <button id="loopBtn">과일 목록 출력</button>
+
+    <ul id="output"></ul>
+
+    <script>
+      $(document).ready(function () {
+        $("#loopBtn").click(function () {
+          $("#output").empty(); // 기존 출력 초기화
+
+          $(".item").each(function (index) {
+            const text = $(this).text();
+            $("#output").append(`<li>${index + 1}번 과일: ${text}</li>`);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
